@@ -4,6 +4,16 @@
 
 export const environment = {
   production: false,
+  firebase: {
+    apiKey: 'AIzaSyCTUgBopwcsxsWRQU0qWKErU8xVRRcifLo',
+    authDomain: 'druk-resale.firebaseapp.com',
+    databaseURL: 'https://druk-resale-default-rtdb.firebaseio.com',
+    projectId: 'druk-resale',
+    storageBucket: 'druk-resale.appspot.com',
+    messagingSenderId: '871658735527',
+    appId: '1:871658735527:web:9ecb571568835316f25882',
+    measurementId: 'G-K58NR0PFD8'
+  }
 };
 
 /*
