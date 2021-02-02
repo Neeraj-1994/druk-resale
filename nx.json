@@ -1,14 +1,9 @@
 {
   "npmScope": "druk-resale",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -19,26 +14,19 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "accessToken": "OWMzNTZlNzktNjZiYi00YjY2LWFjYWMtOWNjMzRjNmMzNWFmfHJlYWQtd3JpdGU=",
-        "cacheableOperations": [
-          "build",
-          "test",
-          "lint",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
     }
   },
   "projects": {
-    "druk-resale": {
-      "tags": []
-    },
-    "druk-resale-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "druk-resale"
-      ]
-    }
+    "druk-resale": { "tags": [] },
+    "druk-resale-e2e": { "tags": [], "implicitDependencies": ["druk-resale"] },
+    "feature-home": { "tags": [] },
+    "feature-post-product": { "tags": [] },
+    "feature-product-order": { "tags": [] },
+    "feature-auth": { "tags": [] },
+    "shared-components": { "tags": [] }
   }
 }
