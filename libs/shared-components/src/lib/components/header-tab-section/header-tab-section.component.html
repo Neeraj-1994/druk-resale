@@ -1,1 +1,39 @@
-<p>header-tab-section works!</p>
+<div fxLayout='row' fxLayoutAlign='start' class="header-tab">
+
+  <div fxFlex.gt-md='5' fxFlex.lt-md='0'></div>
+
+  <div fxFlex.gt-md='90' fxFlex.lt-md='100' fxLayout="column">
+
+    <div fxLayout="row" fxFlex="40">
+
+      <div fxFlex.gt-md="25" fxFlex.lt-md='30' fxLayoutAlign="start center">
+        <img src='../../../../../assets/images/Title.png' alt='logo' (click)="routeRedirection('/home')" class='logo'>
+      </div>
+
+      <div fxFlex.gt-md="50" fxFlex.lt-md='40'></div>
+
+      <div fxFlex.gt-md="25" fxFlex.lt-md='30' fxLayoutAlign="end center">
+        <button mat-raised-button class="post-ad-button" *ngIf='!hiddenUrls.includes(route.url)' (click)="routeRedirection('/post/ads')">Post an ad</button>
+      </div>
+
+    </div>
+
+    <div fxFlex='60' fxLayout='column' fxLayoutAlign='center'>
+
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <ng-container *ngIf='!hiddenUrls.includes(route.url)'>
+          <input class="category-input" placeholder='All Categories'>
+          <input class="search-input" placeholder="I am looking for....">
+          <button class="search-button">
+            <mat-icon class='search-icon'>search</mat-icon>
+          </button>
+        </ng-container>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div fxFlex.gt-md='5' fxFlex.lt-md='0'></div>
+
+</div>

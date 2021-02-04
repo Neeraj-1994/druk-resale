@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+<div fxLayout='column' fxLayoutAlign='start'>
+  <druk-resale-header></druk-resale-header>
+
+  <div fxLayout='row' fxLayoutAlign='start'>
+    <div fxFlex='5'></div>
+
+    <div fxFlex='90'>
+      <router-outlet></router-outlet>
+    </div>
+
+    <div fxFlex='5'></div>
+  </div>
+
+  <druk-resale-footer></druk-resale-footer>
+</div>
