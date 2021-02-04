@@ -20,7 +20,9 @@
               "apps/druk-resale/src/favicon.ico",
               "apps/druk-resale/src/assets"
             ],
-            "styles": ["apps/druk-resale/src/styles.scss"],
+            "styles": [
+              "apps/druk-resale/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -81,7 +83,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/druk-resale"],
+          "outputs": [
+            "coverage/apps/druk-resale"
+          ],
           "options": {
             "jestConfig": "apps/druk-resale/jest.config.js",
             "passWithNoTests": true
@@ -110,7 +114,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/druk-resale-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/druk-resale-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -132,7 +138,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/feature/home"],
+          "outputs": [
+            "coverage/libs/feature/home"
+          ],
           "options": {
             "jestConfig": "libs/feature/home/jest.config.js",
             "passWithNoTests": true
@@ -157,7 +165,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/feature/post-product"],
+          "outputs": [
+            "coverage/libs/feature/post-product"
+          ],
           "options": {
             "jestConfig": "libs/feature/post-product/jest.config.js",
             "passWithNoTests": true
@@ -182,7 +192,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/feature/product-order"],
+          "outputs": [
+            "coverage/libs/feature/product-order"
+          ],
           "options": {
             "jestConfig": "libs/feature/product-order/jest.config.js",
             "passWithNoTests": true
@@ -207,7 +219,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/feature/auth"],
+          "outputs": [
+            "coverage/libs/feature/auth"
+          ],
           "options": {
             "jestConfig": "libs/feature/auth/jest.config.js",
             "passWithNoTests": true
@@ -232,7 +246,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared-components"],
+          "outputs": [
+            "coverage/libs/shared-components"
+          ],
           "options": {
             "jestConfig": "libs/shared-components/jest.config.js",
             "passWithNoTests": true
@@ -242,7 +258,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
   },
   "schematics": {
     "@nrwl/angular": {

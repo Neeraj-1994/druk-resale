@@ -1,1 +1,14 @@
-<p>footer-links-section works!</p>
+<div fxLayout="row" class="footer-link-container">
+  <div fxFlex="5"></div>
+
+  <div fxFlex="90" class="link-container" fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxLayout="column" fxLayoutAlign="center space-around" class="link-list" *ngFor="let groupLinks of footerList">
+      <p class="group-title">{{groupLinks.label}}</p>
+      <p class="link-label" *ngFor="let content of groupLinks.links">
+        {{content.label}}
+      </p>
+    </div>
+  </div>
+
+  <div fxFlex="5"></div>
+</div>
