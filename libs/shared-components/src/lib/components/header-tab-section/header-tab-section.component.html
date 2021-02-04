@@ -1,4 +1,4 @@
-<div fxLayout='row' fxLayoutAlign='start' class="header-tab">
+<div fxLayout='row' fxLayoutAlign='start' class="header-tab" [ngClass]='{"header-auth-tab": hiddenUrls.includes(route.url)}'>
 
   <div fxFlex.gt-md='5' fxFlex.lt-md='0'></div>
 
@@ -7,7 +7,7 @@
     <div fxLayout="row" fxFlex="40">
 
       <div fxFlex.gt-md="25" fxFlex.lt-md='30' fxLayoutAlign="start center">
-        <img src='../../../../../assets/images/Title.png' alt='logo' (click)="routeRedirection('/home')" class='logo'>
+        <img src='../../../../../assets/images/Title.png' alt='logo' (click)="routeRedirection('/home')" class='logo' [ngClass]='{"logo-tab": hiddenUrls.includes(route.url)}'>
       </div>
 
       <div fxFlex.gt-md="50" fxFlex.lt-md='40'></div>

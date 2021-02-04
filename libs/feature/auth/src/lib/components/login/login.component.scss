@@ -1,0 +1,63 @@
+@import "apps/druk-resale/src/assets/styles/font";
+
+.social-sign-in {
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+
+.fa {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.facebook {
+  background: #3B5998;
+}
+
+.google {
+  background: #bb0000;
+}
+
+.input-field {
+  margin: 5px 10px;
+}
+
+.custom-auth-button {
+  width: 80px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.button-login {
+  background: #fcbe03;
+  color: #000000;
+}
+
+.button-register {
+  background: #5e3131;
+  color: #ffffff;
+}
+
+.login-card {
+  width: 500px;
+  height: auto;
+  border: 1px solid dimgrey;
+  margin: 10px 0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
+}
+
+.log-head {
+  margin: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.action-text {
+  margin: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -3,10 +3,14 @@
 
   <div fxFlex="90" class="link-container" fxLayout="row" fxLayoutAlign="space-between center">
     <div fxLayout="column" fxLayoutAlign="center space-around" class="link-list" *ngFor="let groupLinks of footerList">
+      <div fxLayout='column' fxLayoutAlign='center center'>
       <p class="group-title">{{groupLinks.label}}</p>
+      </div>
+      <div fxLayout='column' fxLayoutAlign='center center'>
       <p class="link-label" *ngFor="let content of groupLinks.links">
         {{content.label}}
       </p>
+      </div>
     </div>
   </div>
 
