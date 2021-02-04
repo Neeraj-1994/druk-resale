@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from './core';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedComponentsModule } from '@druk-resale/shared-components';
+import { FlexModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RouterModule,
     CoreModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedComponentsModule,
+    FlexModule
   ],
   providers: [],
   bootstrap: [AppComponent],

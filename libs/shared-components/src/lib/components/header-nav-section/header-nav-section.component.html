@@ -1,1 +1,35 @@
-<p>header-nav-section works!</p>
+<div fxLayout="row" class="header-nav">
+
+  <div fxFlex="5"></div>
+
+  <!-- header home redirection route -->
+  <div fxFlex="3" class="home-nav" [ngClass]="{'home-nav': !hiddenUrls.includes(route.url)}" fxLayoutAlign="start center">
+    <mat-icon class="home-item" (click)="linkRedirection('/home')">home_outline</mat-icon>
+  </div>
+
+  <!-- header category redirection route -->
+  <div fxFlex="70" class="category-nav" fxLayoutAlign="start center">
+    <ng-container *ngFor="let category of categoryList; let i = index">
+      <span class="category-links montserrat" *ngIf='!hiddenUrls.includes(route.url)'>{{category.label}}</span>
+    </ng-container>
+  </div>
+
+  <!-- header auth redirection route -->
+  <div fxFlex="17" class="auth-nav" fxLayoutAlign="end center">
+    <!-- Login and Register -->
+    <ng-container *ngFor="let authItem of authLinks; let i = index">
+      <span class="auth-items montserrat" *ngIf='!hiddenUrls.includes(route.url)' (click)="linkRedirection(authItem.route)">{{authItem.label}}</span>
+    </ng-container>
+
+    <span class="auth-items info-icon" *ngIf='!hiddenUrls.includes(route.url)'>
+      <mat-icon [matMenuTriggerFor]='belowMenu'>info_outline</mat-icon>
+
+      <mat-menu #belowMenu="matMenu" yPosition="below" xPosition='before'>
+        <button mat-menu-item>Log Out</button>
+      </mat-menu>
+
+    </span>
+  </div>
+
+  <div fxFlex="5"></div>
+</div>
