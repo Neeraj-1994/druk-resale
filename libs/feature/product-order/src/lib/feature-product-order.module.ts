@@ -4,11 +4,13 @@ import { OrderBaseComponent } from './components/order-base/order-base.component
 import { ProductListingComponent } from './components/product-listing/product-listing.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { FlexModule } from '@angular/flex-layout';
+import { SharedComponentsModule } from '@druk-resale/shared-components';
 
 @NgModule({
   imports: [
     CommonModule,
-    FlexModule
+    FlexModule,
+    SharedComponentsModule
   ],
   declarations: [
     OrderBaseComponent,

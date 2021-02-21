@@ -1,0 +1,17 @@
+@import "apps/druk-resale/src/assets/styles/common";
+@import "apps/druk-resale/src/assets/styles/mixins";
+
+.filter-section {
+  .background {
+    width: 200px;
+    height: 70vh;
+    padding: 8px;
+    background-image: linear-gradient(to bottom right, #ccf2f4, #a4ebf3);
+
+    .filtered {
+      //margin: 8px 4px 0px;
+      //padding: 22px 12px;
+      border: 1px dashed rgba(0, 0, 0, .4);
+    }
+  }
+}

@@ -47,7 +47,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderNavSectionComponent,
     FooterLinksSectionComponent,
     FooterSocialSectionComponent,
-    ProductListCardComponent
+    ProductListCardComponent,
+    FilterSectionComponent
   ]
 })
 export class SharedComponentsModule {}

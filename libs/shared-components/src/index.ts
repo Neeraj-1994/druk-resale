@@ -8,3 +8,5 @@ export {SharedFacadeService} from './lib/services/shared-facade.service';
 export {ProductListCardComponent} from './lib/components/product-list-card/product-list-card.component';
 export {ProductList} from './lib/models/product-list.model';
 export {DrukReSaleStoreState} from './lib/services/shared-state.service';
+export {FilterSectionComponent} from './lib/components/filter-section/filter-section.component';
+

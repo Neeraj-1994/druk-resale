@@ -10,7 +10,7 @@
   <!-- header category redirection route -->
   <div fxFlex="70" class="category-nav" fxLayoutAlign="start center">
     <ng-container *ngFor="let category of categoryList; let i = index">
-      <span class="category-links montserrat" *ngIf='!hiddenUrls.includes(route.url)'>{{category.label}}</span>
+      <span class="category-links montserrat" *ngIf='!hiddenUrls.includes(route.url)' (click)='linkRedirection("/product/list")'>{{category.label}}</span>
     </ng-container>
   </div>
 

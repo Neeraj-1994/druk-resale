@@ -23,3 +23,24 @@
 .font-secondary {
   font-family: 'Lato', sans-serif;
 }
+
+.full-width {
+  width: 100% !important;
+}
+
+.black-40 {
+  color: rgba(0, 0, 0, .4);
+}
+
+.black-80 {
+  color: rgba(0, 0, 0, .8);
+}
+
+.dashed-underline {
+  -moz-text-decoration-line: underline;
+  text-decoration-line: underline;
+  -moz-text-decoration-color: rgba(0, 0, 0, .4);
+  text-decoration-color: rgba(0, 0, 0, .4);
+  -moz-text-decoration-style: dashed;
+  text-decoration-style: dashed;
+}
