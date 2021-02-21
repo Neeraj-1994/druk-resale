@@ -9,6 +9,11 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedComponentsModule } from '@druk-resale/shared-components';
 import { FlexModule } from '@angular/flex-layout';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '@druk-resale/env/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,11 @@ import { FlexModule } from '@angular/flex-layout';
     SharedModule,
     BrowserAnimationsModule,
     SharedComponentsModule,
-    FlexModule
+    FlexModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent],

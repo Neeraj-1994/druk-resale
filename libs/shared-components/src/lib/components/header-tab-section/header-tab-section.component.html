@@ -1,4 +1,4 @@
-<div fxLayout='row' fxLayoutAlign='start' class="header-tab">
+<div fxLayout='row' fxLayoutAlign='start' class="header-tab bg-primary" [ngClass]='{"header-auth-tab": hiddenUrls.includes(route.url)}'>
 
   <div fxFlex.gt-md='5' fxFlex.lt-md='0'></div>
 
@@ -7,13 +7,13 @@
     <div fxLayout="row" fxFlex="40">
 
       <div fxFlex.gt-md="25" fxFlex.lt-md='30' fxLayoutAlign="start center">
-        <img src='../../../../../assets/images/Title.png' alt='logo' (click)="routeRedirection('/home')" class='logo'>
+        <img src='../../../../../assets/images/Site_Logo (5).png' alt='logo' (click)="routeRedirection('/home')" class='logo' [ngClass]='{"logo-tab": hiddenUrls.includes(route.url)}'>
       </div>
 
       <div fxFlex.gt-md="50" fxFlex.lt-md='40'></div>
 
       <div fxFlex.gt-md="25" fxFlex.lt-md='30' fxLayoutAlign="end center">
-        <button mat-raised-button class="post-ad-button" *ngIf='!hiddenUrls.includes(route.url)' (click)="routeRedirection('/post/ads')">Post an ad</button>
+        <button mat-raised-button class="post-ad-button btn-primary font-primary" *ngIf='!hiddenUrls.includes(route.url)' (click)="routeRedirection('/post/ads')">Post an ad</button>
       </div>
 
     </div>
@@ -24,7 +24,7 @@
         <ng-container *ngIf='!hiddenUrls.includes(route.url)'>
           <input class="category-input" placeholder='All Categories'>
           <input class="search-input" placeholder="I am looking for....">
-          <button class="search-button">
+          <button class="search-button btn-primary">
             <mat-icon class='search-icon'>search</mat-icon>
           </button>
         </ng-container>
