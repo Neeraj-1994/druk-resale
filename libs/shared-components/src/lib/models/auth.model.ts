@@ -6,8 +6,8 @@ export class User {
   phone: string;
   password: string;
   confirm_password: string;
-  gender: string;
-  birth_date: Date;
+  gender?: string;
+  birth_date?: Date;
   address: Address;
 
   constructor() {

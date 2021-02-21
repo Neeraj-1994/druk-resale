@@ -1,14 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'po-order-base',
   template: ``
 })
-export class OrderBaseComponent implements OnInit {
+export class OrderBaseComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
