@@ -16,6 +16,8 @@ import { FlexModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -23,7 +25,8 @@ import { MatMenuModule } from '@angular/material/menu';
     FlexModule,
     MatButtonModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSnackBarModule
   ],
   declarations: [
     AdSectionComponent,
@@ -43,7 +46,8 @@ import { MatMenuModule } from '@angular/material/menu';
     HeaderTabSectionComponent,
     HeaderNavSectionComponent,
     FooterLinksSectionComponent,
-    FooterSocialSectionComponent
+    FooterSocialSectionComponent,
+    ProductListCardComponent
   ]
 })
 export class SharedComponentsModule {}

@@ -1,1 +1,21 @@
-<p>product-list-card works!</p>
+<div class="product-card" fxLayout="column">
+  <div class="image-content" fxFlex="70" fxLayoutAlign="center">
+    <div class="product-image" fxLayout="row" fxLayoutAlign="space-around stretch">
+      <img fxFlex="calc(100% - 40px)" [src]="product.images[0]" alt="product_image_{{index}}">
+    </div>
+  </div>
+  <div class="text-content" fxFlex="100" fxLayout="column" fxLayoutAlign="start start">
+    <p class="main-text open-sans">{{product.name}}</p>
+    <div fxLayout="row" fxLayoutAlign="space-between" fxFlex="100">
+      <p class="sub-text open-sans">{{product.condition | titlecase}}</p>
+      <mat-icon>favorite_border</mat-icon>
+    </div>
+  </div>
+  <div class="price-tag" fxLayout="row" fxLayoutAlign="end center">
+    <p class="price-amount">
+          <span>
+            <sup class="price-code">Nu</sup>{{product.price | number:'1.0':'en-US'}}
+          </span>
+    </p>
+  </div>
+</div>

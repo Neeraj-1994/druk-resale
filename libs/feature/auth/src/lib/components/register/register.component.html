@@ -1,1 +1,68 @@
-<p>register works!</p>
+<div fxLayout='row' fxLayoutAlign='center start'>
+  <div fxLayout='column' fxLayoutAlign='center center' class='register-card'>
+
+    <header class='montserrat log-head'>Register</header>
+
+    <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
+      <div class='input-field'>
+        <mat-form-field appearance='outline'>
+          <mat-label>First Name</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+
+      <div class='input-field'>
+        <mat-form-field appearance='outline'>
+          <mat-label>Last Name</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
+      <div class='input-field'>
+        <mat-form-field appearance='outline'>
+          <mat-label>Email</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+
+      <div class='input-field'>
+        <mat-form-field appearance='outline'>
+          <mat-label>Phone Number</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
+      <div class='input-field'>
+      <mat-form-field appearance='outline'>
+        <mat-label>Password</mat-label>
+        <input matInput type='password'>
+      </mat-form-field>
+      </div>
+
+      <div class='input-field'>
+        <mat-form-field appearance='outline'>
+          <mat-label>Confirm Password</mat-label>
+          <input matInput type='password'>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div fxLayout='column' fxLayoutAlign='space-around center'>
+      <button mat-raised-button class='custom-auth-button button-login'>
+        <span>Register</span>
+      </button>
+
+      <button mat-raised-button class='custom-auth-button button-register' (click)='routeRedirection("/user/login")'>
+        <span>Sign In</span>
+      </button>
+
+      <p class='action-text'>
+        <span (click)='routeRedirection("/user/forgot-password")'>Forgot password</span>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 @import "apps/druk-resale/src/assets/styles/font";
+@import "apps/druk-resale/src/assets/styles/common";
 
 .header-nav {
-  background-color: #452a2a;
   color: #FFFFFF;
   width: 100%;
   height: 30px;
@@ -14,6 +14,7 @@
 }
 
 .home-item {
+  font-size: 20px;
   cursor: pointer;
 }
 

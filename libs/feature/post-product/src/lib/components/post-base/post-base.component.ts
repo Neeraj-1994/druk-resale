@@ -1,14 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'pp-post-base',
   template: ``
 })
-export class PostBaseComponent implements OnInit {
+export class PostBaseComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
