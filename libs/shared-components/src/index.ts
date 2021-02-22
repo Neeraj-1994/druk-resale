@@ -3,3 +3,4 @@ export {HeaderTabSectionComponent} from './lib/components/header-tab-section/hea
 export {HeaderNavSectionComponent} from './lib/components/header-nav-section/header-nav-section.component';
 export {FooterLinksSectionComponent} from './lib/components/footer-links-section/footer-links-section.component';
 export {FooterSocialSectionComponent} from './lib/components/footer-social-section/footer-social-section.component';
+export {ProductListCardComponent} from './lib/components/product-list-card/product-list-card.component';

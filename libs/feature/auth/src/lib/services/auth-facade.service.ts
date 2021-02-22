@@ -4,7 +4,6 @@ import { AuthApiService } from './auth-api.service';
 import { AuthBlService } from './auth-bl.service';
 import { Observable } from 'rxjs';
 import { User } from '../models/auth.model';
-import { ProductList } from '../../../../../shared-components/src/lib/models/product-list.model';
 
 @Injectable({
   providedIn: 'root'

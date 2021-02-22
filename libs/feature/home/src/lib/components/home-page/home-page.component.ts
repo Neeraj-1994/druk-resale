@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedFacadeService } from '@druk-resale/shared-components';
-import { ProductList } from '@druk-resale/shared-components';
+import { ProductList } from '../../models/product-list.model';
 import { Observable } from 'rxjs';
-import { DrukReSaleStoreState } from '@druk-resale/shared-components';
+import { HomeStoreState } from '../../services/home-state.service';
 import { Router } from '@angular/router';
+import { HomeFacadeService } from '../../services/home-facade.service';
 
 @Component({
   selector: 'home-home-page',
@@ -12,26 +12,26 @@ import { Router } from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
-  state$: Observable<DrukReSaleStoreState>;
+  state$: Observable<HomeStoreState>;
   products: ProductList[];
-  constructor(private sharedFacadeService: SharedFacadeService, private route: Router) {
-    this.sharedFacadeService.initialize();
+  constructor(private homeFacadeService: HomeFacadeService, private route: Router) {
+    this.homeFacadeService.initialize();
   }
 
   ngOnInit(): void {
     this.getProductsList();
-    this.state$ = this.sharedFacadeService.stateChange();
+    this.state$ = this.homeFacadeService.stateChange();
   }
 
   getProductsList(): void {
-    this.sharedFacadeService.getProducts().subscribe(response => {
+    this.homeFacadeService.getProducts().subscribe(response => {
       this.products = response;
-      this.sharedFacadeService.updateProductLists(response);
+      this.homeFacadeService.updateProductLists(response);
     })
   }
 
   goToDetails(product: ProductList): void {
-    this.sharedFacadeService.updateProductDetails(product);
+    this.homeFacadeService.updateProductDetails(product);
     this.route.navigate(['/product/details']).then();
   }
 }

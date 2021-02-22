@@ -43,7 +43,8 @@ import { MatMenuModule } from '@angular/material/menu';
     HeaderTabSectionComponent,
     HeaderNavSectionComponent,
     FooterLinksSectionComponent,
-    FooterSocialSectionComponent
+    FooterSocialSectionComponent,
+    ProductListCardComponent
   ]
 })
 export class SharedComponentsModule {}

@@ -3,10 +3,8 @@ import { ObservableStore } from '@codewithdan/observable-store';
 import { ProductList } from '../models/product-list.model';
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
-import { User } from '@druk-resale/shared-components';
 
-export interface DrukReSaleStoreState {
-  userState?: User;
+export interface HomeStoreState {
   productListState: ProductList[];
   productDetailedState: ProductList;
 }
@@ -14,7 +12,7 @@ export interface DrukReSaleStoreState {
 @Injectable({
   providedIn: 'root'
 })
-export class SharedStateService extends ObservableStore<DrukReSaleStoreState>{
+export class HomeStateService extends ObservableStore<HomeStoreState> {
 
   private productListings: ProductList[];
   private productDetails: ProductList;
