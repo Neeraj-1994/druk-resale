@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SharedFacadeService } from './shared-facade.service';
+import { HomeStateService } from './home-state.service';
 
-describe('SharedFacadeService', () => {
-  let service: SharedFacadeService;
+describe('HomeStateService', () => {
+  let service: HomeStateService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SharedFacadeService);
+    service = TestBed.inject(HomeStateService);
   });
 
   it('should be created', () => {

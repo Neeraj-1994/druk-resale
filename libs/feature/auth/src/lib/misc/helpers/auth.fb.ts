@@ -5,7 +5,7 @@ import {
   phoneNumberValidator,
   validateSpace
 } from '../validators/auth.validator';
-import { ForgotPassword, UserLogin, User } from '@druk-resale/shared-components';
+import { ForgotPassword, UserLogin, User } from '../../models/auth.model';
 
 @Injectable()
 export class AuthFormBuilder {

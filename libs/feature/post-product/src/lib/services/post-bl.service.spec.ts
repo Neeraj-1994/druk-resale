@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SharedBlService } from './shared-bl.service';
+import { PostBlService } from './post-bl.service';
 
-describe('SharedBlService', () => {
-  let service: SharedBlService;
+describe('PostBlService', () => {
+  let service: PostBlService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SharedBlService);
+    service = TestBed.inject(PostBlService);
   });
 
   it('should be created', () => {
