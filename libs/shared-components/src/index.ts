@@ -4,3 +4,5 @@ export {HeaderNavSectionComponent} from './lib/components/header-nav-section/hea
 export {FooterLinksSectionComponent} from './lib/components/footer-links-section/footer-links-section.component';
 export {FooterSocialSectionComponent} from './lib/components/footer-social-section/footer-social-section.component';
 export {ProductListCardComponent} from './lib/components/product-list-card/product-list-card.component';
+export {User, UserLogin, Address, ForgotPassword} from './lib/models/auth.model';
+export {ProductList} from './lib/models/product-list.model';
