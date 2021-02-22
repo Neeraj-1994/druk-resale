@@ -16,8 +16,6 @@ import { FlexModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -25,8 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FlexModule,
     MatButtonModule,
     MatIconModule,
-    MatMenuModule,
-    MatSnackBarModule
+    MatMenuModule
   ],
   declarations: [
     AdSectionComponent,

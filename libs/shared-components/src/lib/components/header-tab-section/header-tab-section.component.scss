@@ -1,13 +1,7 @@
-@import "apps/druk-resale/src/assets/styles/common";
-@import "apps/druk-resale/src/assets/styles/font";
-
 .header-tab {
+  background-color: #5e3131;
   width: 100%;
   height: 200px;
-}
-
-.header-auth-tab {
-  height: 150px;
 }
 
 .logo-section {
@@ -20,9 +14,9 @@
 }
 
 .post-ad-button {
-  padding: 6px 25px;
-  font-size: 14px;
-  font-weight: bold;
+  background-color: #fcbe03;
+  color: #FFFFFF;
+  padding: 10px 10px;
 }
 
 .category-input {
@@ -44,8 +38,10 @@
 .search-button {
   width: 65px;
   height: 65px;
+  background-color: #fcbe03;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
+  color: #FFFFFF;
 }
 
 .search-icon {
@@ -58,8 +54,4 @@
   height: 70px;
   margin-top: 10px;
   cursor: pointer;
-}
-
-.logo-tab {
-  margin-top: 30px;
 }

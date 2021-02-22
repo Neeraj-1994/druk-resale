@@ -1,10 +1,10 @@
-<div fxLayout="row" class="header-nav bg-secondary">
+<div fxLayout="row" class="header-nav">
 
   <div fxFlex="5"></div>
 
   <!-- header home redirection route -->
   <div fxFlex="3" class="home-nav" [ngClass]="{'home-nav': !hiddenUrls.includes(route.url)}" fxLayoutAlign="start center">
-    <i class="home-item fa fa-home" (click)="linkRedirection('/home')"></i>
+    <mat-icon class="home-item" (click)="linkRedirection('/home')">home_outline</mat-icon>
   </div>
 
   <!-- header category redirection route -->
