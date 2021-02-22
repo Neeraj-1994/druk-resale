@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthLink, Category } from '../../models/header.model';
+import { authNav, category } from '../../constants/header.constant';
 
 @Component({
   selector: 'sc-header-tab-section',
@@ -8,12 +10,16 @@ import { Router } from '@angular/router';
 })
 export class HeaderTabSectionComponent implements OnInit {
 
+  categoryList: Category[];
+  authLinks: AuthLink[];
   hiddenUrls: string[];
 
   constructor(public route: Router) { }
 
   ngOnInit(): void {
-    this.hiddenUrls = ['/user/register', '/user/login', '/user/forgot-password', '/post/ads'];
+    this.categoryList = category;
+    this.authLinks = authNav;
+    this.hiddenUrls = ['/user/register', '/user/login', '/user/forgot-password'];
   }
 
   routeRedirection(link: string): void {

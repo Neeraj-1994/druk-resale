@@ -1,13 +1,13 @@
-<div fxLayout="row" class="footer-link-container bg-primary">
+<div fxLayout="row" class="footer-link-container bg-primary primary-border-top">
   <div fxFlex="5"></div>
 
   <div fxFlex="90" class="link-container" fxLayout="row" fxLayoutAlign="space-between center">
     <div fxLayout="column" fxLayoutAlign="center space-around" class="link-list" *ngFor="let groupLinks of footerList">
-      <div fxLayout='column' fxLayoutAlign='center center'>
-      <p class="group-title">{{groupLinks.label}}</p>
+      <div fxLayout='column' fxLayoutAlign='center start'>
+      <p class="group-title font-primary">{{groupLinks.label}}</p>
       </div>
-      <div fxLayout='column' fxLayoutAlign='center center'>
-      <p class="link-label" *ngFor="let content of groupLinks.links">
+      <div fxLayout='column' fxLayoutAlign='center start'>
+      <p class="link-label font-secondary" *ngFor="let content of groupLinks.links">
         {{content.label}}
       </p>
       </div>
