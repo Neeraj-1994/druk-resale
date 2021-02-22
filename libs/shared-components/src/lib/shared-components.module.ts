@@ -19,6 +19,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { MatSliderModule } from '@angular/material/slider';
     MatIconModule,
     MatMenuModule,
     MatSnackBarModule,
-    MatSliderModule
+    MatSliderModule,
+    MatExpansionModule
   ],
   declarations: [
     AdSectionComponent,

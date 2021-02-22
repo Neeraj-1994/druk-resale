@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Options } from '@angular-slider/ngx-slider';
+import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'sc-filter-section',
   templateUrl: './filter-section.component.html',
@@ -7,13 +6,8 @@ import { Options } from '@angular-slider/ngx-slider';
 })
 export class FilterSectionComponent implements OnInit {
 
-  value= 40;
-  highValue= 60;
-  options: Options = {
-    floor: 0,
-    ceil: 100
-  };
-
+  @Input()
+  expanded: true;
   filteredBrands=[
     {brandName:'Adidas Original'},
     {brandName:'Mango Sport'},
