@@ -1,37 +1,17 @@
-<div fxLayout='row' fxLayoutAlign='start' class="header-tab bg-primary" [ngClass]='{"header-auth-tab": hiddenUrls.includes(route.url)}'>
+<div fxLayout='row' fxLayoutAlign='start' class='header-tab bg-primary secondary-border'>
 
   <div fxFlex.gt-md='5' fxFlex.lt-md='0'></div>
 
-  <div fxFlex.gt-md='90' fxFlex.lt-md='100' fxLayout="column">
-
-    <div fxLayout="row" fxFlex="40">
-
-      <div fxFlex.gt-md="25" fxFlex.lt-md='30' fxLayoutAlign="start center">
-        <img src='../../../../../assets/images/Site_Logo (5).png' alt='logo' (click)="routeRedirection('/home')" class='logo' [ngClass]='{"logo-tab": hiddenUrls.includes(route.url)}'>
-      </div>
-
-      <div fxFlex.gt-md="50" fxFlex.lt-md='40'></div>
-
-      <div fxFlex.gt-md="25" fxFlex.lt-md='30' fxLayoutAlign="end center">
-        <button mat-raised-button class="post-ad-button btn-primary font-primary" *ngIf='!hiddenUrls.includes(route.url)' (click)="routeRedirection('/post/ads')">Post an ad</button>
-      </div>
-
+  <div fxFlex.gt-md='90' fxFlex.lt-md='100' fxLayout='row'>
+    <div fxFlex='5' class='home-nav' fxLayoutAlign='start center'>
+      <i class='home-item fa fa-home' (click)="routeRedirection('/home')"></i>
     </div>
 
-    <div fxFlex='60' fxLayout='column' fxLayoutAlign='center'>
-
-      <div fxLayout="row" fxLayoutAlign="center center">
-        <ng-container *ngIf='!hiddenUrls.includes(route.url)'>
-          <input class="category-input" placeholder='All Categories'>
-          <input class="search-input" placeholder="I am looking for....">
-          <button class="search-button btn-primary">
-            <mat-icon class='search-icon'>search</mat-icon>
-          </button>
-        </ng-container>
-      </div>
-
+    <div fxFlex='95' fxLayoutAlign='' class='category-nav'>
+      <ng-container *ngFor='let category of categoryList'>
+      <a class='category-links font-secondary'>{{category.label}}</a>
+      </ng-container>
     </div>
-
   </div>
 
   <div fxFlex.gt-md='5' fxFlex.lt-md='0'></div>
