@@ -1,0 +1,18 @@
+<div class="view-container" fxLayout="row" *ngIf='state$ | async as state'>
+
+  <div class="product-details" fxLayout="row" fxLayoutAlign="center center">
+    <div fxLayout="column" class="product-description" fxFlex="60">
+      <div class="image-gallery">
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="start center">
+        <p>{{productDetails.name}}</p>
+      </div>
+    </div>
+
+    <div fxLayout="column" class="seller-info" fxFlex="40">
+
+    </div>
+  </div>
+</div>
+
