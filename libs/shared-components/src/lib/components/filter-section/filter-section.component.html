@@ -2,11 +2,30 @@
   <div class='background'>
     <div class='filtered m-x-8 m-y-12 p-12'>
       <p class='black-40 dashed-underline'>reset all Filters</p>
-      <p class='black-80'>Brands:</p>
-
+      <p class='black-80 fs-18'>Brands:</p>
+      <ng-container *ngFor='let item of filteredBrands'>
+        <p class='m-y-8'>
+          <mat-icon class='s-18 v-bottom'>clear</mat-icon>
+          <span class='black-60 m-l-12 dashed-underline'>{{item.brandName}}</span>
+        </p>
+      </ng-container>
     </div>
+    <div class='p-x-20'>
+      <p class=' black-80 fs-18'>Price:</p>
+      <div class='full-width'>
+        <mat-slider
+          thumbLabel
+          [displayWith]="formatLabel"
+          tickInterval="100"
+          min="1"
+          max="100000"
+        class='full-width'>
+        </mat-slider>
 
+        <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ng5-slider>
+      </div>
+    </div>
   </div>
 </div>
 
-<!--p-12 my-8-->
+
