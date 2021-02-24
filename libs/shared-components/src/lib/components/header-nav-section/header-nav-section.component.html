@@ -1,4 +1,4 @@
-<div fxLayout="row" class="header-nav bg-secondary primary-border">
+<div fxLayout="row" class="header-nav bg-secondary primary-border font-sm">
   <div fxFlex="5"></div>
 
   <div fxFlex='90' fxLayout='row' fxLayoutAlign='space-between center'>
@@ -10,7 +10,7 @@
 
     <div fxFlex='55' fxLayoutAlign='center center'>
       <mat-form-field appearance='outline' class='search-bar'>
-        <input matInput class='text-center header-input' placeholder="I'm looking for....">
+        <input matInput class='text-center header-input font-secondary' placeholder="I'm looking for....">
         <mat-icon matSuffix class='text-center'>search</mat-icon>
       </mat-form-field>
     </div>
@@ -42,7 +42,7 @@
       <ng-container *ngIf='![null, undefined].includes(authFacadeService.getUserState().uid)'>
 
           <span [matMenuTriggerFor]='belowMenu'
-                class='user-items font-secondary user-name-font'>Welcome {{authFacadeService.getUserState().displayName}}!</span>
+                class='user-items font-secondary font-xs'>Welcome {{authFacadeService.getUserState().displayName}}!</span>
 
           <span [matMenuTriggerFor]='belowMenu'>
             <ng-container *ngIf='![null, undefined].includes(authFacadeService.getUserState().photoUrl)'>
@@ -55,7 +55,7 @@
           </span>
 
           <mat-menu #belowMenu="matMenu" yPosition="below" xPosition='before'>
-            <button mat-menu-item (click)='logout()'>Log Out</button>
+            <button mat-menu-item (click)='logout()' class='font-secondary font-sm'>Log Out</button>
           </mat-menu>
       </ng-container>
     </div>
