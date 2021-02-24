@@ -1,34 +1,6 @@
-@import "apps/druk-resale/src/assets/styles/font";
+@import "apps/druk-resale/src/assets/styles/utility";
 @import "apps/druk-resale/src/assets/styles/common";
-
-.social-sign-in {
-  width: 200px;
-  height: 50px;
-  margin: 10px;
-  border-radius: 5px;
-  color: #FFFFFF;
-}
-
-.fa {
-  margin-right: 20px;
-  font-size: 20px;
-}
-
-.fa-envelope-o {
-  margin-top: -5px;
-}
-
-.fa-key {
-  margin-top: -5px;
-}
-
-.facebook {
-  background: #3B5998;
-}
-
-.google {
-  background: #bb0000;
-}
+@import "apps/druk-resale/src/assets/styles/overwrite";
 
 .input-field {
   margin: 5px 10px;
@@ -39,16 +11,6 @@
   height: 40px;
   margin: 10px;
   border-radius: 5px;
-}
-
-.button-login {
-  background: #fcbe03;
-  color: #000000;
-}
-
-.button-register {
-  background: #5e3131;
-  color: #ffffff;
 }
 
 .register-card {
@@ -62,8 +24,6 @@
 
 .log-head {
   margin: 20px;
-  font-size: 30px;
-  font-weight: bold;
 }
 
 .action-text {

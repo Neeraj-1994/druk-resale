@@ -4,7 +4,7 @@
   <div fxFlex='90' fxLayout='row' fxLayoutAlign='space-between center'>
     <!-- header logo route -->
     <div fxFlex="20" fxLayoutAlign="start center">
-      <img src='../../../../../assets/images/Site_Logo (1).png' alt='logo' (click)="linkRedirection('/home')"
+      <img src='../../../../../assets/images/Site Title.png' alt='logo' (click)="linkRedirection('/home')"
            class='logo'>
     </div>
 
@@ -42,7 +42,7 @@
       <ng-container *ngIf='![null, undefined].includes(authFacadeService.getUserState().uid)'>
 
           <span [matMenuTriggerFor]='belowMenu'
-                class='auth-items font-secondary'>{{authFacadeService.getUserState().displayName}}</span>
+                class='user-items font-secondary user-name-font'>Welcome {{authFacadeService.getUserState().displayName}}!</span>
 
           <span [matMenuTriggerFor]='belowMenu'>
             <ng-container *ngIf='![null, undefined].includes(authFacadeService.getUserState().photoUrl)'>
@@ -50,7 +50,7 @@
             </ng-container>
 
             <ng-container *ngIf='[null, undefined].includes(authFacadeService.getUserState().photoUrl)'>
-              <mat-icon class='auth-items info-icon'>account_circle</mat-icon>
+              <mat-icon class='user-items info-icon'>account_circle</mat-icon>
             </ng-container>
           </span>
 

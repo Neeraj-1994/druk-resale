@@ -1,0 +1,19 @@
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+  color: #D9415C !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: #02BD7E !important;
+}
+
+::ng-deep .mat-form-field-invalid .mat-input-element {
+  caret-color: #D9415C !important;
+}
+
+::ng-deep .mat-input-element {
+  caret-color: #02BD7E !important;
+}
+
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: #D9415C !important;
+}

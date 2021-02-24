@@ -21,9 +21,6 @@ export class RegisterComponent extends AuthBaseComponent implements OnInit {
   }
 
   registerUser(user: User = this.form.value): void {
-    this.firstName.valid && this.lastName.valid ?
-      this.displayName.setValue(this.firstName.value + ' ' + this.lastName.value) :
-      [this.firstName, this.lastName].forEach(control => control.markAllAsTouched());
     this.form.valid ? this.authFacadeService.emailRegister(user) : this.form.markAllAsTouched();
   }
 
@@ -49,9 +46,5 @@ export class RegisterComponent extends AuthBaseComponent implements OnInit {
 
   get confirmPassword(): FormControl {
     return this.form.get('confirm_password') as FormControl;
-  }
-
-  get displayName(): FormControl {
-    return this.form.get('displayName') as FormControl;
   }
 }

@@ -35,7 +35,6 @@ export class AuthApiService {
   signInWithEmailAndPassword(userCred: UserLogin): void {
     this.fireAuth.signInWithEmailAndPassword(userCred.email, userCred.password).then(
       (response) => {
-        console.log(response);
         this.userData.photoUrl = response.user.photoURL;
         this.userData.displayName = response.user.displayName;
         this.userData.email = response.user.email;
@@ -62,7 +61,7 @@ export class AuthApiService {
         this.userData.photoUrl = response.user.photoURL;
         this.userData.email = response.user.email;
         this.userData.uid = response.user.uid;
-        response.user.updateProfile({displayName: user.displayName}).then();
+        response.user.updateProfile({displayName: (user.first_name + ' ' + user.last_name)}).then();
         this.userData.displayName = response.user.displayName;
       this._snackBar.open('Sign In to Continue', 'End now', {
         duration: 5000,

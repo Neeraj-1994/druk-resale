@@ -1,7 +1,7 @@
-<div fxLayout='row' fxLayoutAlign='start start'>
+<div fxLayout='row' fxLayoutAlign='start center'>
   <div fxLayout='column' fxLayoutAlign='center center' class='register-card'>
 
-    <header class='montserrat log-head'>Register</header>
+    <header class='alegreya-medium font-xxl log-head'>Register</header>
 
     <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
       <div class='input-field'>
@@ -76,11 +76,11 @@
     </div>
 
     <div fxLayout='column' fxLayoutAlign='space-around center'>
-      <button mat-raised-button class='custom-auth-button button-login' (click)='registerUser()'>
+      <button mat-raised-button class='custom-auth-button btn-primary' (click)='registerUser()'>
         <span>Register</span>
       </button>
 
-      <button mat-raised-button class='custom-auth-button button-register' (click)='routeRedirection("/user/login")'>
+      <button mat-raised-button class='custom-auth-button btn-secondary' (click)='routeRedirection("/user/login")'>
         <span>Sign In</span>
       </button>
 

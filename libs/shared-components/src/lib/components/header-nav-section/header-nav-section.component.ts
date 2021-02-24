@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { AuthLink, Category } from '../../models/header.model';
 import { authHiddenRoutes, authNav, category, postHiddenRoutes } from '../../constants/header.constant';
 import { Router } from '@angular/router';
@@ -11,7 +11,7 @@ import { UserData } from '../../models/auth.model';
   templateUrl: './header-nav-section.component.html',
   styleUrls: ['./header-nav-section.component.scss']
 })
-export class HeaderNavSectionComponent implements OnInit {
+export class HeaderNavSectionComponent implements OnInit, AfterViewInit {
 
   categoryList: Category[];
   authLinks: AuthLink[];
@@ -27,6 +27,9 @@ export class HeaderNavSectionComponent implements OnInit {
     this.authLinks = authNav;
     this.authHiddenUrls = authHiddenRoutes;
     this.postHiddenUrls = postHiddenRoutes;
+  }
+
+  ngAfterViewInit(): void {
     this.saveAuthdata();
   }
 
