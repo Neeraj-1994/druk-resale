@@ -4,12 +4,12 @@
 
   <div fxFlex.gt-md='90' fxFlex.lt-md='100' fxLayout='row'>
     <div fxFlex='3' class='home-nav' fxLayoutAlign='start center'>
-      <i class='home-item fa fa-home' (click)="routeRedirection('/home')"></i>
+      <i class='home-item font-lg fa fa-home' (click)="routeRedirection('/home')"></i>
     </div>
 
     <div fxFlex='97' fxLayoutAlign='' class='category-nav'>
       <ng-container *ngFor='let category of categoryList'>
-      <a class='category-links font-secondary' (click)='routeRedirection(category.value)'>{{category.label}}</a>
+      <a class='category-links font-secondary font-sm' (click)='routeRedirection(category.value)'>{{category.label}}</a>
       </ng-container>
     </div>
   </div>
