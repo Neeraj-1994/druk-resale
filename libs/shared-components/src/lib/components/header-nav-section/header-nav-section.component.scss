@@ -16,7 +16,7 @@
 ::ng-deep {
   .search-bar.mat-form-field {
     text-align: center !important;
-    height: 35px !important;
+    height: 40px !important;
   }
 }
 
@@ -29,7 +29,7 @@
 
 ::ng-deep {
   .search-bar.mat-form-field-appearance-outline .mat-form-field-infix {
-    padding: 0 !important;
+    padding: 5px !important;
   }
 }
 
