@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductList } from '../../models/product-list.model';
+import { ProductList, SliderImage } from '../../models/product-list.model';
 import { Observable } from 'rxjs';
 import { HomeStoreState } from '../../services/home-state.service';
 import { Router } from '@angular/router';
 import { HomeFacadeService } from '../../services/home-facade.service';
+import { ProductFacadeService, ProductStoreState } from '@druk-resale/feature/product-order';
 
 @Component({
   selector: 'home-home-page',
@@ -12,15 +13,27 @@ import { HomeFacadeService } from '../../services/home-facade.service';
 })
 export class HomePageComponent implements OnInit {
 
+  slides: SliderImage[] = [
+    {
+    image: '../../../../../assets/images/slider-images/image_1.jpg'
+    },
+    {
+      image: '../../../../../assets/images/slider-images/image_2.jpg'
+    },
+    {
+      image: '../../../../../assets/images/slider-images/image_3.jpg'
+    }];
   state$: Observable<HomeStoreState>;
+  productState$: Observable<ProductStoreState>;
   products: ProductList[];
-  constructor(private homeFacadeService: HomeFacadeService, private route: Router) {
+  constructor(public homeFacadeService: HomeFacadeService, private route: Router, public productFacadeService: ProductFacadeService) {
     this.homeFacadeService.initialize();
   }
 
   ngOnInit(): void {
-    this.getProductsList();
     this.state$ = this.homeFacadeService.stateChange();
+    this.productState$ = this.productFacadeService.stateChange();
+    this.getProductsList();
   }
 
   getProductsList(): void {
@@ -32,6 +45,7 @@ export class HomePageComponent implements OnInit {
 
   goToDetails(product: ProductList): void {
     this.homeFacadeService.updateProductDetails(product);
+    this.productFacadeService.updateProductDetails(product);
     this.route.navigate(['/product/details']).then();
   }
 }

@@ -13,35 +13,31 @@
   border-right: 1px solid #000000;
 }
 
-::ng-deep .mat-form-field {
-  text-align: center!important;
-  height: 35px!important;
+::ng-deep {
+  .search-bar.mat-form-field {
+    text-align: center !important;
+    height: 35px !important;
+  }
 }
 
-.text-center {
-  vertical-align: super!important;
+::ng-deep {
+  .text-center.mat-form-field-suffix .mat-icon {
+    font-size: 60% !important;
+    display: inline-flex !important;
+  }
 }
 
-::ng-deep .mat-form-field-suffix .mat-icon {
-  font-size: 130% !important;
-  display: inline-flex !important;
+::ng-deep {
+  .search-bar.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0 !important;
+  }
 }
 
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-start {
-  border-radius: 20px 0 0 20px !important;
-}
-
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
-  border-radius: 0 20px 20px 0;
-}
-
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
-  padding: 0!important;
-}
-
-::ng-deep .mat-raised-button {
-  line-height: 30px !important;
-  border-radius: 20px !important;
+::ng-deep {
+  .header-button.mat-raised-button {
+    line-height: 30px !important;
+    border-radius: 20px !important;
+  }
 }
 
 .logo {

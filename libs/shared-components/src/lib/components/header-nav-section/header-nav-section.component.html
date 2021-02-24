@@ -4,36 +4,60 @@
   <div fxFlex='90' fxLayout='row' fxLayoutAlign='space-between center'>
     <!-- header logo route -->
     <div fxFlex="20" fxLayoutAlign="start center">
-      <img src='../../../../../assets/images/Site_Logo (1).png' alt='logo' (click)="linkRedirection('/home')" class='logo'>
+      <img src='../../../../../assets/images/Site_Logo (1).png' alt='logo' (click)="linkRedirection('/home')"
+           class='logo'>
     </div>
 
     <div fxFlex='55' fxLayoutAlign='center center'>
       <mat-form-field appearance='outline' class='search-bar'>
-        <input matInput class='text-center' placeholder="I'm looking for....">
+        <input matInput class='text-center header-input' placeholder="I'm looking for....">
         <mat-icon matSuffix class='text-center'>search</mat-icon>
       </mat-form-field>
     </div>
 
     <div fxFlex='10' fxLayoutAlign='end center'>
-      <button mat-raised-button class='btn-primary btn-bottom-shift' (click)='linkRedirection("/post/ads")'>
-        <span class='font-secondary'>Post an ad</span>
-      </button>
+      <ng-container *ngIf='!postHiddenUrls.includes(route.url)'>
+        <button mat-raised-button class='btn-primary btn-bottom-shift header-button'
+                (click)='linkRedirection("/post/ads")'>
+          <span class='font-secondary'>Post an ad</span>
+        </button>
+      </ng-container>
     </div>
 
     <!-- header auth redirection route -->
     <div fxFlex="15" class="auth-nav" fxLayoutAlign="end center">
-      <!-- Login and Register -->
-      <ng-container *ngFor="let authItem of authLinks; let i = index">
-        <span class="auth-items font-secondary" (click)="linkRedirection(authItem.route)">{{authItem.label}}</span>
+      <ng-container *ngIf='[null, undefined].includes(authFacadeService.getUserState().uid)'>
+        <ng-container *ngIf='!authHiddenUrls.includes(route.url)'>
+          <!-- Login and Register -->
+          <ng-container *ngFor="let authItem of authLinks; let i = index">
+            <span class="auth-items font-secondary" (click)="linkRedirection(authItem.route)">{{authItem.label}}</span>
+          </ng-container>
+
+          <span class="auth-items info-icon">
+            <mat-icon>info_outline</mat-icon>
+          </span>
+        </ng-container>
       </ng-container>
 
-      <span class="auth-items info-icon">
-        <mat-icon [matMenuTriggerFor]='belowMenu'>info_outline</mat-icon>
+      <ng-container *ngIf='![null, undefined].includes(authFacadeService.getUserState().uid)'>
 
-        <mat-menu #belowMenu="matMenu" yPosition="below" xPosition='before'>
-          <button mat-menu-item>Log Out</button>
-        </mat-menu>
-      </span>
+          <span [matMenuTriggerFor]='belowMenu'
+                class='auth-items font-secondary'>{{authFacadeService.getUserState().displayName}}</span>
+
+          <span [matMenuTriggerFor]='belowMenu'>
+            <ng-container *ngIf='![null, undefined].includes(authFacadeService.getUserState().photoUrl)'>
+              <img [src]='authFacadeService.getUserState().photoUrl' alt='user_img' width='30' height='30'>
+            </ng-container>
+
+            <ng-container *ngIf='[null, undefined].includes(authFacadeService.getUserState().photoUrl)'>
+              <mat-icon class='auth-items info-icon'>account_circle</mat-icon>
+            </ng-container>
+          </span>
+
+          <mat-menu #belowMenu="matMenu" yPosition="below" xPosition='before'>
+            <button mat-menu-item (click)='logout()'>Log Out</button>
+          </mat-menu>
+      </ng-container>
     </div>
   </div>
 

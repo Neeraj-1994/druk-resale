@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { SuccessPageComponent } from './components/success-page/success-page.component';
 import { FailurePageComponent } from './components/failure-page/failure-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -19,7 +20,9 @@ import { FailurePageComponent } from './components/failure-page/failure-page.com
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     RegisterComponent,

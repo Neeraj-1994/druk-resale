@@ -50,7 +50,13 @@ import { MatInputModule } from '@angular/material/input';
     HeaderNavSectionComponent,
     FooterLinksSectionComponent,
     FooterSocialSectionComponent,
-    ProductListCardComponent
+    ProductListCardComponent,
+    PopularTabSectionComponent,
+    SortSectionComponent,
+    UserSectionComponent,
+    FeatureSectionComponent,
+    DownloadSectionComponent,
+    AdSectionComponent
   ]
 })
 export class SharedComponentsModule {}
