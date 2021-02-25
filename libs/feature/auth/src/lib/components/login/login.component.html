@@ -14,7 +14,7 @@
     </button>
 
     <div class='input-group' fxLayout='column' fxLayoutAlign='space-around center'>
-      <mat-form-field appearance='outline'>
+      <mat-form-field appearance='outline' class='custom-input'>
         <mat-label class='font-secondary'>Email</mat-label>
         <mat-icon matPrefix class='fa font-lg fa-envelope-o prefix-icon'></mat-icon>
         <input matInput type='email' [formControl]='email'>
@@ -24,7 +24,7 @@
         </mat-icon>
       </mat-form-field>
 
-      <mat-form-field appearance='outline'>
+      <mat-form-field appearance='outline' class='custom-input'>
         <mat-label class='font-secondary'>Password</mat-label>
         <i matPrefix class='fa font-lg fa-key prefix-icon'></i>
         <input matInput type='password' [formControl]='password'>

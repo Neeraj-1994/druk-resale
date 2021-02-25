@@ -5,7 +5,7 @@
 
     <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
       <div class='input-field'>
-        <mat-form-field appearance='outline'>
+        <mat-form-field appearance='outline' class='custom-input'>
           <mat-label class='font-secondary'>First Name</mat-label>
           <input matInput [formControl]='firstName'>
           <mat-error *ngIf="firstName.invalid && firstName.touched">{{getErrorMessage(firstName)}}</mat-error>
@@ -16,7 +16,7 @@
       </div>
 
       <div class='input-field'>
-        <mat-form-field appearance='outline'>
+        <mat-form-field appearance='outline' class='custom-input'>
           <mat-label class='font-secondary'>Last Name</mat-label>
           <input matInput [formControl]='lastName'>
           <mat-error *ngIf="lastName.invalid && lastName.touched">{{getErrorMessage(lastName)}}</mat-error>
@@ -29,7 +29,7 @@
 
     <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
       <div class='input-field'>
-        <mat-form-field appearance='outline'>
+        <mat-form-field appearance='outline' class='custom-input'>
           <mat-label class='font-secondary'>Email</mat-label>
           <input matInput [formControl]='email'>
           <mat-error *ngIf="email.invalid && email.touched">{{getErrorMessage(email)}}</mat-error>
@@ -40,7 +40,7 @@
       </div>
 
       <div class='input-field'>
-        <mat-form-field appearance='outline'>
+        <mat-form-field appearance='outline' class='custom-input'>
           <mat-label class='font-secondary'>Phone Number</mat-label>
           <input matInput [formControl]='phone'>
           <mat-error *ngIf="phone.invalid && phone.touched">{{getErrorMessage(phone)}}</mat-error>
@@ -53,7 +53,7 @@
 
     <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
       <div class='input-field'>
-      <mat-form-field appearance='outline'>
+      <mat-form-field appearance='outline' class='custom-input'>
         <mat-label class='font-secondary'>Password</mat-label>
         <input matInput type='password' [formControl]='password'>
         <mat-error *ngIf="password.invalid && password.touched">{{getErrorMessage(password)}}</mat-error>
@@ -64,7 +64,7 @@
       </div>
 
       <div class='input-field'>
-        <mat-form-field appearance='outline'>
+        <mat-form-field appearance='outline' class='custom-input'>
           <mat-label class='font-secondary'>Confirm Password</mat-label>
           <input matInput type='password' [formControl]='confirmPassword'>
           <mat-error *ngIf="confirmPassword.invalid && confirmPassword.touched">{{getErrorMessage(confirmPassword)}}</mat-error>

@@ -10,12 +10,12 @@
 
     <div fxFlex='55' fxLayoutAlign='center center'>
       <mat-form-field appearance='outline' class='search-bar'>
-        <input matInput class='text-center header-input font-secondary' placeholder="I'm looking for....">
-        <mat-icon matSuffix class='text-center'>search</mat-icon>
+        <input matInput class='text-center font-secondary' placeholder="I'm looking for....">
+        <mat-icon class='custom-search-icon' matSuffix>search</mat-icon>
       </mat-form-field>
     </div>
 
-    <div fxFlex='10' fxLayoutAlign='end center'>
+    <div [fxFlex]='authHiddenUrls.includes(route.url) ? "25" : "10"' fxLayoutAlign='end center'>
       <ng-container *ngIf='!postHiddenUrls.includes(route.url)'>
         <button mat-raised-button class='btn-primary btn-bottom-shift header-button'
                 (click)='linkRedirection("/post/ads")'>
@@ -25,7 +25,7 @@
     </div>
 
     <!-- header auth redirection route -->
-    <div fxFlex="15" class="auth-nav" fxLayoutAlign="end center">
+    <div [fxFlex]='authHiddenUrls.includes(route.url) ? "0": "15"' class="auth-nav" fxLayoutAlign="end center">
       <ng-container *ngIf='[null, undefined].includes(authFacadeService.getUserState().uid)'>
         <ng-container *ngIf='!authHiddenUrls.includes(route.url)'>
           <!-- Login and Register -->

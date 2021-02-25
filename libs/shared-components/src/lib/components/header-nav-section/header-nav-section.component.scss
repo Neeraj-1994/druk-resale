@@ -16,13 +16,25 @@
 ::ng-deep {
   .search-bar.mat-form-field {
     text-align: center !important;
-    height: 40px !important;
+    height: 45px !important;
   }
 }
 
 ::ng-deep {
-  .text-center.mat-form-field-suffix .mat-icon {
-    font-size: 60% !important;
+  .text-center.mat-input-element {
+    margin: 0 5px 5px 5px !important;
+  }
+}
+
+::ng-deep {
+  .custom-search-icon.mat-form-field-appearance-outline .mat-form-field-suffix {
+    top: -.25em !important;
+  }
+}
+
+::ng-deep {
+  .custom-search-icon.mat-form-field-suffix .mat-icon {
+    font-size: 120% !important;
     display: inline-flex !important;
   }
 }
