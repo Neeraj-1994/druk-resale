@@ -1,34 +1,40 @@
-<div fxLayout="row" class="header-nav bg-secondary">
-
+<div fxLayout="row" class="header-nav bg-secondary primary-border">
   <div fxFlex="5"></div>
 
-  <!-- header home redirection route -->
-  <div fxFlex="3" class="home-nav" [ngClass]="{'home-nav': !hiddenUrls.includes(route.url)}" fxLayoutAlign="start center">
-    <i class="home-item fa fa-home" (click)="linkRedirection('/home')"></i>
-  </div>
+  <div fxFlex='90' fxLayout='row' fxLayoutAlign='space-between center'>
+    <!-- header logo route -->
+    <div fxFlex="20" fxLayoutAlign="start center">
+      <img src='../../../../../assets/images/Site_Logo (1).png' alt='logo' (click)="linkRedirection('/home')" class='logo'>
+    </div>
 
-  <!-- header category redirection route -->
-  <div fxFlex="70" class="category-nav" fxLayoutAlign="start center">
-    <ng-container *ngFor="let category of categoryList; let i = index">
-      <span class="category-links montserrat" *ngIf='!hiddenUrls.includes(route.url)' (click)='linkRedirection("/product/list")'>{{category.label}}</span>
-    </ng-container>
-  </div>
+    <div fxFlex='55' fxLayoutAlign='center center'>
+      <mat-form-field appearance='outline' class='search-bar'>
+        <input matInput class='text-center' placeholder="I'm looking for....">
+        <mat-icon matSuffix class='text-center'>search</mat-icon>
+      </mat-form-field>
+    </div>
 
-  <!-- header auth redirection route -->
-  <div fxFlex="17" class="auth-nav" fxLayoutAlign="end center">
-    <!-- Login and Register -->
-    <ng-container *ngFor="let authItem of authLinks; let i = index">
-      <span class="auth-items montserrat" *ngIf='!hiddenUrls.includes(route.url)' (click)="linkRedirection(authItem.route)">{{authItem.label}}</span>
-    </ng-container>
+    <div fxFlex='10' fxLayoutAlign='end center'>
+      <button mat-raised-button class='btn-primary btn-bottom-shift' (click)='linkRedirection("/post/ads")'>
+        <span class='font-secondary'>Post an ad</span>
+      </button>
+    </div>
 
-    <span class="auth-items info-icon" *ngIf='!hiddenUrls.includes(route.url)'>
-      <mat-icon [matMenuTriggerFor]='belowMenu'>info_outline</mat-icon>
+    <!-- header auth redirection route -->
+    <div fxFlex="15" class="auth-nav" fxLayoutAlign="end center">
+      <!-- Login and Register -->
+      <ng-container *ngFor="let authItem of authLinks; let i = index">
+        <span class="auth-items font-secondary" (click)="linkRedirection(authItem.route)">{{authItem.label}}</span>
+      </ng-container>
 
-      <mat-menu #belowMenu="matMenu" yPosition="below" xPosition='before'>
-        <button mat-menu-item>Log Out</button>
-      </mat-menu>
+      <span class="auth-items info-icon">
+        <mat-icon [matMenuTriggerFor]='belowMenu'>info_outline</mat-icon>
 
-    </span>
+        <mat-menu #belowMenu="matMenu" yPosition="below" xPosition='before'>
+          <button mat-menu-item>Log Out</button>
+        </mat-menu>
+      </span>
+    </div>
   </div>
 
   <div fxFlex="5"></div>

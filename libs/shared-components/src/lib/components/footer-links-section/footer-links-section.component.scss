@@ -1,7 +1,7 @@
 @import "apps/druk-resale/src/assets/styles/common";
 
 .footer-link-container {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .link-container {
@@ -9,6 +9,7 @@
 }
 
 .link-list {
+  font-size: 14px;
 }
 
 .link-label {
@@ -16,6 +17,6 @@
 }
 
 .group-title {
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: bolder;
+  font-size: 18px;
 }

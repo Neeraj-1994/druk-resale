@@ -1,5 +1,16 @@
+.full-height {
+  height: 100vh;
+}
+
 .app-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .app-container {
+}
+
+.app-header + .app-container {
+  padding-top: 70px;
 }

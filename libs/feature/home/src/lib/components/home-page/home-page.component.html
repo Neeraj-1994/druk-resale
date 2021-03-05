@@ -1,5 +1,20 @@
-<div class="home-container" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
-  <ng-container *ngFor="let product of products; let i = index">
-    <sc-product-list-card [product]='product' [index]='i' (click)='goToDetails(product)'></sc-product-list-card>
-  </ng-container>
+<div fxLayout='column' fxLayoutAlign='center center'>
+  <div fxLayout='row wrap' fxLayoutAlign='space-evenly start'>
+    <mat-carousel timings="250ms ease-in" interval="5000" color="accent" maxWidth="auto" proportion="25" slides="5" orientation="ltr"
+                  [autoplay]="true" [loop]="true" [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="false">
+      <mat-carousel-slide
+        #matCarouselSlide
+        [image]="slide.image"
+        overlayColor="#00000040"
+        [hideOverlay]="false"
+        *ngFor="let slide of slides; let i = index"
+      ></mat-carousel-slide>
+    </mat-carousel>
+  </div>
+
+  <div class="home-container" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
+    <ng-container *ngFor="let product of products; let i = index">
+      <sc-product-list-card [product]='product' [index]='i' (click)='goToDetails(product)'></sc-product-list-card>
+    </ng-container>
+  </div>
 </div>
