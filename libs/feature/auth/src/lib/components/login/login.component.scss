@@ -1,4 +1,6 @@
-@import "apps/druk-resale/src/assets/styles/font";
+@import "apps/druk-resale/src/assets/styles/utility";
+@import "apps/druk-resale/src/assets/styles/common";
+@import "apps/druk-resale/src/assets/styles/overwrite";
 
 .social-sign-in {
   width: 200px;
@@ -10,7 +12,6 @@
 
 .fa {
   margin-right: 20px;
-  font-size: 20px;
 }
 
 .fa-envelope-o {
@@ -40,32 +41,26 @@
   border-radius: 5px;
 }
 
-.button-login {
-  background: #fcbe03;
-  color: #000000;
-}
-
-.button-register {
-  background: #5e3131;
-  color: #ffffff;
-}
-
 .login-card {
-  width: 500px;
+  width: 350px;
   height: auto;
   border: 1px solid dimgrey;
   margin: 10px 0;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
+  border-radius: 10px;
 }
 
 .log-head {
   margin: 20px;
-  font-size: 30px;
-  font-weight: bold;
 }
 
 .action-text {
   margin: 10px;
-  font-size: 14px;
   cursor: pointer;
+}
+
+::ng-deep {
+  .fa.mat-form-field-appearance-outline .mat-form-field-prefix {
+    top: 0!important;
+  }
 }

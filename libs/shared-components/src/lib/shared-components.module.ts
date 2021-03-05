@@ -56,6 +56,12 @@ import { MatExpansionModule } from '@angular/material/expansion';
     FooterLinksSectionComponent,
     FooterSocialSectionComponent,
     ProductListCardComponent,
+    PopularTabSectionComponent,
+    SortSectionComponent,
+    UserSectionComponent,
+    FeatureSectionComponent,
+    DownloadSectionComponent,
+    AdSectionComponent,
     FilterSectionComponent
   ]
 })

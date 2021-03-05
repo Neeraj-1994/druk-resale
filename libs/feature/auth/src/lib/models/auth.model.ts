@@ -9,7 +9,10 @@ export class User {
   confirm_password: string;
   gender?: string;
   birth_date?: Date;
-  address: Address;
+  address?: Address;
+  displayName?: string;
+  photoUrl?: string;
+  uid?: string;
 
   constructor() {
   this.first_name = undefined;
@@ -20,6 +23,7 @@ export class User {
   this.confirm_password = undefined;
   this.gender = undefined;
   this.birth_date = undefined;
+  this.photoUrl = undefined;
   this.address = undefined;
   }
 }
@@ -40,5 +44,19 @@ export class ForgotPassword {
 
   constructor() {
     this.email = undefined;
+  }
+}
+
+export class UserData {
+  displayName: string;
+  uid: string;
+  email: string;
+  photoUrl: string;
+
+  constructor() {
+    this.displayName = undefined;
+    this.uid = undefined;
+    this.email = undefined;
+    this.photoUrl = undefined;
   }
 }

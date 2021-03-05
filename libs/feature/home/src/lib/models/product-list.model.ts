@@ -12,3 +12,7 @@ export interface ProductList {
   description?: string;
   images?: File[];
 }
+
+export interface SliderImage {
+  image: string;
+}

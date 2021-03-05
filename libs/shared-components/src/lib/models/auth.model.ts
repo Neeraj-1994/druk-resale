@@ -55,3 +55,18 @@ export class ForgotPassword {
     this.email = undefined;
   }
 }
+
+export class UserData {
+  displayName: string;
+  uid: string;
+  email: string;
+  photoUrl: string;
+
+  constructor() {
+    this.displayName = undefined;
+    this.uid = undefined;
+    this.email = undefined;
+    this.photoUrl = undefined;
+  }
+
+}
