@@ -1,5 +1,6 @@
+@import "apps/druk-resale/src/assets/styles/utility";
 @import "apps/druk-resale/src/assets/styles/common";
-@import "apps/druk-resale/src/assets/styles/font";
+@import "apps/druk-resale/src/assets/styles/overwrite";
 
 .header-tab {
   width: 100%;
@@ -21,7 +22,6 @@
 }
 
 .home-item {
-  font-size: 20px;
   cursor: pointer;
-  margin-left: 30px;
+  //margin-left: 30px;
 }

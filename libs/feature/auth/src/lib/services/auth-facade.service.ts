@@ -3,7 +3,9 @@ import { AuthStateService, AuthStoreState } from './auth-state.service';
 import { AuthApiService } from './auth-api.service';
 import { AuthBlService } from './auth-bl.service';
 import { Observable } from 'rxjs';
-import { User } from '../models/auth.model';
+import { User, UserData, UserLogin } from '../models/auth.model';
+import firebase from 'firebase';
+import UserCredential = firebase.auth.UserCredential;
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +15,7 @@ export class AuthFacadeService {
   constructor(
     private userStateService: AuthStateService,
     private userApiService: AuthApiService,
-    private userBLService: AuthBlService) { }
+    private userBlService: AuthBlService) { }
 
   // State services
   // Initialize and update states
@@ -61,5 +63,28 @@ export class AuthFacadeService {
   }
 
   // API services
+  googleSignIn(): void {
+    this.userApiService.signInViaGoogle();
+  }
+
+  facebookSignIn(): void {
+    this.userApiService.signInViaFacebook();
+  }
+
+  emailSignIn(userCred: UserLogin): void {
+    this.userApiService.signInWithEmailAndPassword(userCred);
+    this.updateUser(this.userData);
+  }
+
+  emailRegister(user: User): void {
+    this.userApiService.registerUser(user);
+    this.updateUsers(user);
+    this.updateUser(this.userData);
+  }
+
+  get userData(): UserData {
+    return this.userApiService.getUserData();
+  }
+
   // Business Logic services
 }

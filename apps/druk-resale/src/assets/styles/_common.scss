@@ -8,20 +8,12 @@
 
 .btn-primary {
   background-color: #FCBE03;
-  color: white;
+  color: #000000;
 }
 
 .btn-secondary {
   background-color: #5E3131;
-  color: black;
-}
-
-.font-primary {
-  font-family: 'Alegreya', sans-serif;
-}
-
-.font-secondary {
-  font-family: 'Lato', sans-serif;
+  color: #FFFFFF;
 }
 
 .primary-border {
@@ -38,4 +30,43 @@
 
 .secondary-border-top {
   border-top: 1px solid #b3b3b3;
+}
+
+.valid-icon {
+  color: #239A98;
+}
+
+.invalid-icon {
+  color: #D9415C;
+}
+
+.authentication-bg{
+  background-image: url("../images/slider-images/image_1.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  .bg-overlay{
+    background-color: #292626;
+  }
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+.bg-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  opacity: 0.7;
+  background-color: $black;
+}
+
+.authentication-page-content{
+  height: 100vh;
+  display: flex;
 }
