@@ -21,6 +21,8 @@
               "apps/druk-resale/src/assets"
             ],
             "styles": [
+              "apps/druk-resale/src/assets/styles/bootstrap.scss",
+              "apps/druk-resale/src/assets/styles/app.scss",
               "apps/druk-resale/src/styles.scss"
             ],
             "scripts": []
