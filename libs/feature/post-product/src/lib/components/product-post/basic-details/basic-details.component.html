@@ -1,0 +1,50 @@
+<div fxLayout='column' fxLayoutAlign='center start'>
+  <div fxLayout='row' fxLayoutAlign='center center'>
+    <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+      <input matInput [formControl]='name' placeholder='Write a descriptive title for your ad...'>
+      <mat-error *ngIf='name.invalid && name.touched'>{{getErrorMessage(name)}}</mat-error>
+    </mat-form-field>
+    <button mat-raised-button class='custom-post-button btn-primary' [disabled]='name.invalid' (click)='isNameValid()'>
+      <i class='font-xxl fa fa-angle-right'></i>
+    </button>
+  </div>
+  <p class='font-secondary font-light font-xs'>Eg. Iphone 11 brand new</p>
+</div>
+
+<div fxLayout='column' fxLayoutAlign='center start' *ngIf='openCategory'>
+  <p class='font-secondary font-bold font-sm'>Category</p>
+  <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+    <mat-select [formControl]='category' (selectionChange)='isCategorySelected(category.value)'>
+      <mat-option *ngFor='let category of categories' [value]='category.value' class='font-secondary'>
+        {{category.label}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf='category.invalid && category.touched'>{{getErrorMessage(category)}}</mat-error>
+  </mat-form-field>
+</div>
+
+<div fxLayout='column' fxLayoutAlign='center start' *ngIf='category.touched && openSubCategory'>
+  <p class='font-secondary font-medium font-sm'>Sub-category</p>
+  <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+    <mat-select [formControl]='subCategory' (selectionChange)='isSubCategorySelected(subCategory.value)'>
+      <mat-option *ngFor='let subCategory of subCategories' [value]='subCategory.value' class='font-secondary'>
+        {{subCategory.label}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf='subCategory.invalid && subCategory.touched'>{{getErrorMessage(subCategory)}}</mat-error>
+  </mat-form-field>
+</div>
+
+<div fxLayout='column' fxLayoutAlign='center start'
+     *ngIf='category.touched && openSubCategory && subCategory.touched && openItemCategory'>
+  <p class='font-secondary font-medium font-sm'>Sub-category</p>
+  <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+    <mat-select [formControl]='itemCategory'>
+      <mat-option *ngFor='let itemCategory of itemCategories' [value]='itemCategory.value'
+                  class='font-secondary'>
+        {{itemCategory.label}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf='itemCategory.invalid && itemCategory.touched'>{{getErrorMessage(itemCategory)}}</mat-error>
+  </mat-form-field>
+</div>

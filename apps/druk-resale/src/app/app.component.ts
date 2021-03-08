@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'druk-resale';
-  authRoutes = ['/user/login', '/user/register'];
+  authRoutes = ['/user/login', '/user/register', '/user/forgot-password'];
 
   constructor(public route: Router) {
   }

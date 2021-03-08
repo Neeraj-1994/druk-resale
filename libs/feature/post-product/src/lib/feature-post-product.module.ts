@@ -7,19 +7,43 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { RealEstatePostComponent } from './components/real-estate-post/real-estate-post.component';
 import { VehiclePostComponent } from './components/vehicle-post/vehicle-post.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BasicDetailsComponent } from './components/product-post/basic-details/basic-details.component';
+import { DescriptiveInfoComponent } from './components/product-post/descriptive-info/descriptive-info.component';
+import { FinancialsComponent } from './components/product-post/financials/financials.component';
+import { VisualDescriptionComponent } from './components/product-post/visual-description/visual-description.component';
+import { OwnerDetailsComponent } from './components/product-post/owner-details/owner-details.component';
+import { FeatureTypeComponent } from './components/product-post/feature-type/feature-type.component';
+import { MiscDataComponent } from './components/product-post/misc-data/misc-data.component';
+import { PayOutComponent } from './components/product-post/pay-out/pay-out.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   imports: [
     CommonModule,
     FlexLayoutModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSelectModule
   ],
   declarations: [
     ProductPostComponent,
     PostBaseComponent,
     RealEstatePostComponent,
-    VehiclePostComponent
+    VehiclePostComponent,
+    BasicDetailsComponent,
+    DescriptiveInfoComponent,
+    FinancialsComponent,
+    VisualDescriptionComponent,
+    OwnerDetailsComponent,
+    FeatureTypeComponent,
+    MiscDataComponent,
+    PayOutComponent
   ],
   exports: [
     ProductPostComponent,

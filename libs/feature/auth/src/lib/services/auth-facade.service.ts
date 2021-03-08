@@ -3,7 +3,7 @@ import { AuthStateService, AuthStoreState } from './auth-state.service';
 import { AuthApiService } from './auth-api.service';
 import { AuthBlService } from './auth-bl.service';
 import { Observable } from 'rxjs';
-import { User, UserData, UserLogin } from '../models/auth.model';
+import { ForgotPassword, User, UserData, UserLogin } from '../models/auth.model';
 import firebase from 'firebase';
 import UserCredential = firebase.auth.UserCredential;
 
@@ -69,6 +69,10 @@ export class AuthFacadeService {
 
   facebookSignIn(): void {
     this.userApiService.signInViaFacebook();
+  }
+
+  resetPassword(userEmail: ForgotPassword) {
+    this.userApiService.resetPassword(userEmail);
   }
 
   emailSignIn(userCred: UserLogin): void {
