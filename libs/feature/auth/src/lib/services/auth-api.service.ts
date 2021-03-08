@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User, UserData, UserLogin } from '../models/auth.model';
+import { ForgotPassword, User, UserData, UserLogin } from '../models/auth.model';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import firebase from 'firebase';
@@ -77,6 +77,23 @@ export class AuthApiService {
           });
         }
     );
+  }
+
+  _handleError(error) {
+    // tslint:disable-next-line: prefer-const
+    var errorMessage = error.message;
+    return errorMessage;
+  }
+
+  resetPassword(userMail: ForgotPassword) {
+    return new Promise((resolve, reject) => {
+      // tslint:disable-next-line: max-line-length
+      this.fireAuth.sendPasswordResetEmail(userMail.email, { url: window.location.protocol + '//' + window.location.host + '/login' }).then(() => {
+        resolve(true);
+      }).catch((error) => {
+        reject(this._handleError(error));
+      });
+    });
   }
 
   getUserData(): UserData {

@@ -17,7 +17,7 @@ export class ProductStateService extends ObservableStore<ProductStoreState> {
   private productListings: ProductList[];
   private productDetails: ProductList;
   constructor() {
-    super({trackStateHistory: true, logStateChanges: true});
+    super({trackStateHistory: true});
     this.initialState();
   }
 

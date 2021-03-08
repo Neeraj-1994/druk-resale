@@ -54,6 +54,7 @@
     "bootstrap": "^4.6.0",
     "firebase": "^8.2.5",
     "google-libphonenumber": "^3.2.16",
+    "lodash": "^4.17.21",
     "ngx-drag-drop": "^2.0.0",
     "ngx-dropzone-wrapper": "^10.0.1",
     "rxjs": "~6.5.5",
