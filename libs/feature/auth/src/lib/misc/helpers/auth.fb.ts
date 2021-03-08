@@ -44,7 +44,7 @@ export class AuthFormBuilder {
       ...new ForgotPassword()
     })
 
-    form.get('email').setValidators([Validators.required]);
+    form.get('email').setValidators([Validators.required, Validators.email]);
 
     return form;
   }

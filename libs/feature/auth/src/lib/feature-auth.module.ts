@@ -13,6 +13,7 @@ import { SuccessPageComponent } from './components/success-page/success-page.com
 import { FailurePageComponent } from './components/failure-page/failure-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { SharedComponentsModule } from '@druk-resale/shared-components';
 
 @NgModule({
   imports: [
