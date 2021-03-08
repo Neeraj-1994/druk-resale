@@ -19,6 +19,7 @@ import { PayOutComponent } from './components/product-post/pay-out/pay-out.compo
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import { BasicDetailsEditedComponent } from './components/product-post/basic-details-edited/basic-details-edited.component';
 
 @NgModule({
   imports: [
@@ -43,7 +44,8 @@ import { MatSelectModule } from '@angular/material/select';
     OwnerDetailsComponent,
     FeatureTypeComponent,
     MiscDataComponent,
-    PayOutComponent
+    PayOutComponent,
+    BasicDetailsEditedComponent
   ],
   exports: [
     ProductPostComponent,
