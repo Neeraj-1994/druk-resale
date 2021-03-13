@@ -1,0 +1,32 @@
+.opt-img {
+  width: 94px;
+  height: 78px;
+  border-radius: 4px;
+  background-size: 50%;
+  background-size: 40px 40px;
+  //background-color: #3B5998;
+  &:focus {
+    background-color:#f1f5f7;
+    outline-color: transparent;
+  }
+  .mini-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.selected-product {
+  min-width: 290px;
+  min-height: 290px;
+  border: 1px solid #f1f5f7;
+  .img {
+
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+.yellow-color {
+  color: #febe00;
+}

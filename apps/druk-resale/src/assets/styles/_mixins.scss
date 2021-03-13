@@ -5,15 +5,15 @@ $unit: 'px'; // Feel free to change the unit.
 
     #{$className + $size} {
       @each $direction in $directio {
-        #{$direction}: #{$size + $unit};
+        #{$direction}: #{$size + $unit} !important;
       }
     }
   }
 }
 //padding
-@include list-loop((12),'.p-', 'padding');
+@include list-loop((12, 20),'.p-', 'padding');
 @include list-loop((16),'.p-r-', 'padding-right');
-@include list-loop((20),'.p-l-', 'padding-left');
+@include list-loop((20,4),'.p-l-', 'padding-left');
 @include list-loop((),'.p-b-', 'padding-bottom');
 @include list-loop((),'.p-t-', 'padding-top');
 @include list-loop((12, 20),'.p-x-', ('padding-right', 'padding-left'));
@@ -21,15 +21,15 @@ $unit: 'px'; // Feel free to change the unit.
 
 //margin
 @include list-loop((),'.m-', 'margin');
-@include list-loop((4,12),'.m-r-', 'margin-right');
-@include list-loop((12),'.m-l-', 'margin-left');
+@include list-loop((4,12,20, 24),'.m-r-', 'margin-right');
+@include list-loop((12,24,60),'.m-l-', 'margin-left');
 @include list-loop((),'.m-b-', 'margin-bottom');
-@include list-loop((),'.m-t-', 'margin-top');
+@include list-loop((12,20),'.m-t-', 'margin-top');
 @include list-loop((8),'.m-x-', ('margin-right', 'margin-left'));
-@include list-loop((8,12,16,20),'.m-y-', ('margin-top', 'margin-bottom'));
+@include list-loop((4,8,12,16,20,24),'.m-y-', ('margin-top', 'margin-bottom'));
 
 //border-radius
-@include list-loop((12),'.b-r-', 'border-radius');
+@include list-loop((4,12),'.b-r-', 'border-radius');
 @include list-loop((12),'.b-t-l-r-', 'border-top-left-radius');
 @include list-loop((12),'.b-t-r-r-', 'border-top-right-radius');
 @include list-loop((12),'.b-b-l-r-', 'border-bottom-left-radius');
@@ -61,7 +61,7 @@ $unit: 'px'; // Feel free to change the unit.
     }
   }
 }
-@include size((10, 12, 16, 18, 20));
+@include size((8,10, 12, 16, 18, 20));
 
 
 //vertical-align

@@ -5,12 +5,16 @@ import { ProductListingComponent } from './components/product-listing/product-li
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { FlexModule } from '@angular/flex-layout';
 import { SharedComponentsModule } from '@druk-resale/shared-components';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   imports: [
     CommonModule,
     FlexModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    MatIconModule,
+    MatCardModule
   ],
   declarations: [
     OrderBaseComponent,

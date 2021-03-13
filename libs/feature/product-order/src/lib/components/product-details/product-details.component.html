@@ -1,18 +1,38 @@
-<div class="view-container" fxLayout="row">
-
-  <div class="product-details" fxLayout="row" fxLayoutAlign="center center">
-    <div fxLayout="column" class="product-description" fxFlex="60">
-      <div class="image-gallery">
-      </div>
-
-      <div fxLayout="row" fxLayoutAlign="start center">
-        <p></p>
-      </div>
-    </div>
-
-    <div fxLayout="column" class="seller-info" fxFlex="40">
-
-    </div>
-  </div>
+<div fxLayout='row' fxLayoutAlign='space-between center'>
+  <p class='black-80 m-y-24 font-bold'>PRODUCT DETAIL</p>
+  <p class='black-60 '>
+    <span class=''>Ecommerce</span>
+    <mat-icon class='s-20 m-t-12 m-x-8 v-sub'>navigate_next</mat-icon>
+    <span>Produce Detail</span>
+  </p>
 </div>
+<div>
+  <mat-card class='p-20'>
+    <div fxLayout='row'>
+      <div class='m-r-24'>
+        <div fxLayoutAlign='center center'  class='opt-img b-r-4 m-y-4' tabindex="1" *ngFor='let i of [1,2,3,4]'>
+          <img src='../assets/images/SiteLogo.png' alt='' class='mini-img'>
+        </div>
+      </div>
+<!--      <div class='selected-product'>-->
+<!--      </div>-->
+      <div fxLayoutAlign='center center' class='selected-product'>
+        <img src='../assets/images/SiteLogo.png' alt='' class='img'>
+      </div>
 
+      <div fxLayout='column' class='m-l-60 pl-4 full-width'>
+      <div>
+        <p class='fs-14'>Blue color, T-shirt</p>
+        <p class='fs-20'>Full sleeve T-shirt</p>
+      </div>
+
+
+        <div fxLayout='row' class='m-t-20'>
+          <mat-icon *ngFor='let i of [1,2,3,4,5]' class='s-16 yellow-color'>grade</mat-icon>
+          <p class='m-l-24'>(0)</p>
+        </div>
+      </div>
+    </div>
+
+  </mat-card>
+</div>
