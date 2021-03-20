@@ -5,7 +5,7 @@
   background-size: 50%;
   background-size: 40px 40px;
   //background-color: #3B5998;
-  &:focus {
+  &:focus, &:hover {
     background-color:#f1f5f7;
     outline-color: transparent;
   }
@@ -16,8 +16,8 @@
 }
 
 .selected-product {
-  min-width: 290px;
-  min-height: 290px;
+  width: 400px !important;
+  height: 290px !important;
   border: 1px solid #f1f5f7;
   .img {
 
@@ -29,4 +29,12 @@
 
 .yellow-color {
   color: #febe00;
+}
+
+.description-border {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+hr.faint {
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
 }

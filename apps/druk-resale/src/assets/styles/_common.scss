@@ -1,3 +1,5 @@
+$mint: #f1f5f7;
+
 .bg-primary {
   background-color: #FFFFFF;
 }
@@ -18,6 +20,10 @@
 
 .full-width {
   width: 100% !important;
+}
+
+.mint-bg {
+  background-color: $mint !important;
 }
 
 $black-40:rgba(0, 0, 0, .4);
@@ -65,10 +71,17 @@ $black-80:rgba(0, 0, 0, .8);
   color: #239A98;
 }
 
-.invalid-icon {
+.invalid-icon, .warn-text {
   color: #D9415C;
 }
 
+.icon {
+  color: #5664d2 ;
+}
+
+.product-border {
+  border: 2px solid #5664d2;
+}
 .authentication-bg {
   background-image: url("../images/authentication-bg.jpg");
   height: 100vh;
@@ -162,4 +175,12 @@ a.text-primary:hover, a.text-primary:focus {
 
 .alert-margin {
   margin-bottom: 1.5rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.circle {
+  border-radius: 50%;
 }
