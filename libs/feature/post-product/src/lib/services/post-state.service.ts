@@ -6,6 +6,7 @@ import { filter, map } from 'rxjs/operators';
 
 export interface PostStoreState {
   productPostState: ProductPost;
+  editBasicDetails?: boolean;
 }
 
 @Injectable({
@@ -21,7 +22,8 @@ export class PostStateService extends ObservableStore<PostStoreState>{
 
   initialState(): void {
     const initialState = {
-      productPostState: undefined
+      productPostState: undefined,
+      editBasicDetails: false
     };
     this.productPost = undefined;
     this.setState(initialState, 'INIT_STATE');
@@ -31,7 +33,7 @@ export class PostStateService extends ObservableStore<PostStoreState>{
     let stateData = this.getState();
 
     stateData = {
-      productPostState: { ...stateData.productPostState} as ProductPost;
+      productPostState: { ...stateData.productPostState} as ProductPost
     }
     this.setState({ ...stateData }, 'UPDATE_ALL_STATE');
   }
@@ -56,6 +58,10 @@ export class PostStateService extends ObservableStore<PostStoreState>{
 
   updateProductPost(productPostState: ProductPost): void {
     this.setState({productPostState}, 'UPDATE_PRODUCT_POST');
+  }
+
+  updateBasicDetails = (editBasicDetails: boolean) => {
+    this.setState({editBasicDetails}, 'UPDATE_EDIT_BASIC_DETAILS');
   }
 
   // Remove States

@@ -12,4 +12,13 @@ export class VisualDescriptionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  files: File[] = [];
+
+  onSelect(event: any): void {
+    this.files.push(...event.addedFiles);
+  }
+
+  onRemove(event: any): void {
+    this.files.splice(this.files.indexOf(event), 1);
+  }
 }
