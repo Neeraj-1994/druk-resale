@@ -1,4 +1,4 @@
-import { FormControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { AbstractControl, FormControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 import * as lpn from 'google-libphonenumber';
 
 export const phoneNumberValidator: ValidatorFn = (control: FormControl): ValidationErrors | null =>  {
@@ -22,4 +22,15 @@ export function validateSpace(control: FormControl) {
       valid: false
     }
   };
+}
+
+export function MinPriceValidator(control: AbstractControl): void {
+  const price = control.get('price');
+  const minPrice = control.get('min_price');
+  if (price.pristine || minPrice.pristine) {
+    minPrice.setErrors(null);
+  }
+  if (price && minPrice && price.value < minPrice.value) {
+    minPrice.setErrors({ greaterError: true });
+  }
 }

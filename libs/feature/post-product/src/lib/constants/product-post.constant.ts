@@ -1,4 +1,7 @@
-export const itemCategories = [
+import { FirstLevelCategory } from '../models/edit-ads.model';
+import { PriceType } from '../models/post-ads.model';
+
+export const itemCategories: FirstLevelCategory[] = [
   {
     value: 'electronics',
     label: 'Electronics',
@@ -229,4 +232,124 @@ export const itemCategories = [
     label: 'Home & Garden',
     value: 'home_garden'
   }
-]
+];
+
+export const priceType: PriceType[] = [
+  {
+    label: 'Fixed',
+    value: 'fixed'
+  },
+  {
+    label: 'Free',
+    value: 'free'
+  },
+  {
+    label: 'Negotiable',
+    value: 'negotiable'
+  }
+];
+
+export const conditionType: PriceType[] = [
+  {
+    label: 'Used',
+    value: 'used'
+  },
+  {
+    label: 'New',
+    value: 'new'
+  }
+];
+
+export let featureTypes = [
+  {
+    name: 'DRUK FREE',
+    description: {
+        type: 'Your standard Druk-reSale ad'
+    },
+    price: 0,
+    details: [
+      {
+        row: 'Unlimited Edits'
+      },
+      {
+        row: 'Up to 10 photos'
+      }
+    ],
+    value: 'free',
+    background_color: '#878787',
+    color: '#000000',
+    selected: false
+  },
+  {
+    name: 'DRUK PLUS',
+    description: {
+      type: 'Increase views by 2x',
+      sup: '*'
+    },
+    price: 25,
+    details: [
+      {
+        head: 'ALL FREE features',
+        row: 'Highlighted background'
+      },
+      {
+        row: 'Website link'
+      }
+    ],
+    value: 'plus',
+    background_color: '#32a852',
+    color: '#000000',
+    selected: false
+  },
+  {
+    name: 'DRUK PRO',
+    description: {
+        type: 'Increase views by 7x',
+        sup: '*'
+      },
+    price: 100,
+    details: [
+      {
+        head: 'ALL PLUS features',
+        row: 'Up to 20 Photos'
+      },
+      {
+        row: 'Top Ad'
+      },
+      {
+        row: 'Bigger image in search results'
+      },
+      {
+        row: 'Website link'
+      }
+    ],
+    value: 'pro',
+    background_color: '#d43333',
+    color: '#000000',
+    selected: false
+  },
+  {
+    name: 'DRUK PREMIUM',
+    description: {
+        type: 'Increase views by 12x',
+        sup: '*'
+      },
+    price: 250,
+    details: [
+      {
+        head: 'ALL PRO features',
+        row: 'Homepage Gallery'
+      },
+      {
+        row: '3 images in search results'
+      },
+      {
+        row: 'Website link'
+      }
+    ],
+    value: 'premium',
+    background_color: '#d1a82c',
+    color: '#000000',
+    selected: false
+  }
+];

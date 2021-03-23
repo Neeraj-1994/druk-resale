@@ -19,6 +19,12 @@ import { PayOutComponent } from './components/product-post/pay-out/pay-out.compo
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CategoryPipe } from './pipes/category.pipe';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   imports: [
@@ -29,7 +35,12 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    NgxDropzoneModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatStepperModule,
+    MatCardModule
   ],
   declarations: [
     ProductPostComponent,
@@ -43,7 +54,8 @@ import { MatSelectModule } from '@angular/material/select';
     OwnerDetailsComponent,
     FeatureTypeComponent,
     MiscDataComponent,
-    PayOutComponent
+    PayOutComponent,
+    CategoryPipe
   ],
   exports: [
     ProductPostComponent,

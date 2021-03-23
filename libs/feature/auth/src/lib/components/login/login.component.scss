@@ -3,15 +3,16 @@
 @import "apps/druk-resale/src/assets/styles/overwrite";
 
 .social-sign-in {
-  width: 200px;
+  width: 175px;
   height: 50px;
   margin: 10px;
   border-radius: 5px;
-  color: #FFFFFF;
+  border: 1px solid #000000;
+  color: #000000;
 }
 
 .fa {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .fa-envelope-o {
@@ -23,11 +24,11 @@
 }
 
 .facebook {
-  background: #3B5998;
+  background: #ffffff;
 }
 
 .google {
-  background: #bb0000;
+  background: #ffffff;
 }
 
 .input-field {
