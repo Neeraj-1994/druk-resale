@@ -1,0 +1,280 @@
+<div fxLayout='column' fxLayoutAlign='center center' class='post-container'>
+  <h1 class='font-primary font-xxl post-title'>Post An Ad</h1>
+
+  <!-- Basic Details about the product -->
+  <div fxLayout='column' fxLayoutAlign='center center' *ngIf='showBasicDetails'>
+    <!-- Name of the product -->
+    <div fxLayout='column' fxLayoutAlign='center center'>
+      <div fxLayout='column' fxLayoutAlign.gt-lg='center start'>
+        <div fxLayout='row' fxLayoutAlign='center center'>
+          <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+            <input matInput [formControl]='name' placeholder='Write a descriptive title for your ad...'>
+            <mat-error *ngIf='name.invalid && name.touched'>{{getErrorMessage(name)}}</mat-error>
+          </mat-form-field>
+          <button mat-raised-button class='custom-post-button btn-primary' [disabled]='name.invalid'
+                  (click)='isNameValid()'>
+            <i class='font-xxl fa fa-angle-right'></i>
+          </button>
+        </div>
+        <p class='font-secondary font-light font-xs'>Eg. Iphone 11 brand new</p>
+      </div>
+    </div>
+
+    <!-- Display Card -->
+    <ng-container *ngIf='category.dirty'>
+      <div class='categorical-display' fxLayout='row' fxLayoutAlign='start center'>
+        <p class='font-secondary font-thin font-sm category-display'
+        ><span>{{category.value | formatCategory: categories}}</span><span
+          *ngIf='subCategory.value'> > {{subCategory.value | formatCategory: subCategories}}
+        </span><span *ngIf='itemCategory.value'> > {{itemCategory.value | formatCategory: itemCategories}}</span></p>
+      </div>
+    </ng-container>
+
+    <!-- Category of the product -->
+    <div fxLayout='column' fxLayoutAlign='center center' *ngIf='openCategory'>
+      <div fxLayout='column' fxLayoutAlign='center start'>
+        <p class='font-secondary font-bold font-md category-title'>Select a category</p>
+        <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+          <mat-select [formControl]='category' (selectionChange)='isCategorySelected(category.value)'>
+            <mat-option *ngFor='let category of categories' [value]='category.value' class='font-secondary'>
+              {{category.label}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf='category.invalid && category.touched'>{{getErrorMessage(category)}}</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!-- (Optional) Sub-category of the product -->
+    <div fxLayout='column' fxLayoutAlign='center center' *ngIf='category.touched && openSubCategory'>
+      <div fxLayout='column' fxLayoutAlign='center start'>
+        <p class='font-secondary font-medium font-sm'>Select a sub-category
+          in {{category.value | formatCategory: categories}}</p>
+        <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+          <mat-select [formControl]='subCategory' (selectionChange)='isSubCategorySelected(subCategory.value)'>
+            <mat-option *ngFor='let subCategory of subCategories' [value]='subCategory.value' class='font-secondary'>
+              {{subCategory.label}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf='subCategory.invalid && subCategory.touched'>{{getErrorMessage(subCategory)}}</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!-- (Optional) Item category of the product -->
+    <div fxLayout='column' fxLayoutAlign='center center'
+         *ngIf='category.touched && openSubCategory && subCategory.touched && openItemCategory'>
+      <div fxLayout='column' fxLayoutAlign='center start'>
+        <p class='font-secondary font-medium font-sm'>Select an item-category
+          in {{subCategory.value | formatCategory: subCategories}}</p>
+        <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+          <mat-select [formControl]='itemCategory' (selectionChange)='isItemCategorySelected(itemCategory.value)'>
+            <mat-option *ngFor='let itemCategory of itemCategories' [value]='itemCategory.value'
+                        class='font-secondary'>
+              {{itemCategory.label}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf='itemCategory.invalid && itemCategory.touched'>{{getErrorMessage(itemCategory)}}</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='editable-container' *ngIf='showEditableContext'>
+  <mat-horizontal-stepper linear #stepper>
+    <!-- Financial details of the product -->
+    <mat-step [stepControl]='financialDetailsForm'>
+      <form [formGroup]='financialDetailsForm'>
+        <div fxLayout='column' fxLayoutAlign='start start'>
+          <p class='font-secondary font-bold font-lg'>Price</p>
+          <div fxLayout='row' fxLayoutAlign='center center'>
+            <mat-form-field appearance='outline'>
+              <input matInput [formControl]='price'>
+              <mat-error *ngIf='price.invalid && price.touched'>{{getErrorMessage(price)}}</mat-error>
+            </mat-form-field>
+
+            <mat-radio-group [formControl]='priceType' class='financial-radio-group'>
+              <mat-radio-button *ngFor='let type of typesOfPrice' [value]='type.value'
+                                class='financial-radio-button font-secondary font-sm font-light'>
+                {{type.label}}
+              </mat-radio-button>
+            </mat-radio-group>
+            <mat-error *ngIf='priceType.invalid && priceType.touched'>{{getErrorMessage(priceType)}}</mat-error>
+          </div>
+
+          <mat-checkbox class='example-margin' [formControl]='wantMinPrice'
+                        [disabled]='["fixed", "free"].includes(priceType.value)'
+                        (change)='isMinPriceRequired()'>Would you like to set a minimum price?
+          </mat-checkbox>
+
+          <ng-container *ngIf='wantMinPrice.value'>
+            <p class='font-secondary font-bold font-md'>Minimum price</p>
+            <mat-form-field appearance='outline'>
+              <input matInput [formControl]='minPrice'>
+              <mat-error *ngIf='minPrice.invalid && minPrice.touched'>{{getErrorMessage(minPrice)}}</mat-error>
+            </mat-form-field>
+          </ng-container>
+
+          <div fxLayout='row' fxLayoutAlign='center center'>
+            <mat-label class='font-secondary font-md font-regular'>Condition</mat-label>
+            <mat-radio-group [formControl]='condition' class='condition-radio-group'>
+              <mat-radio-button *ngFor='let type of conditionOfProduct' [value]='type.value'
+                                class='financial-radio-button font-secondary font-sm font-light'>
+                {{type.label}}
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div fxLayout='row' fxLayoutAlign='center center'>
+          <button mat-button matStepperNext class='font-bold font-secondary font-sm btn-primary custom-config-button'>
+            Next
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <!-- Descriptive section -->
+    <mat-step [stepControl]='descriptiveDetailsForm'>
+      <form [formGroup]='descriptiveDetailsForm'>
+        <div fxLayout='column' fxLayoutAlign='start start'>
+          <p class='font-secondary font-bold font-lg'>Product Description</p>
+          <div fxLayout='row' fxLayoutAlign='center center'>
+            <mat-form-field appearance='outline' class='descriptive-form-field'>
+              <textarea matInput [formControl]='description' class='descriptive-textarea'></textarea>
+              <mat-error *ngIf='description.invalid && description.touched'>{{getErrorMessage(description)}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div fxLayout='row' fxLayoutAlign='center center'>
+          <button mat-button matStepperPrevious
+                  class='font-bold font-secondary font-sm btn-secondary custom-config-button'>Back
+          </button>
+          <button mat-button matStepperNext class='font-bold font-secondary font-sm btn-primary custom-config-button'>
+            Next
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <!-- Image section -->
+    <mat-step [stepControl]='visualDescriptionForm'>
+      <form [formGroup]='visualDescriptionForm'>
+        <div fxLayout='column' fxLayoutAlign='start start'>
+          <p class='font-secondary font-bold font-lg'>Add your product images here</p>
+          <div class='custom-dropzone' ngx-dropzone [accept]="'image/*'" (change)='onSelect($event)'>
+            <ngx-dropzone-label>
+              <div>
+                <h2>Drop your files here</h2>
+              </div>
+            </ngx-dropzone-label>
+            <ngx-dropzone-image-preview ngProjectAs='ngx-dropzone-preview' *ngFor='let f of files' [file]='f'
+                                        [removable]='true' (removed)='onRemove(f)'>
+              <ngx-dropzone-label></ngx-dropzone-label>
+            </ngx-dropzone-image-preview>
+          </div>
+        </div>
+
+        <div fxLayout='row' fxLayoutAlign='center center'>
+          <button mat-button matStepperPrevious
+                  class='font-bold font-secondary font-sm btn-secondary custom-config-button'>Back
+          </button>
+          <button mat-button matStepperNext class='font-bold font-secondary font-sm btn-primary custom-config-button'>
+            Next
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <!-- Owner details section -->
+    <mat-step [stepControl]='ownerDetailsForm'>
+      <form [formGroup]='ownerDetailsForm'>
+        <div fxLayout='column' fxLayoutAlign='start start'>
+          <p class='font-secondary font-bold font-lg'>Owner Details</p>
+          <div fxLayout='row' fxLayoutAlign='start center'>
+            <mat-form-field appearance='outline'>
+              <mat-label>Contact Name</mat-label>
+              <input matInput [formControl]='contactName'>
+              <mat-error *ngIf='contactName.invalid && contactName.touched'>{{getErrorMessage(contactName)}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance='outline'>
+              <mat-label>Email</mat-label>
+              <input matInput [formControl]='email'>
+              <mat-error *ngIf='email.invalid && email.touched'>{{getErrorMessage(email)}}</mat-error>
+            </mat-form-field>
+          </div>
+
+          <div fxLayout='row' fxLayoutAlign='start center'>
+            <mat-form-field appearance='outline'>
+              <mat-label>Phone Number</mat-label>
+              <input matInput [formControl]='phone'>
+              <mat-error *ngIf='phone.invalid && phone.touched'>{{getErrorMessage(phone)}}</mat-error>
+            </mat-form-field>
+
+            <div fxLayout='row' fxLayoutAlign='center center'>
+              <mat-radio-button [formControl]='showPhoneNumber'
+                                class='financial-radio-button font-secondary font-sm font-light'>
+                Do you want to show phone number?
+              </mat-radio-button>
+            </div>
+          </div>
+
+          <div fxLayout='row' fxLayoutAlign='start center'>
+            <mat-form-field appearance='outline'>
+              <mat-label>Location</mat-label>
+              <input matInput [formControl]='location'>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout='row' fxLayoutAlign='center center'>
+          <button mat-button matStepperPrevious
+                  class='font-bold font-secondary font-sm btn-secondary custom-config-button'>Back
+          </button>
+          <button mat-button matStepperNext class='font-bold font-secondary font-sm btn-primary custom-config-button'>
+            Next
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <!-- Feature details section -->
+    <mat-step [stepControl]='featureForm'>
+      <form [formGroup]='featureForm'>
+        <p class='font-secondary font-bold font-lg'>Choose a feature</p>
+        <div fxLayout='row' fxLayoutAlign='space-around start'>
+          <div class='feature-card' *ngFor='let feature of featureTypes'>
+            <div>
+                <div fxLayout='column' fxLayoutAlign='center center'
+                                 class='feature-card-header' [style.color]="feature.color"
+                [style.background-color]='feature.background_color'>
+                  <p class='font-secondary font-lg font-bold'>{{feature.name}}</p>
+                  <p>{{feature.description.type}}<sup *ngIf='!!feature.description.sup'
+                  >{{feature.description.sup}}</sup></p>
+                </div>
+                <div class='feature-card-content'>
+                  <div fxLayout='column' fxLayoutAlign='start center'>
+                    <ng-container *ngFor='let details of feature.details'>
+                      <p class='font-secondary font-bold font-sm' *ngIf='!!details.head'>{{details.head}}</p>
+                      <p class='font-secondary font-sm font-thin'>{{details.row}}</p>
+                    </ng-container>
+                  </div>
+                </div>
+                <div fxLayout='row' fxLayoutAlign='center center' class='feature-card-action'>
+                  <button mat-flat-button (click)='selectFeature(feature)'
+                          [ngClass]='feature.selected ? "btn-primary": "btn-secondary"'>
+                    {{feature.selected ? 'Selected' : 'Select'}}
+                  </button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div fxLayout='row' fxLayoutAlign='center center'>
+          <button mat-button matStepperPrevious
+                  class='font-bold font-secondary font-sm btn-secondary custom-config-button'>Back
+          </button>
+          <button mat-button matStepperNext class='font-bold font-secondary font-sm btn-primary custom-config-button'>
+            Next
+          </button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>

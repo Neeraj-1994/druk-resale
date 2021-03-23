@@ -1,0 +1,64 @@
+@import "apps/druk-resale/src/assets/styles/font";
+
+.home-container {
+  margin: 10px 20px;
+}
+
+.product-card {
+  border: 1px solid lightgrey;
+  margin: 10px 0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
+  border-radius: 5px;
+}
+
+.image-content {
+  margin: 10px;
+  background-color: darkgrey;
+}
+
+.price-tag {
+  position: absolute;
+  margin-top: 120px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, .7);
+  height: auto;
+  width: auto;
+}
+
+.price-code {
+  opacity: 1;
+  color: #02BD7E;
+  font-size: 10px;
+}
+
+.price-amount {
+  opacity: 1;
+  color: white;
+  margin: 5px 5px 10px 10px;
+  font-size: 20px;
+}
+
+.product-image {
+  height: 150px;
+  width: 200px;
+}
+
+.text-content {
+  margin: 0 10px;
+  font-family: Arial, sans-serif;
+}
+
+.main-text {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.sub-text {
+  font-size: 10px;
+  font-weight: lighter;
+  color: #757575;
+  margin: 0 150px 0 5px;
+}

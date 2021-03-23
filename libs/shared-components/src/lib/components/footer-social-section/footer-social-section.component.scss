@@ -1,0 +1,48 @@
+@import "apps/druk-resale/src/assets/styles/utility";
+@import "apps/druk-resale/src/assets/styles/common";
+@import "apps/druk-resale/src/assets/styles/overwrite";
+
+.footer-social {
+  height: 40px;
+  width: 100%;
+  color: #000000;
+}
+
+.fa {
+  width: 20px;
+  padding: 7px 8px 5px 6px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 10px;
+  color: #000000;
+  border-radius: 50%;
+}
+
+.fa-facebook {
+  margin-left: -10px;
+}
+
+.fa-twitter {
+}
+
+.fa-youtube {
+}
+
+.fa-instagram {
+}
+
+.fa-facebook:hover {
+  background: #3B5998;
+}
+
+.fa-twitter:hover {
+  background: #55ACEE;
+}
+
+.fa-youtube:hover {
+  background: #bb0000;
+}
+
+.fa-instagram:hover {
+  background: #8a3ab9;
+}
