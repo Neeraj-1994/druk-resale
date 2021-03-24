@@ -1,3 +1,5 @@
+$mint: #f1f5f7;
+
 .bg-primary {
   background-color: #FFFFFF;
 }
@@ -14,6 +16,39 @@
 .btn-secondary {
   background-color: #5E3131;
   color: #FFFFFF;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.mint-bg {
+  background-color: $mint !important;
+}
+
+$black-40:rgba(0, 0, 0, .4);
+$black-60:rgba(0, 0, 0, .6);
+$black-80:rgba(0, 0, 0, .8);
+
+.black-40 {
+  color: $black-40;
+}
+
+.black-60 {
+  color: $black-60;
+}
+
+.black-80 {
+  color: $black-80;
+}
+
+.dashed-underline {
+  -moz-text-decoration-line: underline;
+  text-decoration-line: underline;
+  -moz-text-decoration-color: rgba(0, 0, 0, .4);
+  text-decoration-color: rgba(0, 0, 0, .4);
+  -moz-text-decoration-style: dashed;
+  text-decoration-style: dashed;
 }
 
 .primary-border {
@@ -36,10 +71,17 @@
   color: #239A98;
 }
 
-.invalid-icon {
+.invalid-icon, .warn-text {
   color: #D9415C;
 }
 
+.icon {
+  color: #5664d2 ;
+}
+
+.product-border {
+  border: 2px solid #5664d2;
+}
 .authentication-bg {
   background-image: url("../images/authentication-bg.jpg");
   height: 100vh;
@@ -133,6 +175,14 @@ a.text-primary:hover, a.text-primary:focus {
 
 .alert-margin {
   margin-bottom: 1.5rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.circle {
+  border-radius: 50%;
 }
 
 .custom-config-button {
