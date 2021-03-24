@@ -1,15 +1,15 @@
-* {
-  font-family: Lato, sans-serif;
-}
+@import "apps/druk-resale/src/assets/styles/utility";
+@import "apps/druk-resale/src/assets/styles/common";
+@import "apps/druk-resale/src/assets/styles/overwrite";
 
 ngx-dropzone,
 .custom-dropzone {
-  margin: 20px;
+  margin: 10px;
 }
 
 .custom-dropzone {
-  height: 250px;
-  width: 1000px;
+  height: 150px;
+  width: 1200px;
 }
 
 .custom-dropzone.ngx-dz-hovered {

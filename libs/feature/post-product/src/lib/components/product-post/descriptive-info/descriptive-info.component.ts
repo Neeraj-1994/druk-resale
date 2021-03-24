@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'pp-descriptive-info',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DescriptiveInfoComponent implements OnInit {
 
+  @Input() descriptiveDetailsForm: FormGroup;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  get description(): FormControl {
+    return this.descriptiveDetailsForm.get('description') as FormControl;
+  }
 }

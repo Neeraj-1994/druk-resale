@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { PostBaseComponent } from '../../post-base/post-base.component';
 import { PostFacadeService } from '../../../services/post-facade.service';
@@ -13,6 +13,9 @@ import { FirstLevelCategory, SecondLevelCategory, ThirdLevelCategory } from '../
   styleUrls: ['./basic-details.component.scss']
 })
 export class BasicDetailsComponent extends PostBaseComponent implements OnInit {
+
+
+  @Input() basicDetailsForm: FormGroup;
 
   constructor(public postFacadeService: PostFacadeService, public route: Router) {
     super(postFacadeService, route);

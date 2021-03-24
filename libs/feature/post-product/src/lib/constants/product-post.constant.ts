@@ -276,7 +276,7 @@ export let featureTypes = [
       }
     ],
     value: 'free',
-    background_color: '#878787',
+    background_color: '#8D918D',
     color: '#000000',
     selected: false
   },
@@ -297,7 +297,7 @@ export let featureTypes = [
       }
     ],
     value: 'plus',
-    background_color: '#32a852',
+    background_color: '#a62c2b',
     color: '#000000',
     selected: false
   },
@@ -324,7 +324,7 @@ export let featureTypes = [
       }
     ],
     value: 'pro',
-    background_color: '#d43333',
+    background_color: '#228b22',
     color: '#000000',
     selected: false
   },
@@ -348,7 +348,7 @@ export let featureTypes = [
       }
     ],
     value: 'premium',
-    background_color: '#d1a82c',
+    background_color: '#FFD700',
     color: '#000000',
     selected: false
   }

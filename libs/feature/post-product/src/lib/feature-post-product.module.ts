@@ -25,6 +25,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CategoryPipe } from './pipes/category.pipe';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCardModule } from '@angular/material/card';
+import { FormatErrorPipe } from './pipes/format-error.pipe';
+import { FormatPricePipe } from './pipes/format-price.pipe';
+import { BasicEditableDetailsComponent } from './components/product-post/basic-editable-details/basic-editable-details.component';
 
 @NgModule({
   imports: [
@@ -55,7 +58,10 @@ import { MatCardModule } from '@angular/material/card';
     FeatureTypeComponent,
     MiscDataComponent,
     PayOutComponent,
-    CategoryPipe
+    CategoryPipe,
+    FormatErrorPipe,
+    FormatPricePipe,
+    BasicEditableDetailsComponent
   ],
   exports: [
     ProductPostComponent,
