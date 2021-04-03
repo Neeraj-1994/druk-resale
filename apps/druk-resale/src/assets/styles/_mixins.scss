@@ -1,0 +1,76 @@
+$unit: 'px'; // Feel free to change the unit.
+@mixin list-loop($amount, $className, $directio) {
+
+  @each $size in $amount {
+
+    #{$className + $size} {
+      @each $direction in $directio {
+        #{$direction}: #{$size + $unit} !important;
+      }
+    }
+  }
+}
+//padding
+@include list-loop((12, 20),'.p-', 'padding');
+@include list-loop((0,16),'.p-r-', 'padding-right');
+@include list-loop((0,20,4),'.p-l-', 'padding-left');
+@include list-loop((),'.p-b-', 'padding-bottom');
+@include list-loop((),'.p-t-', 'padding-top');
+@include list-loop((12, 20, 40),'.p-x-', ('padding-right', 'padding-left'));
+@include list-loop((12),'.p-y-', ('padding-top', 'padding-bottom'));
+
+//margin
+@include list-loop((),'.m-', 'margin');
+@include list-loop((4,8,12,20, 24),'.m-r-', 'margin-right');
+@include list-loop((8,12,24,60),'.m-l-', 'margin-left');
+@include list-loop((0,4,8,12),'.m-b-', 'margin-bottom');
+@include list-loop((-1,0,12,20,28),'.m-t-', 'margin-top');
+@include list-loop((8,12, 20),'.m-x-', ('margin-right', 'margin-left'));
+@include list-loop((0,4,8,12,16,20,24),'.m-y-', ('margin-top', 'margin-bottom'));
+
+//border-radius
+@include list-loop((4,12),'.b-r-', 'border-radius');
+@include list-loop((12),'.b-t-l-r-', 'border-top-left-radius');
+@include list-loop((12),'.b-t-r-r-', 'border-top-right-radius');
+@include list-loop((12),'.b-b-l-r-', 'border-bottom-left-radius');
+@include list-loop((12),'.b-b-r-r-', 'border-bottom-right-radius');
+@include list-loop((12),'.b-t-r-', ('border-top-left-radius','border-top-right-radius'));
+@include list-loop((12),'.b-b-r-', ('border-bottom-left-radius','border-bottom-right-radius'));
+@include list-loop((12),'.b-l-r-', ('border-bottom-left-radius','border-top-left-radius'));
+@include list-loop((12),'.b-r-r-', ('border-bottom-right-radius','border-top-right-radius'));
+
+//font-size
+@mixin font-size($amount) {
+
+  @each $size in $amount {
+    .fs-#{$size} {
+      font-size:#{$size}px;
+    }
+  }
+}
+@include font-size((10, 12, 14, 18, 20, 30));
+
+//object-size
+@mixin size($amount) {
+
+  @each $size in $amount {
+    .s-#{$size} {
+      width: #{$size}px !important;
+      height: #{$size}px !important;
+      font-size: #{$size}px !important;
+    }
+  }
+}
+@include size((8,10, 12, 16, 18, 20, 24, 32,50, 54, 72));
+
+
+//vertical-align
+@mixin ver($direction) {
+
+  @each $position in $direction {
+    .v-#{$position} {
+      vertical-align:#{$position};
+    }
+  }
+}
+@include ver(('middle','super', 'baseline', 'text-top', 'text-bottom', 'sub', 'bottom'));

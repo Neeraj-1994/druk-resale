@@ -1,0 +1,20 @@
+<form [formGroup]='descriptiveDetailsForm'>
+  <div fxLayout='column' fxLayoutAlign='start start'>
+    <p class='font-secondary font-bold font-lg'>Product Description</p>
+    <div fxLayout='row' fxLayoutAlign='center center'>
+      <mat-form-field appearance='outline' class='descriptive-form-field'>
+        <textarea matInput [formControl]='description' class='descriptive-textarea'></textarea>
+        <mat-error *ngIf='description.invalid && description.touched'>{{description | formatError}}</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div fxLayout='row' fxLayoutAlign='center center'>
+    <button mat-button matStepperPrevious
+            class='font-bold font-secondary font-sm btn-secondary custom-config-button'>Back
+    </button>
+    <button mat-button matStepperNext class='font-bold font-secondary font-sm btn-primary custom-config-button'>
+      Next
+    </button>
+  </div>
+</form>

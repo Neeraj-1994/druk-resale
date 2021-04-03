@@ -1,0 +1,25 @@
+<form [formGroup]='visualDescriptionForm'>
+  <div fxLayout='column' fxLayoutAlign='start start'>
+    <p class='font-secondary font-bold font-lg'>Add your product images here</p>
+    <div class='custom-dropzone' ngx-dropzone [accept]="'image/*'" (change)='onSelect($event)'>
+      <ngx-dropzone-label>
+        <div>
+          <h2>Drop your files here</h2>
+        </div>
+      </ngx-dropzone-label>
+      <ngx-dropzone-image-preview ngProjectAs='ngx-dropzone-preview' *ngFor='let f of files' [file]='f'
+                                  [removable]='true' (removed)='onRemove(f)'>
+        <ngx-dropzone-label></ngx-dropzone-label>
+      </ngx-dropzone-image-preview>
+    </div>
+  </div>
+
+  <div fxLayout='row' fxLayoutAlign='center center'>
+    <button mat-button matStepperPrevious
+            class='font-bold font-secondary font-sm btn-secondary custom-config-button'>Back
+    </button>
+    <button mat-button matStepperNext class='font-bold font-secondary font-sm btn-primary custom-config-button'>
+      Next
+    </button>
+  </div>
+</form>

@@ -1,6 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { DrukReSaleStoreState, ProductList, SharedFacadeService } from '@druk-resale/shared-components';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'po-product-details',
@@ -9,15 +7,28 @@ import { Observable } from 'rxjs';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  state$: Observable<DrukReSaleStoreState>;
-  productDetails: ProductList;
-  constructor(public sharedFacadeService: SharedFacadeService) {
-    this.sharedFacadeService.initialize();
+  feature = [
+    {
+      icon : 'check_circle_outline',
+      title: 'Free Shipping',
+      label: 'Sed ut perspiciatis unde',
+    },
+    {
+      icon : 'paid_outline',
+      title: 'Easy Return',
+      label: 'Sed ut perspiciatis unde',
+    },
+    {
+      icon : 'people',
+      title: 'Cash On Delivery',
+      label: 'Sed ut perspiciatis unde',
+    }
+  ];
+
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.state$ = this.sharedFacadeService.stateChange();
-    this.productDetails = this.sharedFacadeService.getProductDetailedState();
   }
 
 }

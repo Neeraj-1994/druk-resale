@@ -1,0 +1,39 @@
+::ng-deep {
+  .custom-input.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+    color: #D9415C !important;
+  }
+}
+
+::ng-deep {
+  .custom-input.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: #02BD7E !important;
+  }
+}
+
+::ng-deep {
+  .custom-input.mat-form-field-invalid .mat-input-element {
+    caret-color: #D9415C !important;
+  }
+}
+
+::ng-deep {
+  .custom-input.mat-input-element {
+    caret-color: #02BD7E !important;
+  }
+}
+
+::ng-deep {
+  .custom-input.mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    color: #D9415C !important;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px white inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #333;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px white inset; /*your box-shadow*/
+  -webkit-text-fill-color: #333;
+}

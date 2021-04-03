@@ -1,18 +1,126 @@
-<div class="view-container" fxLayout="row" *ngIf='state$ | async as state'>
-
-  <div class="product-details" fxLayout="row" fxLayoutAlign="center center">
-    <div fxLayout="column" class="product-description" fxFlex="60">
-      <div class="image-gallery">
-      </div>
-
-      <div fxLayout="row" fxLayoutAlign="start center">
-        <p>{{productDetails.name}}</p>
-      </div>
-    </div>
-
-    <div fxLayout="column" class="seller-info" fxFlex="40">
-
-    </div>
-  </div>
+<div fxLayout='row' fxLayoutAlign='space-between center'>
+  <p class='black-80 m-y-24 font-bold'>PRODUCT DETAIL</p>
+  <p class='black-60 '>
+    <span class=''>Ecommerce</span>
+    <mat-icon class='s-20 m-t-12 m-x-8 v-sub'>navigate_next</mat-icon>
+    <span>Produce Detail</span>
+  </p>
 </div>
+<div>
+  <mat-card class='p-20'>
+    <div fxLayout='row'>
+      <div class='m-r-24'>
+        <div fxLayoutAlign='center center' class='opt-img b-r-4 m-y-4' tabindex='1' *ngFor='let i of [1,2,3,4]'>
+          <img src='../assets/images/SiteLogo.png' alt='' class='mini-img'>
+        </div>
+      </div>
+      <!--      <div class='selected-product'>-->
+      <!--      </div>-->
+      <div fxLayoutAlign='center center' class='selected-product'>
+        <img src='../assets/images/SiteLogo.png' alt='' class='img'>
+      </div>
 
+      <div fxLayout='column' class='m-l-60 pl-4 full-width'>
+        <div>
+          <p class='fs-14'>Blue color, T-shirt</p>
+          <p class='fs-20'>Full sleeve T-shirt</p>
+        </div>
+
+
+        <div fxLayout='row' class='m-t-20'>
+          <mat-icon *ngFor='let i of [1,2,3,4,5]' class='s-16 yellow-color'>grade</mat-icon>
+          <p class='m-l-24'>(0)</p>
+        </div>
+        <p class='fs-18'>
+          <span>$450</span> <span class='black-60 m-x-8'>$405 </span> <span class='fs-14 warn-text'>10 % Off</span>
+        </p>
+        <p class='black-60'>To achieve this, it would be necessary to have uniform pronunciation</p>
+        <hr class='full-width m-y-20'>
+
+        <div fxLayoutAlign='space-between' class='full-width'>
+          <div fxFlex='45' fxLayout='column'>
+            <p class='bold m-t-8 m-b-0'>Specification :</p>
+            <ul>
+              <li *ngFor='let item of [1,2,3,4,5]' class='black-60 m-y-8 p-l-0'>Coffee</li>
+            </ul>
+          </div>
+          <div fxFlex='45' fxLayout='column' fxLayoutAlign=''>
+
+            <p class='bold m-t-8 m-b-8'>Services : :</p>
+            <p class='black-60'>
+              <mat-icon class='s-20 v-bottom icon'>autorenew</mat-icon>
+              10 Days Replacement
+            </p>
+            <p class='black-60'>
+              <mat-icon class='s-20 v-bottom icon'>monetization_on</mat-icon>
+              10 Days Replacement
+            </p>
+          </div>
+        </div>
+        <div fxLayoutAlign='space-between' class='full-width'>
+          <div fxFlex='45' fxLayout='column'>
+            <p class='bold m-t-8 m-b-0'>Color:</p>
+            <div fxLayoutAlign='start center'>
+              <div fxLayoutAlign='center center' class='s-72  b-r-4 m-y-16 m-x-8 product-border'
+                   *ngFor='let i of [1,2]'>
+                <img src='../assets/images/SiteLogo.png' alt='' class='s-50 '>
+              </div>
+            </div>
+          </div>
+          <div fxFlex='45' fxLayout='column' fxLayoutAlign=''>
+
+            <p class='bold m-t-8 m-b-0'>Size :</p>
+            <div fxLayoutAlign='start center'>
+              <div fxLayoutAlign='center center' class='s-32  b-r-4 m-y-16 m-x-8 product-border'
+                   *ngFor='let i of [1,2,3,4]'>
+                <p class='m-y-0'>S</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='m-y-24'>
+      <p>Product description:</p>
+      <mat-tab-group>
+        <mat-tab label='Description'>
+          <mat-card class='description-border p-x-40 m-t--1'>
+            <p>If several languages coalesce, the grammar of the resulting language is more simple and regular than that
+              of the individual</p>
+
+            <p>To achieve this, it would be necessary to have uniform grammar, pronunciation and more common several
+              languages coalesce, the grammar of the resulting.
+            </p>
+            <p>It will be as simple as occidental in fact.</p>
+          </mat-card>
+        </mat-tab>
+        <mat-tab label='Specification'>
+          <mat-card class='description-border p-x-40 m-t--1'>
+            <hr class='faint'>
+            <ng-container *ngFor='let item of [1,2,3,4,5]'>
+              <div fxLayoutAlign='start center' fxLayoutGap='200px' class='full-width'>
+                <p class='m-y-8'>Category</p>
+                <p class='m-y-8'>t-shirt</p>
+              </div>
+              <hr class='faint'>
+            </ng-container>
+          </mat-card>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </mat-card>
+  <mat-card class='m-y-20'>
+    <div fxLayoutAlign='space-between center' >
+      <div fxFlex='30' fxLayout='row' fxLayoutAlign='start center' *ngFor='let item of feature'>
+        <div fxLayoutAlign='center center' class='s-54 mint-bg circle'>
+          <mat-icon class='s-24 icon'>{{item.icon}}</mat-icon>
+        </div>
+        <div class='m-x-20'>
+          <p class='font-size-18 bold m-b-8 m-t-12'>Free Shipping</p>
+          <p class='black-40 fs-14'>Sed ut perspiciatis unde</p>
+        </div>
+      </div>
+
+    </div>
+  </mat-card>
+</div>

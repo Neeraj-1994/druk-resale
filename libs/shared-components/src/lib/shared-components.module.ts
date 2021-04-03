@@ -19,6 +19,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   imports: [
@@ -29,7 +31,10 @@ import { MatInputModule } from '@angular/material/input';
     MatMenuModule,
     MatSnackBarModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule,
+    MatSliderModule,
+    MatExpansionModule
   ],
   declarations: [
     AdSectionComponent,
@@ -50,7 +55,14 @@ import { MatInputModule } from '@angular/material/input';
     HeaderNavSectionComponent,
     FooterLinksSectionComponent,
     FooterSocialSectionComponent,
-    ProductListCardComponent
+    ProductListCardComponent,
+    PopularTabSectionComponent,
+    SortSectionComponent,
+    UserSectionComponent,
+    FeatureSectionComponent,
+    DownloadSectionComponent,
+    AdSectionComponent,
+    FilterSectionComponent
   ]
 })
 export class SharedComponentsModule {}

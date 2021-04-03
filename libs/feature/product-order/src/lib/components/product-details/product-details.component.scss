@@ -1,0 +1,40 @@
+.opt-img {
+  width: 94px;
+  height: 78px;
+  border-radius: 4px;
+  background-size: 50%;
+  background-size: 40px 40px;
+  //background-color: #3B5998;
+  &:focus, &:hover {
+    background-color:#f1f5f7;
+    outline-color: transparent;
+  }
+  .mini-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.selected-product {
+  width: 400px !important;
+  height: 290px !important;
+  border: 1px solid #f1f5f7;
+  .img {
+
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+.yellow-color {
+  color: #febe00;
+}
+
+.description-border {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+hr.faint {
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+}

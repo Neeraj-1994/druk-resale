@@ -1,0 +1,27 @@
+@import "apps/druk-resale/src/assets/styles/utility";
+@import "apps/druk-resale/src/assets/styles/common";
+@import "apps/druk-resale/src/assets/styles/overwrite";
+
+.financial-radio-group {
+  margin-left: 15px;
+}
+
+.financial-radio-button {
+  margin: 5px 10px 23px 10px;
+}
+
+.condition-radio-group {
+  margin-left: 15px;
+  margin-top: 18px;
+}
+
+::ng-deep {
+  .currency-code.mat-form-field-appearance-outline .mat-form-field-prefix {
+    top: -5px;
+  }
+}
+
+ .financial-input {
+   margin: 0 0 5px 5px;
+   width: 90%;
+ }

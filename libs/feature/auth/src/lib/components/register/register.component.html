@@ -1,68 +1,127 @@
-<div fxLayout='row' fxLayoutAlign='center start'>
-  <div fxLayout='column' fxLayoutAlign='center center' class='register-card'>
+<div class="home-btn font-xxl">
+  <a routerLink="">
+    <i class='home-item fa fa-home' (click)="routeRedirection('/home')"></i>
+  </a>
+</div>
 
-    <header class='montserrat log-head'>Register</header>
+<div fxFill fxLayout='row wrap'>
+  <div fxFlexFill fxLayout='row' fxFlex='35' class='authentication-page-content'>
 
-    <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
-      <div class='input-field'>
-        <mat-form-field appearance='outline'>
-          <mat-label>First Name</mat-label>
-          <input matInput>
-        </mat-form-field>
+    <div fxLayout='column' fxLayoutAlign='center center'>
+      <div class="text-center">
+        <div>
+          <a routerLink="" class="logo"><img src="../../../../../assets/images/Site Title.png" height="40" alt="logo"></a>
+        </div>
+
+        <h4 class="font-md auth-title font-primary font-lg">Register Account</h4>
+        <p class="text-muted font-secondary font-sm">Get your free Druk-ReSale account now.</p>
       </div>
 
-      <div class='input-field'>
-        <mat-form-field appearance='outline'>
-          <mat-label>Last Name</mat-label>
-          <input matInput>
-        </mat-form-field>
+      <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
+        <div class='input-field'>
+          <mat-form-field appearance='outline' class='custom-input'>
+            <mat-label class='font-secondary'>First Name</mat-label>
+            <input matInput [formControl]='firstName'>
+            <mat-error *ngIf='firstName.invalid && firstName.touched'>{{getErrorMessage(firstName)}}</mat-error>
+            <mat-icon matSuffix
+                      [ngClass]="(firstName.invalid && firstName.dirty) ? 'invalid-icon' : ((firstName.valid && firstName.dirty) ? 'valid-icon' : '')">
+              {{firstName.invalid && firstName.dirty ? 'highlight_off' : (firstName.valid && firstName.dirty ? 'check_circle_outline' : '')}}
+            </mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div class='input-field'>
+          <mat-form-field appearance='outline' class='custom-input'>
+            <mat-label class='font-secondary'>Last Name</mat-label>
+            <input matInput [formControl]='lastName'>
+            <mat-error *ngIf='lastName.invalid && lastName.touched'>{{getErrorMessage(lastName)}}</mat-error>
+            <mat-icon matSuffix
+                      [ngClass]="(lastName.invalid && lastName.dirty) ? 'invalid-icon' : ((lastName.valid && lastName.dirty) ? 'valid-icon' : '')">
+              {{lastName.invalid && lastName.dirty ? 'highlight_off' : (lastName.valid && lastName.dirty ? 'check_circle_outline' : '')}}
+            </mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
+        <div class='input-field'>
+          <mat-form-field appearance='outline' class='custom-input'>
+            <mat-label class='font-secondary'>Email</mat-label>
+            <input matInput [formControl]='email'>
+            <mat-error *ngIf='email.invalid && email.touched'>{{getErrorMessage(email)}}</mat-error>
+            <mat-icon matSuffix
+                      [ngClass]="(email.invalid && email.dirty) ? 'invalid-icon' : ((email.valid && email.dirty) ? 'valid-icon' : '')">
+              {{email.invalid && email.dirty ? 'highlight_off' : (email.valid && email.dirty ? 'check_circle_outline' : '')}}
+            </mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div class='input-field'>
+          <mat-form-field appearance='outline' class='custom-input'>
+            <mat-label class='font-secondary'>Phone Number</mat-label>
+            <input matInput [formControl]='phone'>
+            <mat-error *ngIf='phone.invalid && phone.touched'>{{getErrorMessage(phone)}}</mat-error>
+            <mat-icon matSuffix
+                      [ngClass]="(phone.invalid && phone.dirty) ? 'invalid-icon' : ((phone.valid && phone.dirty) ? 'valid-icon' : '')">
+              {{phone.invalid && phone.dirty ? 'highlight_off' : (phone.valid && phone.dirty ? 'check_circle_outline' : '')}}
+            </mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
+        <div class='input-field'>
+          <mat-form-field appearance='outline' class='custom-input'>
+            <mat-label class='font-secondary'>Password</mat-label>
+            <input matInput type='password' [formControl]='password'>
+            <mat-error *ngIf='password.invalid && password.touched'>{{getErrorMessage(password)}}</mat-error>
+            <mat-icon matSuffix
+                      [ngClass]="(password.invalid && password.dirty) ? 'invalid-icon' : ((password.valid && password.dirty) ? 'valid-icon' : '')">
+              {{password.invalid && password.dirty ? 'highlight_off' : (password.valid && password.dirty ? 'check_circle_outline' : '')}}
+            </mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div class='input-field'>
+          <mat-form-field appearance='outline' class='custom-input'>
+            <mat-label class='font-secondary'>Confirm Password</mat-label>
+            <input matInput type='password' [formControl]='confirmPassword'>
+            <mat-error
+              *ngIf='confirmPassword.invalid && confirmPassword.touched'>{{getErrorMessage(confirmPassword)}}</mat-error>
+            <mat-icon matSuffix
+                      [ngClass]="(confirmPassword.invalid && confirmPassword.dirty) ? 'invalid-icon' : ((confirmPassword.valid && confirmPassword.dirty) ? 'valid-icon' : '')">
+              {{confirmPassword.invalid && confirmPassword.dirty ? 'highlight_off' : (confirmPassword.valid && confirmPassword.dirty ? 'check_circle_outline' : '')}}
+            </mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div fxLayout='column' fxLayoutAlign='space-around center'>
+        <button mat-raised-button class='custom-auth-button btn-primary font-secondary' (click)='registerUser()'>
+          <span>Register</span>
+        </button>
+      </div>
+
+      <div fxLayout='column' fxLayoutAlign='space-around center'>
+        <div class='auth-title text-center'>
+          <p class='condition-terms font-secondary font-sm'>By registering you agree to the Druk-ReSale <a href='#' class='text-primary'>Terms of
+            Use</a></p>
+        </div>
+      </div>
+
+      <div fxLayout='column' fxLayoutAlign='space-around center'>
+        <div class='auth-reroute text-center'>
+          <p class='font-sm font-secondary'>Already have an account ? <a routerLink='/user/login' class='font-regular text-primary'>
+            Login</a></p>
+          <p class='font-secondary font-light font-xs'>© 2021 Neeraj Pradhan</p>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
-      <div class='input-field'>
-        <mat-form-field appearance='outline'>
-          <mat-label>Email</mat-label>
-          <input matInput>
-        </mat-form-field>
-      </div>
-
-      <div class='input-field'>
-        <mat-form-field appearance='outline'>
-          <mat-label>Phone Number</mat-label>
-          <input matInput>
-        </mat-form-field>
-      </div>
-    </div>
-
-    <div class='input-group' fxLayout='row' fxLayoutAlign='space-around center'>
-      <div class='input-field'>
-      <mat-form-field appearance='outline'>
-        <mat-label>Password</mat-label>
-        <input matInput type='password'>
-      </mat-form-field>
-      </div>
-
-      <div class='input-field'>
-        <mat-form-field appearance='outline'>
-          <mat-label>Confirm Password</mat-label>
-          <input matInput type='password'>
-        </mat-form-field>
-      </div>
-    </div>
-
-    <div fxLayout='column' fxLayoutAlign='space-around center'>
-      <button mat-raised-button class='custom-auth-button button-login'>
-        <span>Register</span>
-      </button>
-
-      <button mat-raised-button class='custom-auth-button button-register' (click)='routeRedirection("/user/login")'>
-        <span>Sign In</span>
-      </button>
-
-      <p class='action-text'>
-        <span (click)='routeRedirection("/user/forgot-password")'>Forgot password</span>
-      </p>
+  <div fxFlex='65' fxLayout='column'>
+    <div class='authentication-bg'>
+      <div class='bg-overlay'></div>
     </div>
   </div>
 </div>

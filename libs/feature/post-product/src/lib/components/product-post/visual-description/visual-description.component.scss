@@ -1,0 +1,17 @@
+@import "apps/druk-resale/src/assets/styles/utility";
+@import "apps/druk-resale/src/assets/styles/common";
+@import "apps/druk-resale/src/assets/styles/overwrite";
+
+ngx-dropzone,
+.custom-dropzone {
+  margin: 10px;
+}
+
+.custom-dropzone {
+  height: 150px;
+  width: 1200px;
+}
+
+.custom-dropzone.ngx-dz-hovered {
+  border: 5px solid rgb(235, 79, 79);
+}

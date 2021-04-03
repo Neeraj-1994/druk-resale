@@ -1,0 +1,52 @@
+<form [formGroup]='financialDetailsForm'>
+  <div fxLayout='column' fxLayoutAlign='start start'>
+    <p class='font-secondary font-bold font-lg'>Price</p>
+    <div fxLayout='row' fxLayoutAlign='center center'>
+      <mat-form-field appearance='outline' class='currency-code'>
+        <span matPrefix class='font-secondary font-bold font-sm'>Nu</span>
+        <input matInput [formControl]='price' class='financial-input'>
+        <mat-error *ngIf='price.invalid && price.touched'>{{price | formatError}}</mat-error>
+      </mat-form-field>
+
+      <mat-radio-group [formControl]='priceType' class='financial-radio-group'>
+        <mat-radio-button *ngFor='let type of typesOfPrice' [value]='type.value'
+                          class='financial-radio-button font-secondary font-sm font-light'>
+          {{type.label}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <mat-error *ngIf='priceType.invalid && priceType.touched'>{{priceType | formatError}}</mat-error>
+    </div>
+
+    <mat-checkbox class='example-margin' [formControl]='wantMinPrice'
+                  [disabled]='["fixed", "free"].includes(priceType.value)'
+                  (change)='isMinPriceRequired()'>Would you like to set a minimum price?
+    </mat-checkbox>
+
+    <ng-container *ngIf='wantMinPrice.value'>
+      <p class='font-secondary font-bold font-md'>Minimum price</p>
+      <mat-form-field appearance='outline' class='currency-code'>
+        <span matPrefix class='font-secondary font-extra-bold font-md '>Nu</span>
+        <input matInput [formControl]='minPrice' class='financial-input'>
+        <mat-error *ngIf='minPrice.invalid && minPrice.touched'>{{minPrice | formatError}}</mat-error>
+      </mat-form-field>
+    </ng-container>
+
+    <div fxLayout='row' fxLayoutAlign='center center'>
+      <mat-label class='font-secondary font-md font-regular'>Condition</mat-label>
+      <mat-radio-group [formControl]='condition' class='condition-radio-group'>
+        <mat-radio-button *ngFor='let type of conditionOfProduct' [value]='type.value'
+                          class='financial-radio-button font-secondary font-sm font-light'>
+          {{type.label}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+  <div fxLayout='row' fxLayoutAlign='center center'>
+    <button mat-button matStepperPrevious
+            class='font-bold font-secondary font-sm btn-secondary custom-config-button'>Back
+    </button>
+    <button mat-button matStepperNext class='font-bold font-secondary font-sm btn-primary custom-config-button'>
+      Next
+    </button>
+  </div>
+</form>

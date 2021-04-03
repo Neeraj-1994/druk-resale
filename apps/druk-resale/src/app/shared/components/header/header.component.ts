@@ -8,11 +8,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  hiddenUrls: string[];
-  constructor(public route: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.hiddenUrls = ['/user/register', '/user/login', '/user/forgot-password'];
   }
 
 }
