@@ -1,7 +1,22 @@
 <div fxLayout='column' fxLayoutAlign='space-between' class='full-height'>
   <div>
     <druk-resale-header *ngIf='!authRoutes.includes(route.url)'></druk-resale-header>
+    <div>
+      <swiper [config]="brandSwiper" fxFlex="auto" *ngIf="renderSwiper">
+        <div *ngFor="let option of [1,2,3]">
+          <img class="promotion-image" src="https://source.unsplash.com/collection/190727/1600x900"
+               alt="promotion image"/>
 
+          <span class="post-text">join the revolution</span>
+          <button class="post-btn" mat-flat-button color="primary">
+            <span fxLayoutAlign="center center">
+              <span>Post an ad</span>
+              <mat-icon>post_add</mat-icon>
+            </span>
+          </button>
+        </div>
+      </swiper>
+    </div>
     <div fxLayout='row' fxLayoutAlign='start' class='app-container'>
       <div fxFlex='{{!authRoutes.includes(route.url) ? 5 : 0}}'></div>
 
