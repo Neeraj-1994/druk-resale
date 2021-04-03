@@ -4,6 +4,9 @@ $mint: #f1f5f7;
   background-color: #FFFFFF;
 }
 
+.white-color {
+  color: #FFFFFF;
+}
 .bg-secondary {
   background-color: #fafbfc;
 }
@@ -183,6 +186,10 @@ a.text-primary:hover, a.text-primary:focus {
 
 .circle {
   border-radius: 50%;
+}
+
+.hand-cursor {
+  cursor: pointer;
 }
 
 .custom-config-button {
