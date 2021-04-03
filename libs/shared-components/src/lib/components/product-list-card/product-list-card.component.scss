@@ -1,19 +1,20 @@
 @import "apps/druk-resale/src/assets/styles/font";
-
 .home-container {
   margin: 10px 20px;
 }
 
-.product-card {
+/*.product-card {
   border: 1px solid lightgrey;
   margin: 10px 0;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
   border-radius: 5px;
-}
+}*/
 
-.image-content {
+/*.image-content {
+  position: relative;
   margin: 10px;
   background-color: darkgrey;
+
 }
 
 .price-tag {
@@ -25,14 +26,15 @@
   background-color: rgba(0, 0, 0, .7);
   height: auto;
   width: auto;
-}
+}*/
 
 .price-code {
   opacity: 1;
   color: #02BD7E;
-  font-size: 10px;
+  //font-size: 10px;
 }
 
+/*
 .price-amount {
   opacity: 1;
   color: white;
@@ -61,4 +63,71 @@
   font-weight: lighter;
   color: #757575;
   margin: 0 150px 0 5px;
+}
+*/
+
+.product-card {
+  position: relative;
+  //height: 150px;
+  height: 300px;
+  width: 234px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, .1);
+  margin: 10px 0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+  border-radius: 7px;
+
+  .image {
+    height: 170px;
+    width: 100%;
+    object-fit: contain;
+    //border-radius: 8px;
+  }
+  .heart {
+    background-color: rgba(0,0,0, .2);
+    position: absolute;
+    right: 4px;
+    top: 8px;
+    border-radius: 50%;
+    &:hover {
+      box-shadow: 1px 1px 5px rgba(227,27,35, .6);
+    }
+    .heart-icon {
+      &:hover {
+        color: rgb(227,27,35, .9);
+      }
+    }
+  }
+
+/*  .image-card1 {
+    position: absolute;
+    //height: 100px;
+    height: 112px;
+    width: 150px;
+    border-radius: 8px !important;
+    background: #f1f5f7;
+    //box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+    //border: 1px solid rgba(0, 0, 0, .1);
+    left: 50%;
+    transform: translate(-50%,-30%);
+    //background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.2));
+    border: 2px solid transparent;
+    //backdrop-filter: blur(30px);
+    //background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(45, 55, 68, .15);
+    z-index: 1;
+  }*/
+
+}
+
+.warn-color {
+  color: rgb(227,27,35, .8);
+}
+
+.transparent {
+  background-color: transparent !important;
+  &:hover {
+    box-shadow: none !important;
+  }
 }
