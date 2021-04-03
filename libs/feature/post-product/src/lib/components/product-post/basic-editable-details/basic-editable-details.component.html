@@ -1,0 +1,38 @@
+<form [formGroup]='basicDetailsForm'>
+  <!-- Name of the product -->
+  <div fxLayout='column' fxLayoutAlign='start start'>
+    <p class='font-secondary font-bold font-lg'>Product Name</p>
+    <div fxLayout='column' fxLayoutAlign.gt-lg='center start'>
+      <div fxLayout='row' fxLayoutAlign='center center'>
+        <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+          <input matInput [formControl]='name'>
+          <mat-error *ngIf='name.invalid && name.touched'>{{name | formatError}}</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!-- Category display Card -->
+    <ng-container *ngIf='category.dirty'>
+      <div class='categorical-display' fxLayout='row' fxLayoutAlign='space-between center'>
+        <div fxLayout='column' fxLayoutAlign='center start'>
+          <p class='font-secondary font-bold font-md category-display'
+          ><span>
+            {{!!itemCategory.value ? (itemCategory.value | formatCategory: itemCategories) :
+            (!!subCategory.value ? (subCategory.value | formatCategory: subCategories) :
+              (category.value | formatCategory: categories))}}</span></p>
+          <p class='font-secondary font-thin font-sm category-display'><span
+            >{{!!subCategory.value ? (category.value | formatCategory: categories) : ''}}
+              </span><span *ngIf='!!itemCategory.value'> > {{subCategory.value | formatCategory: subCategories}}</span>
+          </p>
+        </div>
+        <i class='font-xxl fa fa-angle-right arrow-icon'></i>
+      </div>
+    </ng-container>
+  </div>
+
+  <div fxLayout='row' fxLayoutAlign='center center'>
+    <button mat-button matStepperNext class='font-bold font-secondary font-sm btn-primary custom-config-button'>
+      Next
+    </button>
+  </div>
+</form>

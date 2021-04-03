@@ -1,1 +1,63 @@
-<p>filter-section works!</p>
+<div class='filter-section'>
+  <div class='background'>
+    <div class='filtered m-x-8 m-y-12 p-12'>
+      <p class='black-40 dashed-underline'>reset all Filters</p>
+      <p class='black-80 fs-18'>Brands:</p>
+      <ng-container *ngFor='let item of filteredBrands'>
+        <p class='m-y-8'>
+          <mat-icon class='s-18 v-bottom'>clear</mat-icon>
+          <span class='black-60 m-l-12 dashed-underline'>{{item.brandName}}</span>
+        </p>
+      </ng-container>
+    </div>
+    <div class='p-l-20 p-r-16'>
+      <p class=' black-80 fs-18'>Price:</p>
+      <div class='full-width'>
+        <mat-slider
+          thumbLabel
+          [displayWith]="formatLabel"
+          tickInterval="100"
+          min="1"
+          max="100000"
+        class='full-width'>
+        </mat-slider>
+      </div>
+      <div class='dashed-hr m-y-20'></div>
+
+      <mat-accordion class="panel-header full-width" multi>
+        <mat-expansion-panel class='panel-body'>
+          <mat-expansion-panel-header class='panel-header'>
+            <mat-panel-title>
+              <span>Shopping Category:</span>
+            </mat-panel-title>
+            <mat-panel-description>
+<!--              <mat-icon>account_circle</mat-icon>-->
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>Clothing</p>
+          <p>Clothing</p>
+          <p>Clothing</p>
+          <p>Clothing</p>
+          <p>Clothing</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel class='panel-body'>
+          <mat-expansion-panel-header class='panel-header'>
+            <mat-panel-title>
+              brands:
+            </mat-panel-title>
+            <mat-panel-description>
+<!--              <mat-icon>account_circle</mat-icon>-->
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>Clothing</p>
+          <p>Clothing</p>
+          <p>Clothing</p>
+          <p>Clothing</p>
+          <p>Clothing</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+</div>
+
+

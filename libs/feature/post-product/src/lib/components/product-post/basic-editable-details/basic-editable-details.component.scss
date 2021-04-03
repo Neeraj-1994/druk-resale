@@ -2,32 +2,11 @@
 @import "apps/druk-resale/src/assets/styles/common";
 @import "apps/druk-resale/src/assets/styles/overwrite";
 
-.post-container {
-  margin: 20px 0 10px 0;
-}
-
-.post-title {
-  margin: 0 0 40px 0;
-}
-
-.editable-container {
-  width: 100%;
-  background-color: #fcfcfa;
-  box-shadow: 0.25px 0.25px 2px rgba(0, 0, 0, .4);
-  padding: 20px;
-  margin: 10px;
-}
-
 ::ng-deep {
   .custom-post-input.mat-form-field .mat-form-field-wrapper {
-    width: 500px !important;
+    width: 400px !important;
     padding-bottom: 20px !important;
   }
-}
-
-.custom-input {
-  margin: 0 0 5px 5px;
-  width: 90%;
 }
 
 .custom-post-button {
@@ -41,18 +20,16 @@
   }
 }
 
-.category-container {
-  margin: 10px 0;
-}
-
 .categorical-display {
-  width: 564px;
-  height: 40px;
+  width: 400px;
+  height: 75px;
+  margin: 10px 0;
+  border-radius: 5px;
   box-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, .4);
 }
 
 .category-display {
-  margin: 0 20px 0 10px;
+  margin: 2.5px 20px 1px 10px;
 }
 
 .category-title {
@@ -61,4 +38,12 @@
 
 .section-border {
   border-bottom: 1px solid grey;
+}
+
+.arrow-icon {
+  margin-right: 10px;
+}
+
+.arrow-icon:hover {
+  color: #3B5998;
 }
