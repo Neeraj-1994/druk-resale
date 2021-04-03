@@ -6,12 +6,14 @@ import { FlexModule } from '@angular/flex-layout';
 import { SharedComponentsModule } from '@druk-resale/shared-components';
 import { RealEstateHomeComponent } from './components/real-estate-home/real-estate-home.component';
 import { VehicleHomeComponent } from './components/vehicle-home/vehicle-home.component';
+import { SwiperModule } from 'ngx-swiper-wrapper';
 
 @NgModule({
   imports: [
     CommonModule,
     FlexModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    SwiperModule
   ],
   declarations: [
     HomePageComponent,
