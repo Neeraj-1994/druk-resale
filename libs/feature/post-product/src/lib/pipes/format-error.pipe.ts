@@ -16,5 +16,4 @@ export class FormatErrorPipe implements PipeTransform {
                 (control.hasError('minLength') ? 'Enter atleast 20 characters' :
                   (control.hasError('pattern') ? 'Invalid Email format' : '')))))));
   }
-
 }
