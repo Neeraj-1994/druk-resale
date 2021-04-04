@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ProductFacadeService } from '../../services/product-facade.service';
+import { Router } from '@angular/router';
+import { ProductList } from '../../../../../home/src/lib/models/product-list.model';
 
 @Component({
   selector: 'po-product-details',
@@ -25,10 +28,12 @@ export class ProductDetailsComponent implements OnInit {
     }
   ];
 
-  constructor() {
+  productDetails: ProductList;
+  constructor(public productFacadeService: ProductFacadeService, private route: Router) {
   }
 
   ngOnInit(): void {
+    this.productDetails = this.productFacadeService.getProductDetailedState();
   }
 
 }
