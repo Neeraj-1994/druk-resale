@@ -76,18 +76,26 @@
   margin: 10px 0;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
   border-radius: 7px;
+  cursor: pointer;
 
   .image {
     height: 170px;
     width: 100%;
     object-fit: contain;
+    transition: 0.3s;
+
+    &:hover {
+      transform: translate(0, -10px);
+    }
     //border-radius: 8px;
   }
+
+
   .heart {
     background-color: rgba(0,0,0, .2);
     position: absolute;
-    right: 4px;
-    top: 8px;
+    right: 12px;
+    bottom: 12px;
     border-radius: 50%;
     &:hover {
       box-shadow: 1px 1px 5px rgba(227,27,35, .6);
