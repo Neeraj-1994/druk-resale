@@ -7,13 +7,17 @@ import { SharedComponentsModule } from '@druk-resale/shared-components';
 import { RealEstateHomeComponent } from './components/real-estate-home/real-estate-home.component';
 import { VehicleHomeComponent } from './components/vehicle-home/vehicle-home.component';
 import { SwiperModule } from 'ngx-swiper-wrapper';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
     CommonModule,
     FlexModule,
     SharedComponentsModule,
-    SwiperModule
+    SwiperModule,
+    MatIconModule,
+    MatButtonModule
   ],
   declarations: [
     HomePageComponent,
