@@ -21,16 +21,10 @@
   </div>
 </div>
 -->
-<div class='p-t-60'>
+<div class='p-t-32'>
   <div class='product-card m-t-20 p-x-12 p-y-20' fxLayout='column'>
     <div class='image-card' fxLayoutAlign='center center'>
       <img [src]='product.images[0]' alt='product_image_{{index}}' class='image'>
-    </div>
-    <div class='heart s-32 hand-cursor' [ngClass]="{'transparent':select==true}" fxLayoutAlign='center center' (click)='favourite()'>
-      <ng-container [ngSwitch]="select">
-        <mat-icon class='heart-icon s-24 warn-color' *ngSwitchCase="true">favorite</mat-icon>
-        <mat-icon class='heart-icon s-24 white-color' *ngSwitchCase="false">favorite_border</mat-icon>
-      </ng-container>
     </div>
 
     <div class='p-t-8'>
@@ -41,6 +35,13 @@
             <sup class='price-code bold'>Nu</sup>{{product.price | number:'1.0':'en-US'}}
           </span>
       </p>
+    </div>
+
+    <div class='heart s-32 hand-cursor' [ngClass]="{'transparent':select==true}" fxLayoutAlign='center center' (click)='favourite()'>
+      <ng-container [ngSwitch]="select">
+        <mat-icon class='heart-icon s-24 warn-color' *ngSwitchCase="true">favorite</mat-icon>
+        <mat-icon class='heart-icon s-24 white-color' *ngSwitchCase="false">favorite_border</mat-icon>
+      </ng-container>
     </div>
   </div>
 </div>

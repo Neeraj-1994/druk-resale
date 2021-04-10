@@ -4,12 +4,12 @@
 
 .header-tab {
   width: 100%;
-  height: 30px;
+  height: 46px;
 }
 
 .home-nav {
   margin: 5px 0;
-  border-right: 1px solid #000000;
+  border-right: 1px solid #FFFFFF;
 }
 
 .category-nav {
@@ -19,6 +19,16 @@
 .category-links {
   margin: 0 10px;
   cursor: pointer;
+  padding: 4px;
+  transition: 0.25s;
+
+  &:hover {
+    color: $primary-color;
+    background-color: white;
+    border-radius: 8px;
+    padding: 4px;
+    transition: 0.3s;
+  }
 }
 
 .home-item {
