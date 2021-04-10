@@ -6,9 +6,10 @@
   background-size: 40px 40px;
   //background-color: #3B5998;
   &:focus, &:hover {
-    background-color:#f1f5f7;
+    background-color: #f1f5f7;
     outline-color: transparent;
   }
+
   .mini-img {
     width: 40px;
     height: 40px;
@@ -16,9 +17,10 @@
 }
 
 .selected-product {
-  width: 400px !important;
-  height: 290px !important;
+  width: 400px;
+  height: 290px;
   border: 1px solid #f1f5f7;
+
   .img {
 
     width: 180px;
@@ -38,3 +40,26 @@
 hr.faint {
   border: 0.5px solid rgba(0, 0, 0, 0.12);
 }
+
+
+::ng-deep ngx-img-zoom {
+  height: 100%;
+
+  .img-zoom-container {
+    .img-zoom-lens {
+      border: none !important;
+    }
+
+    .img-zoom-result {
+      background-color: white;
+      background-repeat: no-repeat;
+      right: 8%;
+      position: fixed;
+      top: 10%;
+      z-index: 999;
+      height: calc(100vh - 200px) !important;
+      width: calc(100vh - 200px) !important;
+    }
+  }
+}
+

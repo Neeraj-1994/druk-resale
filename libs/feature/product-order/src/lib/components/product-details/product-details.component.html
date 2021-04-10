@@ -16,7 +16,13 @@
         </div>
       </div>
       <div fxLayoutAlign='center center' class='selected-product'>
-        <img src='../assets/images/SiteLogo.png' alt='' class='img'>
+        <ngx-img-zoom
+          [zoomImageSrc]="zoomImageSrc"
+          [previewImageSrc]="previewImageSrc"
+          [containerStyle]="'max-height:296px; height:100%; position: unset;'"
+          [imgStyle]="'max-width:100%; height:100%'"
+          [enableZoom]="true"
+        ></ngx-img-zoom>
       </div>
 
       <div fxLayout='column' class='m-l-60 pl-4 full-width'>

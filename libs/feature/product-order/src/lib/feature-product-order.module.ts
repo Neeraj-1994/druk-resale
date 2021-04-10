@@ -8,6 +8,7 @@ import { SharedComponentsModule } from '@druk-resale/shared-components';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
+import { NgxImgZoomModule } from 'ngx-img-zoom';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     SharedComponentsModule,
     MatIconModule,
     MatCardModule,
-    MatTabsModule
+    MatTabsModule,
+    NgxImgZoomModule
   ],
   declarations: [
     OrderBaseComponent,

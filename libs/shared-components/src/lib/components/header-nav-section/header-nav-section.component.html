@@ -17,7 +17,7 @@
 
     <div [fxFlex]='authHiddenUrls.includes(route.url) ? "25" : "10"' fxLayoutAlign='end center'>
       <ng-container *ngIf='!postHiddenUrls.includes(route.url)'>
-        <button mat-raised-button class='btn-primary btn-bottom-shift header-button'
+        <button mat-raised-button color="primary" class='btn-bottom-shift header-button'
                 (click)='linkRedirection("/post/ads")'>
           <span class='font-secondary'>Post an ad</span>
         </button>

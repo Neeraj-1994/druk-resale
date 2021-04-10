@@ -11,7 +11,7 @@
             <input matInput [formControl]='name' placeholder='Write a descriptive title for your ad...' class='custom-input'>
             <mat-error *ngIf='name.invalid && name.touched'>{{name | formatError}}</mat-error>
           </mat-form-field>
-          <button mat-raised-button class='custom-post-button btn-primary' [disabled]='name.invalid'
+          <button mat-raised-button color="primary" class='custom-post-button' [disabled]='name.invalid'
                   (click)='isNameValid()'>
             <i class='font-xxl fa fa-angle-right'></i>
           </button>
