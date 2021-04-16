@@ -7,7 +7,7 @@ import { ProductList } from '../../models/product-list.model';
   styleUrls: ['./product-list-card.component.scss']
 })
 export class ProductListCardComponent implements OnInit {
-
+select=false;
   @Input() product: ProductList;
   @Input() index: number;
   constructor() { }
@@ -15,4 +15,7 @@ export class ProductListCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  favourite():void {
+    this.select != this.select;
+  }
 }

@@ -1,6 +1,8 @@
 <div fxLayout='row wrap' fxLayoutAlign='space-between start'>
-  <ng-container *ngFor="let product of products; let i = index">
-    <sc-product-list-card [product]='product' [index]='i' (click)='goToDetails(product)'></sc-product-list-card>
-  </ng-container>
+  <sc-filter-section fxFlex='25'></sc-filter-section>
+  <div fxLayout='row wrap' fxLayoutAlign='start center' fxLayoutGap="20px" fxFlex='75' class="product-card">
+    <ng-container *ngFor='let product of products; let i = index'>
+      <sc-product-list-card class="product-card-list" [product]='product' [index]='i' (click)='goToDetails(product)'></sc-product-list-card>
+    </ng-container>
+  </div>
 </div>
-<sc-filter-section></sc-filter-section>

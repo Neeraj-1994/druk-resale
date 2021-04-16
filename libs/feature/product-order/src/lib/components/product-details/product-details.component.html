@@ -10,20 +10,26 @@
   <mat-card class='p-20'>
     <div fxLayout='row'>
       <div class='m-r-24'>
-        <div fxLayoutAlign='center center' class='opt-img b-r-4 m-y-4' tabindex='1' *ngFor='let i of [1,2,3,4]'>
-          <img src='../assets/images/SiteLogo.png' alt='' class='mini-img'>
+        <div fxLayoutAlign='center center' class='opt-img b-r-4 m-y-4' tabindex='1'
+             *ngFor='let image of productDetails.images; let i = index'>
+          <img [src]='image' alt='product_image{{i}}' class='mini-img'>
         </div>
       </div>
-      <!--      <div class='selected-product'>-->
-      <!--      </div>-->
       <div fxLayoutAlign='center center' class='selected-product'>
-        <img src='../assets/images/SiteLogo.png' alt='' class='img'>
+        <ngx-img-zoom
+          [zoomImageSrc]="zoomImageSrc"
+          [previewImageSrc]="previewImageSrc"
+          [containerStyle]="'max-height:296px; height:100%; position: unset;'"
+          [imgStyle]="'max-width:100%; height:100%'"
+          [enableZoom]="true"
+        ></ngx-img-zoom>
       </div>
 
       <div fxLayout='column' class='m-l-60 pl-4 full-width'>
         <div>
-          <p class='fs-14'>Blue color, T-shirt</p>
-          <p class='fs-20'>Full sleeve T-shirt</p>
+          <p class='fs-14'>{{productDetails.name}}</p>
+          <p
+            class='fs-20'>{{productDetails.category + ' > ' + productDetails.sub_category + ' > ' + productDetails.item_category}}</p>
         </div>
 
 
@@ -32,9 +38,15 @@
           <p class='m-l-24'>(0)</p>
         </div>
         <p class='fs-18'>
-          <span>$450</span> <span class='black-60 m-x-8'>$405 </span> <span class='fs-14 warn-text'>10 % Off</span>
+          <span
+          >Nu.{{productDetails.price}}
+          </span>
+          <ng-container *ngIf='!!productDetails.minimum_price'>
+          <span class='black-60 m-x-8'>Minimum Price: Nu.{{productDetails.minimum_price}}
+          </span> <span class='fs-14 warn-text'>{{((productDetails.price - productDetails.minimum_price)/productDetails.price) * 100}}% negotiable</span>
+          </ng-container>
         </p>
-        <p class='black-60'>To achieve this, it would be necessary to have uniform pronunciation</p>
+        <p class='black-60'>{{productDetails.description}}</p>
         <hr class='full-width m-y-20'>
 
         <div fxLayoutAlign='space-between' class='full-width'>
@@ -110,7 +122,7 @@
     </div>
   </mat-card>
   <mat-card class='m-y-20'>
-    <div fxLayoutAlign='space-between center' >
+    <div fxLayoutAlign='space-between center'>
       <div fxFlex='30' fxLayout='row' fxLayoutAlign='start center' *ngFor='let item of feature'>
         <div fxLayoutAlign='center center' class='s-54 mint-bg circle'>
           <mat-icon class='s-24 icon'>{{item.icon}}</mat-icon>
