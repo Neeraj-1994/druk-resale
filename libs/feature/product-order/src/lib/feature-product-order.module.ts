@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgxImgZoomModule } from 'ngx-img-zoom';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { NgxImgZoomModule } from 'ngx-img-zoom';
     MatIconModule,
     MatCardModule,
     MatTabsModule,
-    NgxImgZoomModule
+    NgxImgZoomModule,
+    MatMenuModule
   ],
   declarations: [
     OrderBaseComponent,
