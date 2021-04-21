@@ -21,6 +21,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { HeaderBannerSectionComponent } from './components/header-banner-section/header-banner-section.component';
+import { HomeProductCardComponent } from './components/home-product-card/home-product-card.component';
+import { PaginationSectionComponent } from './components/pagination-section/pagination-section.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   imports: [
@@ -48,7 +52,11 @@ import { MatExpansionModule } from '@angular/material/expansion';
     PopularTabSectionComponent,
     ProductListCardComponent,
     SortSectionComponent,
-    UserSectionComponent
+    UserSectionComponent,
+    HeaderBannerSectionComponent,
+    HomeProductCardComponent,
+    PaginationSectionComponent,
+    SearchBarComponent
   ],
   exports: [
     HeaderTabSectionComponent,
