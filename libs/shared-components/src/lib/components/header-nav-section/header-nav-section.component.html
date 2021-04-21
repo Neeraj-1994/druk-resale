@@ -1,17 +1,17 @@
 <div fxLayout='row' fxLayoutAlign='space-between center'
-     class='header-nav bg-secondary primary-border font-sm p-x-50'>
+     class='header-nav bg-white p-x-50'>
   <!-- Home logo -->
-  <div fxFlex='20' fxLayoutAlign='start center'>
-    <mat-icon class='primary-color'>home</mat-icon>
+  <div fxFlex='10' fxLayoutAlign='start center'>
+    <mat-icon class='primary-color home-item'>home</mat-icon>
   </div>
 
   <!-- Auth redirection route -->
   <div [fxFlex]='authHiddenUrls.includes(route.url) ? "0": "15"'
-       class='auth-nav primary-color font-size-primary' fxLayoutAlign='end center'>
+       class='primary-color font-size-primary font-secondary' fxLayoutAlign='end center'>
     <ng-container *ngIf='[null, undefined].includes(authFacadeService.getUserState().uid)'>
       <!-- Login and Register -->
       <ng-container *ngFor='let authItem of authLinks; let i = index'>
-        <span class='auth-items font-secondary'
+        <span class='auth-items'
               (click)='linkRedirection(authItem.route)'>{{authItem.label}}</span>
       </ng-container>
 
@@ -22,7 +22,7 @@
 
     <ng-container *ngIf='![null, undefined].includes(authFacadeService.getUserState().uid)'>
       <span [matMenuTriggerFor]='belowMenu'
-            class='user-items font-secondary font-xs'>Welcome {{authFacadeService.getUserState().displayName}}
+            class='user-items'>Welcome {{authFacadeService.getUserState().displayName}}
         !</span>
 
       <span [matMenuTriggerFor]='belowMenu'>
@@ -36,7 +36,7 @@
       </span>
 
       <mat-menu #belowMenu='matMenu' yPosition='below' xPosition='before'>
-        <button mat-menu-item (click)='logout()' class='font-secondary font-sm'>Log Out</button>
+        <button mat-menu-item (click)='logout()' class='font-sm'>Log Out</button>
       </mat-menu>
     </ng-container>
   </div>
