@@ -64,6 +64,10 @@ $black-80: rgba(0, 0, 0, .8);
   text-decoration-style: dashed;
 }
 
+.bg-white {
+  background-color: #FFFFFF;
+}
+
 .primary-border {
   border-bottom: 2px solid #c2c2c2;
 }
@@ -157,11 +161,6 @@ a.text-primary:hover, a.text-primary:focus {
 
 .condition-terms {
   margin-bottom: 0;
-}
-
-.home-item {
-  cursor: pointer;
-  color: #FFFFFF;
 }
 
 .custom-auth-button {
