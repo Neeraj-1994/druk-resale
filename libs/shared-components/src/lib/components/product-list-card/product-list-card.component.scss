@@ -1,4 +1,6 @@
 @import "apps/druk-resale/src/assets/styles/font";
+@import "apps/druk-resale/src/assets/styles/common";
+
 .home-container {
   margin: 10px 20px;
 }
@@ -91,13 +93,13 @@
 
 
   .heart {
-    background-color: rgba(0,0,0, .2);
+    //background-color: rgba(0,0,0, .2);
     position: absolute;
     right: 12px;
     bottom: 12px;
-    border-radius: 50%;
+    //border-radius: 50%;
     &:hover {
-      box-shadow: 1px 1px 5px rgba(227,27,35, .6);
+      //box-shadow: 1px 1px 5px rgba($primary-color .6);
     }
     .heart-icon {
       &:hover {

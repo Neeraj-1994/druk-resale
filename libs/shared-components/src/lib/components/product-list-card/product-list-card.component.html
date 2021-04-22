@@ -39,8 +39,8 @@
 
     <div class='heart s-32 hand-cursor' [ngClass]="{'transparent':select==true}" fxLayoutAlign='center center' (click)='favourite()'>
       <ng-container [ngSwitch]="select">
-        <mat-icon class='heart-icon s-24 warn-color' *ngSwitchCase="true">favorite</mat-icon>
-        <mat-icon class='heart-icon s-24 white-color' *ngSwitchCase="false">favorite_border</mat-icon>
+        <mat-icon class='heart-icon s-24 primary-color' *ngSwitchCase="true">favorite</mat-icon>
+        <mat-icon class='heart-icon s-24 price-code' *ngSwitchCase="false">favorite_border</mat-icon>
       </ng-container>
     </div>
   </div>
