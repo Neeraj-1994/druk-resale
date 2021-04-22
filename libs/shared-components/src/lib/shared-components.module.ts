@@ -21,6 +21,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -34,7 +37,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatInputModule,
     MatSnackBarModule,
     MatSliderModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatChipsModule,
+    MatCheckboxModule,
+    FormsModule
   ],
   declarations: [
     AdSectionComponent,

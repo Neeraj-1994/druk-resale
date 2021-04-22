@@ -4,7 +4,12 @@
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
 @import 'assets/styles/mixins';
+@import 'assets/styles/font';
+@import 'assets/styles/variable';
+@import 'assets/styles/overwrite';
 @import 'assets/styles/common';
+@import 'assets/styles/utility';
+
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
@@ -70,8 +75,11 @@ $druk-resale-theme: mat-light-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+body { margin: 0; font-family: Lato, sans-serif;
 background-color: #f1f5f7;
 //  background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
+}
+* {
+  font-family: Lato, sans-serif;
 }
 p {font-size: 16px;}
