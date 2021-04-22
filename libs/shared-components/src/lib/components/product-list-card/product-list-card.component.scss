@@ -69,15 +69,21 @@
 .product-card {
   position: relative;
   //height: 150px;
-  height: 300px;
-  width: 234px;
   background: white;
   border: 1px solid rgba(0, 0, 0, .1);
   margin: 10px 0;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, .2);
   border-radius: 7px;
   cursor: pointer;
 
+  &.grid {
+    height: 300px;
+    width: 234px;
+  }
+  &.list {
+    height: 400px;
+    width: 100%;
+  }
   .image {
     height: 170px;
     width: 100%;
