@@ -1,1 +1,16 @@
-<p>header-banner-section works!</p>
+<div class='image-container'>
+  <swiper [config]='brandSwiper' fxFlex='auto' *ngIf='renderSwiper'>
+    <div *ngFor='let option of [1,2,3]'>
+      <div class='promotion-image'></div>
+      <span class='post-text'>
+        <img src='../../../../../assets/images/Site Title.png' alt='brand_logo' width='350' height='76.89'>
+      </span>
+      <button class='post-btn' mat-flat-button color='primary'>
+        <span fxLayoutAlign='center center'>
+          <span class='m-r-4'>Post an ad</span>
+          <mat-icon>post_add</mat-icon>
+        </span>
+      </button>
+    </div>
+  </swiper>
+</div>
