@@ -1,0 +1,23 @@
+@import "apps/druk-resale/src/assets/styles/utility";
+@import "apps/druk-resale/src/assets/styles/common";
+@import "apps/druk-resale/src/assets/styles/overwrite";
+
+.search-bar {
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 60px;
+  border: 0.5px solid #2b6777;
+}
+
+.search-field {
+  width: 55.5%;
+}
+
+.category-selector {
+  width: 37%;
+}
+
+.search-button {
+  width: 7.5%;
+}
