@@ -21,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatInputModule,
     MatSnackBarModule,
     MatSliderModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatRippleModule
   ],
   declarations: [
     AdSectionComponent,
