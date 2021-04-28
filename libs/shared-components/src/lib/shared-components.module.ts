@@ -28,6 +28,9 @@ import { HomeProductCardComponent } from './components/home-product-card/home-pr
 import { PaginationSectionComponent } from './components/pagination-section/pagination-section.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SwiperModule } from 'ngx-swiper-wrapper';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -42,7 +45,10 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
     MatSnackBarModule,
     MatSliderModule,
     MatExpansionModule,
-    SwiperModule
+    SwiperModule,
+    MatChipsModule,
+    MatCheckboxModule,
+    FormsModule
   ],
   declarations: [
     HeaderNavSectionComponent,
