@@ -75,7 +75,6 @@ $primary-color: #2b6777;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, .2);
   border-radius: 7px;
   cursor: pointer;
-  transition: 0.5s linear;
 
   &.grid {
     //height: 300px;
@@ -87,10 +86,6 @@ $primary-color: #2b6777;
       object-fit: contain;
       //transition: 0.5s linear;
       transition: 0.5s linear;
-      &:hover {
-        //transform: translate(0, -10px);
-        //transform: scale(1.1) rotate3d(0, 1, 0, .5turn);
-      }
     }
   }
   &.list {
@@ -101,20 +96,15 @@ $primary-color: #2b6777;
       height: 200px;
       width: 230px;
       object-fit: contain;
-      //transition: 0.3s;
-      &:hover {
-        //transform: translate(0, -10px);
-        //transform: scale(1.06) rotate3d(0, 1, 0, .5turn);
-      }
+      transition: 0.5s linear;
   }
 
 
   }
 
   &:hover {
-    transition: 0.5s linear;
-    &.grid {
-      transition: 0.5s linear;
+    &.grid,
+    &.list {
       .image {
           //transform: translate(0, -10px);
           transform: scale(1.1) rotate3d(0, 1, 0, .5turn);
@@ -131,14 +121,14 @@ $primary-color: #2b6777;
     //border-radius: 50%;
     transition: 2s;
     //animation: all 2s;
-    &:hover {
-      //box-shadow: 1px 1px 5px rgba(227,27,35, .6);
-    }
+
     .heart-icon {
       transition: .5s linear;
-      &:hover {
-        color: rgb($primary-color, .9);
-        transform: scale(1.2) translateY(-5px) rotate3d(0, 1, 0, .5turn);
+    }
+    &:hover {
+      .heart-icon {
+          color: rgb($primary-color, .9);
+          transform: scale(1.2) translateY(-5px) rotate3d(0, 1, 0, .5turn);
       }
     }
   }

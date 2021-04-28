@@ -39,10 +39,6 @@ export const category: Category[] = [
     value: '/product/list'
   },
   {
-    label: 'Clothing & Jewellery',
-    value: '/product/list'
-  },
-  {
     label: 'More',
     value: '/product/list'
   }
