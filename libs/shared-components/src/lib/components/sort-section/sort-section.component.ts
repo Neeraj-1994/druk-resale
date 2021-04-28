@@ -5,11 +5,23 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sort-section.component.html',
   styleUrls: ['./sort-section.component.scss']
 })
+
 export class SortSectionComponent implements OnInit {
 
-  constructor() { }
+  toggle = true;
+
+  constructor() {
+  }
+  sort = [
+    {option: 'Most Relivant'},
+    {option: 'Most Relivant'},
+    {option: 'Most Relivant'}
+  ];
+
+  view(): void {
+    this.toggle = !this.toggle;
+  }
 
   ngOnInit(): void {
   }
-
 }

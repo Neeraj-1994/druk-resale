@@ -68,6 +68,10 @@ $black-80: rgba(0, 0, 0, .8);
   text-decoration-style: dashed;
 }
 
+.bg-white {
+  background-color: #FFFFFF;
+}
+
 .primary-border {
   border: 1px solid $primary-color;
 }
@@ -166,11 +170,6 @@ a.text-primary:hover, a.text-primary:focus {
   margin-bottom: 0;
 }
 
-.home-item {
-  cursor: pointer;
-  color: #FFFFFF;
-}
-
 .custom-auth-button {
   width: 120px;
   height: 35px;
@@ -212,4 +211,12 @@ a.text-primary:hover, a.text-primary:focus {
 
 .custom-config-button {
   margin: 30px 5px 10px 5px;
+}
+
+.warn-bg {
+  background: #D9415C ;
+}
+
+.secondary-font {
+  font-family: 'Lato', sans-serif;
 }

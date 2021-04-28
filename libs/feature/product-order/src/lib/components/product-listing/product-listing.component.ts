@@ -17,6 +17,11 @@ export class ProductListingComponent implements OnInit {
   constructor(public productFacadeService: ProductFacadeService, private route: Router) {
     this.productFacadeService.initialize();
   }
+  /*sort = [
+    {option: 'Most Relivant'},
+    {option: 'Most Relivant'},
+    {option: 'Most Relivant'}
+  ];*/
 
   ngOnInit(): void {
     this.getProductsList();

@@ -1,65 +1,43 @@
-<div fxLayout="row" class="header-nav bg-secondary silver-border font-sm">
-  <div fxFlex="5"></div>
-
-  <div fxFlex='90' fxLayout='row' fxLayoutAlign='space-between center'>
-    <!-- header logo route -->
-    <div fxFlex="20" fxLayoutAlign="start center">
-      <img src='../../../../../assets/images/Site Title.png' alt='logo' (click)="linkRedirection('/home')"
-           class='logo'>
-    </div>
-
-    <div fxFlex='55' fxLayoutAlign='center center'>
-      <mat-form-field appearance='outline' class='search-bar'>
-        <input matInput class='text-center font-secondary' placeholder="I'm looking for....">
-        <mat-icon class='custom-search-icon' matSuffix>search</mat-icon>
-      </mat-form-field>
-    </div>
-
-    <div [fxFlex]='authHiddenUrls.includes(route.url) ? "25" : "10"' fxLayoutAlign='end center'>
-      <ng-container *ngIf='!postHiddenUrls.includes(route.url)'>
-        <button mat-raised-button color="primary" class='btn-bottom-shift header-button'
-                (click)='linkRedirection("/post/ads")'>
-          <span class='font-secondary'>Post an ad</span>
-        </button>
-      </ng-container>
-    </div>
-
-    <!-- header auth redirection route -->
-    <div [fxFlex]='authHiddenUrls.includes(route.url) ? "0": "15"' class="auth-nav" fxLayoutAlign="end center">
-      <ng-container *ngIf='[null, undefined].includes(authFacadeService.getUserState().uid)'>
-        <ng-container *ngIf='!authHiddenUrls.includes(route.url)'>
-          <!-- Login and Register -->
-          <ng-container *ngFor="let authItem of authLinks; let i = index">
-            <span class="auth-items font-secondary" (click)="linkRedirection(authItem.route)">{{authItem.label}}</span>
-          </ng-container>
-
-          <span class="auth-items info-icon">
-            <mat-icon>info_outline</mat-icon>
-          </span>
-        </ng-container>
-      </ng-container>
-
-      <ng-container *ngIf='![null, undefined].includes(authFacadeService.getUserState().uid)'>
-
-          <span [matMenuTriggerFor]='belowMenu'
-                class='user-items font-secondary font-xs'>Welcome {{authFacadeService.getUserState().displayName}}!</span>
-
-          <span [matMenuTriggerFor]='belowMenu'>
-            <ng-container *ngIf='![null, undefined].includes(authFacadeService.getUserState().photoUrl)'>
-              <img [src]='authFacadeService.getUserState().photoUrl' alt='user_img' width='30' height='30'>
-            </ng-container>
-
-            <ng-container *ngIf='[null, undefined].includes(authFacadeService.getUserState().photoUrl)'>
-              <mat-icon class='user-items info-icon'>account_circle</mat-icon>
-            </ng-container>
-          </span>
-
-          <mat-menu #belowMenu="matMenu" yPosition="below" xPosition='before'>
-            <button mat-menu-item (click)='logout()' class='font-secondary font-sm'>Log Out</button>
-          </mat-menu>
-      </ng-container>
-    </div>
+<div fxLayout='row' fxLayoutAlign='space-between center'
+     class='header-nav bg-white p-x-50'>
+  <!-- Home logo -->
+  <div fxFlex='5' fxLayoutAlign='start center'>
+    <mat-icon class='primary-color home-item'>home</mat-icon>
   </div>
 
-  <div fxFlex="5"></div>
+  <!-- Auth redirection route -->
+  <div [fxFlex]='authHiddenUrls.includes(route.url) ? "0": "30"'
+       class='primary-color font-size-primary font-secondary' fxLayoutAlign='end center'>
+    <ng-container *ngIf='[null, undefined].includes(authFacadeService.getUserState().uid)'>
+      <!-- Login and Register -->
+      <ng-container *ngFor='let authItem of authLinks; let i = index'>
+        <span class='auth-items'
+              (click)='linkRedirection(authItem.route)'>{{authItem.label}}</span>
+      </ng-container>
+
+      <span class='auth-items info-icon'>
+        <mat-icon>info_outline</mat-icon>
+      </span>
+    </ng-container>
+
+    <ng-container *ngIf='![null, undefined].includes(authFacadeService.getUserState().uid)'>
+      <span [matMenuTriggerFor]='belowMenu'
+            class='user-items'>Welcome {{authFacadeService.getUserState().displayName}}
+        !</span>
+
+      <span [matMenuTriggerFor]='belowMenu'>
+        <ng-container *ngIf='![null, undefined].includes(authFacadeService.getUserState().photoUrl)'>
+          <img [src]='authFacadeService.getUserState().photoUrl' alt='user_img' width='30' height='30'>
+        </ng-container>
+
+        <ng-container *ngIf='[null, undefined].includes(authFacadeService.getUserState().photoUrl)'>
+          <mat-icon class='user-items info-icon'>account_circle</mat-icon>
+        </ng-container>
+      </span>
+
+      <mat-menu #belowMenu='matMenu' yPosition='below' xPosition='before'>
+        <button mat-menu-item (click)='logout()' class='font-sm'>Log Out</button>
+      </mat-menu>
+    </ng-container>
+  </div>
 </div>
