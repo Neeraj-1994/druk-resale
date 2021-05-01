@@ -1,0 +1,40 @@
+//----------------------------------*\
+// Fonts
+//----------------------------------*/
+@import "font";
+
+// primary & secondary font
+$primary_font: 'Alegreya';
+$secondary_font: 'Lato';
+
+// font-weight
+$thin:100;
+$light:300;
+$regular:400;
+$bold:700;
+$black:900;
+$semi_bold:600;
+$extra_bold:800;
+$medium:500;
+
+// Font size
+$font-xs:12px;
+$font-sm: 14px;
+$primary-fs: 16px;
+$font-md: 18px;
+$font-lg: 20px;
+$font-xl: 24px;
+$font-xxl: 36px;
+
+// Other Fonts
+$alegreya-extra-bold: 'Alegreya ExtraBold';
+$alegreya-semi-bold: 'Alegreya SemiBold';
+$alegreya-black: 'Alegreya Black';
+$alegreya-medium: 'Alegreya Medium';
+$alegreya-bold: 'Alegreya Bold';
+$lato-thin: 'Lato Hairline';
+$lato-bold: 'Lato Bold';
+$lato-black: 'Lato Black';
+$lato-light: 'Lato Light';
+
+// Colors

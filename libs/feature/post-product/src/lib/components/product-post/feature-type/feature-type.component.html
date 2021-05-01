@@ -1,0 +1,38 @@
+<form [formGroup]='featureForm'>
+  <p class='font-secondary font-bold font-lg'>Choose a feature</p>
+  <div fxLayout='row' fxLayoutAlign='space-around start'>
+    <div class='feature-card' *ngFor='let feature of featureTypes'>
+      <div>
+        <div fxLayout='column' fxLayoutAlign='center center'
+             class='feature-card-header' [style.background-color]='feature.background_color'>
+          <p class='font-secondary font-sm font-black feature-card-title'>{{feature.name}}</p>
+          <p class='font-secondary font-xs font-light feature-card-subtitle'>{{feature.description.type}}<sup *ngIf='!!feature.description.sup'
+          >{{feature.description.sup}}</sup></p>
+          <p class='font-secondary font-regular font-xl feature-price'>{{feature.price | formatPrice}}</p>
+        </div>
+        <div class='feature-card-content'>
+          <div fxLayout='column' fxLayoutAlign='start center'>
+            <ng-container *ngFor='let details of feature.details'>
+              <p class='font-secondary font-bold font-sm' *ngIf='!!details.head'>{{details.head}}</p>
+              <p class='font-secondary font-xs font-thin'>{{details.row}}</p>
+            </ng-container>
+          </div>
+        </div>
+        <div fxLayout='row' fxLayoutAlign='center center' class='feature-card-action'>
+          <button mat-flat-button (click)='selectFeature(feature)'
+                  [ngClass]='feature.selected ? "btn-primary": "btn-secondary"'>
+            {{feature.selected ? 'Selected' : 'Select'}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout='row' fxLayoutAlign='center center'>
+    <button mat-button matStepperPrevious
+            class='font-bold font-secondary font-sm btn-secondary custom-config-button'>Back
+    </button>
+    <button mat-button color="primary" matStepperNext class='font-bold font-secondary font-sm custom-config-button'>
+      Next
+    </button>
+  </div>
+</form>

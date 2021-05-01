@@ -15,21 +15,35 @@ export const authNav: AuthLink[] = [
 
 export const category: Category[] = [
   {
-    label: 'Land & Real Estate'
+    label: 'Land & Real Estate',
+    value: '/product/list'
   },
   {
-    label: 'Electrical Appliances'
+    label: 'Cars & Vehicles',
+    value: '/product/list'
   },
   {
-    label: 'Electronics'
+    label: 'Electrical Appliances',
+    value: '/product/list'
   },
   {
-    label: 'Home & Furniture'
+    label: 'Electronics',
+    value: '/product/list'
   },
   {
-    label: 'Books, Music & Games'
+    label: 'Home & Furniture',
+    value: '/product/list'
   },
   {
-    label: 'Clothing & Jewellery'
+    label: 'Books, Music & Games',
+    value: '/product/list'
+  },
+  {
+    label: 'More',
+    value: '/product/list'
   }
 ];
+
+export const authHiddenRoutes: string[] = ['/user/login', '/user/register', '/user/forgot-password'];
+
+export const postHiddenRoutes: string[] = ['/post/ads'];

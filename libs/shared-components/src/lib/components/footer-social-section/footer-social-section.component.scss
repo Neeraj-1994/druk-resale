@@ -1,19 +1,21 @@
+@import "apps/druk-resale/src/assets/styles/utility";
 @import "apps/druk-resale/src/assets/styles/common";
+@import "apps/druk-resale/src/assets/styles/overwrite";
 
 .footer-social {
-  height: 40px;
-  width: 100%;
-  color: #000000;
+  height: 50px;
+  background-color: #2B6777;
+  color: #FFFFFF;
+  padding: 0 50px;
 }
 
 .fa {
   width: 20px;
-  padding: 7px 8px 5px 6px;
-  font-size: 20px;
+  padding: 9px 7px 8px 7px;
   text-align: center;
   text-decoration: none;
   margin: 5px 10px;
-  color: #000000;
+  color: #FFFFFF;
   border-radius: 50%;
 }
 

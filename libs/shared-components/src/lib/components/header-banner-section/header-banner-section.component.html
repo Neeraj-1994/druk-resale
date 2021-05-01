@@ -1,0 +1,28 @@
+<div class='image-container' *ngIf='route.url === "/home"'>
+  <swiper [config]='brandSwiper' fxFlex='auto' *ngIf='renderSwiper'>
+    <div *ngFor='let option of [1,2,3]'>
+      <div class='promotion-image'></div>
+      <span class='post-text' [routerLink]='"/home"'>
+        <img src='../../../../../assets/images/Site Title.png' alt='brand_logo' width='350' height='76.89'>
+      </span>
+      <button class='post-btn' mat-flat-button color='primary' [routerLink]='"/post/ads"'>
+        <span fxLayoutAlign='center center'>
+          <span class='m-r-4'>Post an ad</span>
+          <mat-icon>post_add</mat-icon>
+        </span>
+      </button>
+    </div>
+  </swiper>
+</div>
+
+<div class='normal-banner' *ngIf='route.url !== "/home"' fxLayout='row' fxLayoutAlign='space-between center'>
+  <span [routerLink]='"/home"'>
+    <img src='../../../../../assets/images/Site Title.png' alt='brand_logo' width='350' height='76.89' class='logo'>
+  </span>
+  <button mat-flat-button color='primary' [routerLink]='"/post/ads"' *ngIf='route.url !== "/post/ads"'>
+      <span fxLayoutAlign='center center'>
+        <span class='m-r-4'>Post an ad</span>
+        <mat-icon>post_add</mat-icon>
+      </span>
+  </button>
+</div>

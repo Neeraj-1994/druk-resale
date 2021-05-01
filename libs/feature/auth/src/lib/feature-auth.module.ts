@@ -9,8 +9,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-import { SuccessPageComponent } from './components/success-page/success-page.component';
-import { FailurePageComponent } from './components/failure-page/failure-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { SharedComponentsModule } from '@druk-resale/shared-components';
+import { AuthBackgroundComponent } from './components/auth-background/auth-background.component';
+import { ContentPageComponent } from './components/content-page/content-page.component';
+import { AdPageComponent } from './components/ad-page/ad-page.component';
 
 @NgModule({
   imports: [
@@ -19,15 +23,19 @@ import { FailurePageComponent } from './components/failure-page/failure-page.com
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule
   ],
   declarations: [
     RegisterComponent,
     LoginComponent,
     ForgotPasswordComponent,
     AuthBaseComponent,
-    SuccessPageComponent,
-    FailurePageComponent
+    AuthBackgroundComponent,
+    ContentPageComponent,
+    AdPageComponent
   ],
   exports: [
     RegisterComponent,

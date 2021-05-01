@@ -3,17 +3,51 @@
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
-
+@import 'assets/styles/mixins';
+@import 'assets/styles/common';
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+$mat-teal: (
+  50: #e0f2f1,
+  100: #b2dfdb,
+  200: #80cbc4,
+  300: #4db6ac,
+  400: #26a69a,
+  500: #009688,
+  600: #2b6777,
+  700: #00796b,
+  800: #00695c,
+  900: #004d40,
+  A100: #a7ffeb,
+  A200: #64ffda,
+  A400: #1de9b6,
+  A700: #00bfa5,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $dark-primary-text,
+  )
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$druk-resale-primary: mat-palette($mat-indigo);
-$druk-resale-accent: mat-palette($mat-pink, A200, A100, A400);
+$druk-resale-primary: mat-palette($mat-teal, 600);
+$druk-resale-accent: mat-palette($mat-yellow, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $druk-resale-warn: mat-palette($mat-red);
@@ -36,4 +70,8 @@ $druk-resale-theme: mat-light-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+background-color: #f1f5f7;
+//  background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
+}
+p {font-size: 16px;}

@@ -1,0 +1,105 @@
+@import "variable";
+
+.font-primary {
+  font-family: $primary_font;
+}
+
+.font-secondary {
+  font-family: $secondary_font;
+}
+
+.font-thin {
+  font-weight: $thin;
+}
+
+.font-light {
+  font-weight: $light;
+}
+
+.font-regular {
+  font-weight: $regular;
+}
+
+.font-bold {
+  font-weight: $bold;
+}
+
+.font-black {
+  font-weight: $black;
+}
+
+.font-semi-bold {
+  font-weight: $semi_bold;
+}
+
+.font-extra-bold {
+  font-weight: $extra_bold;
+}
+
+.font-medium {
+  font-weight: $medium;
+}
+
+.font-xs {
+  font-size: $font-xs;
+}
+
+.font-sm {
+  font-size: $font-sm;
+}
+
+.font-size-primary {
+  font-size: $primary-fs;
+}
+
+.font-md {
+  font-size: $font-md;
+}
+
+.font-lg {
+  font-size: $font-lg;
+}
+
+.font-xl {
+  font-size: $font-xl;
+}
+
+.font-xxl {
+  font-size: $font-xxl;
+}
+
+.alegreya-extra-bold {
+  font-family: $alegreya-extra-bold;
+}
+
+.alegreya-semi-bold {
+  font-family: $alegreya-semi-bold;
+}
+
+.alegreya-bold {
+  font-family: $alegreya-bold;
+}
+
+.alegreya-black {
+  font-family: $alegreya-black;
+}
+
+.alegreya-medium {
+  font-family: $alegreya-medium;
+}
+
+.lato-black {
+  font-family: $lato-black;
+}
+
+.lato-bold {
+  font-family: $lato-bold;
+}
+
+.lato-thin {
+  font-family: $lato-thin;
+}
+
+.lato-light {
+  font-family: $lato-light;
+}

@@ -1,0 +1,18 @@
+@import "apps/druk-resale/src/assets/styles/utility";
+@import "apps/druk-resale/src/assets/styles/common";
+@import "apps/druk-resale/src/assets/styles/overwrite";
+
+::ng-deep {
+  .owner-post-input.mat-form-field .mat-form-field-wrapper {
+    width: 350px !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+.owner-post-input {
+  margin: 10px 10px;
+}
+
+.owner-radio {
+  margin: 0 0 19px 10px;
+}

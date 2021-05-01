@@ -1,16 +1,7 @@
 <div fxLayout='column' fxLayoutAlign='space-between' class='full-height'>
-  <div>
-    <druk-resale-header class='app-header'></druk-resale-header>
-
-    <div fxLayout='row' fxLayoutAlign='start' class='app-container'>
-      <div fxFlex='5'></div>
-
-      <div fxFlex='90'>
-        <router-outlet></router-outlet>
-      </div>
-
-      <div fxFlex='5'></div>
-    </div>
+  <druk-resale-header *ngIf='!authRoutes.includes(route.url)'></druk-resale-header>
+  <div fxLayout='row' fxLayoutAlign='start' class='app-container'>
+      <router-outlet></router-outlet>
   </div>
-  <druk-resale-footer></druk-resale-footer>
+  <druk-resale-footer *ngIf='!authRoutes.includes(route.url)'></druk-resale-footer>
 </div>
