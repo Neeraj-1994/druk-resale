@@ -28,6 +28,7 @@ import { HomeProductCardComponent } from './components/home-product-card/home-pr
 import { PaginationSectionComponent } from './components/pagination-section/pagination-section.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SwiperModule } from 'ngx-swiper-wrapper';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -42,7 +43,8 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
     MatSnackBarModule,
     MatSliderModule,
     MatExpansionModule,
-    SwiperModule
+    SwiperModule,
+    RouterModule
   ],
   declarations: [
     HeaderNavSectionComponent,
