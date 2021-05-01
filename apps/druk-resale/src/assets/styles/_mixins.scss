@@ -11,7 +11,7 @@ $unit: 'px'; // Feel free to change the unit.
   }
 }
 //padding
-@include list-loop((12, 20),'.p-', 'padding');
+@include list-loop((4, 12, 20),'.p-', 'padding');
 @include list-loop((0,16),'.p-r-', 'padding-right');
 @include list-loop((0,20,4),'.p-l-', 'padding-left');
 @include list-loop((0),'.p-b-', 'padding-bottom');
@@ -29,7 +29,7 @@ $unit: 'px'; // Feel free to change the unit.
 @include list-loop((0,4,8,12,16,20,24),'.m-y-', ('margin-top', 'margin-bottom'));
 
 //border-radius
-@include list-loop((4,12,),'.b-r-', 'border-radius');
+@include list-loop((4,12),'.b-r-', 'border-radius');
 @include list-loop((12),'.b-t-l-r-', 'border-top-left-radius');
 @include list-loop((12),'.b-t-r-r-', 'border-top-right-radius');
 @include list-loop((12),'.b-b-l-r-', 'border-bottom-left-radius');
