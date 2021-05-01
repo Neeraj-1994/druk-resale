@@ -1,9 +1,62 @@
 <div fxLayout="row wrap" class="home-page">
-  <div fxFlex="100">
-    <mat-form-field appearance="outline">
-      <input type="tel" matInput>
-      <mat-icon matSuffix>search</mat-icon>
-    </mat-form-field>
+  <div  class='p-24 search-bar full-width'>
+    <div fxFlex="100" fxLayout='row' fxLayoutAlign='space-between' class='search-bar-content hand-cursor white-bg'>
+      <div fxLayoutAlign='center center' fxFlex='40' class='primary-bg white-color' [matMenuTriggerFor]="animals">
+        <mat-icon>format_list_bulleted</mat-icon>
+        <button mat-button >Animal index</button>
+        <mat-menu #animals="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+          <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        </mat-menu>
+
+        <mat-menu #vertebrates="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+          <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+          <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+          <button mat-menu-item>Birds</button>
+          <button mat-menu-item>Mammals</button>
+        </mat-menu>
+
+        <mat-menu #invertebrates="matMenu">
+          <button mat-menu-item>Insects</button>
+          <button mat-menu-item>Molluscs</button>
+          <button mat-menu-item>Crustaceans</button>
+          <button mat-menu-item>Corals</button>
+          <button mat-menu-item>Arachnids</button>
+          <button mat-menu-item>Velvet worms</button>
+          <button mat-menu-item>Horseshoe crabs</button>
+        </mat-menu>
+
+        <mat-menu #fish="matMenu">
+          <button mat-menu-item>Baikal oilfish</button>
+          <button mat-menu-item>Bala shark</button>
+          <button mat-menu-item>Ballan wrasse</button>
+          <button mat-menu-item>Bamboo shark</button>
+          <button mat-menu-item>Banded killifish</button>
+        </mat-menu>
+
+        <mat-menu #amphibians="matMenu">
+          <button mat-menu-item>Sonoran desert toad</button>
+          <button mat-menu-item>Western toad</button>
+          <button mat-menu-item>Arroyo toad</button>
+          <button mat-menu-item>Yosemite toad</button>
+        </mat-menu>
+
+        <mat-menu #reptiles="matMenu">
+          <button mat-menu-item>Banded Day Gecko</button>
+          <button mat-menu-item>Banded Gila Monster</button>
+          <button mat-menu-item>Black Tree Monitor</button>
+          <button mat-menu-item>Blue Spiny Lizard</button>
+          <button mat-menu-item disabled>Velociraptor</button>
+        </mat-menu>
+      </div>
+      <div fxFlex='50'>
+        <mat-form-field appearance="none" class='search-bar-input full-width'>
+          <input type="tel" matInput class='search-bar-input'>
+        </mat-form-field>
+      </div>
+      <div fxFlex='5' fxLayout='center center' class='primary-bg white-color'><mat-icon class='s-50'>search</mat-icon></div>
+    </div>
   </div>
 
   <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" class="p-t-20">

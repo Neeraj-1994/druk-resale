@@ -1,3 +1,5 @@
+@import "apps/druk-resale/src/assets/styles/common";
+
 .filter-list:nth-last-child(1) {
   span {
     display: none;
@@ -8,3 +10,14 @@
   background-color: rgba(#2b6777, 0.8);
 }
 
+.search-bar {
+  background: rgba($primary-color, .8);
+  z-index: 1;
+  .search-bar-content {
+    z-index: 2;
+
+  }
+}
+::ng-deep .search-bar-input .mat-form-field-wrapper {
+  padding-bottom: 0px !important;
+}
