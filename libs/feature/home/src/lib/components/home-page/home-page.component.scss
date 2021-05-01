@@ -7,17 +7,26 @@
 }
 
 .featured-section-bg {
-  background-color: rgba(#2b6777, 0.8);
+  background-color: rgba($primary-color, 0.8);
 }
 
-.search-bar {
-  background: rgba($primary-color, .8);
-  z-index: 1;
-  .search-bar-content {
-    z-index: 2;
+.home-page {
+  position: relative;
 
+  .search-bar {
+    position: absolute;
+    top: -98px;
+    background: rgba($primary-color, .4);
+    z-index: 1;
+
+    .search-bar-content {
+      z-index: 2;
+
+    }
   }
 }
+
 ::ng-deep .search-bar-input .mat-form-field-wrapper {
-  padding-bottom: 0px !important;
+  padding-bottom: 0 !important;
 }
+
