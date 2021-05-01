@@ -1,27 +1,26 @@
+@import "apps/druk-resale/src/assets/styles/utility";
 @import "apps/druk-resale/src/assets/styles/common";
-@import "apps/druk-resale/src/assets/styles/font";
+@import "apps/druk-resale/src/assets/styles/overwrite";
 
 .header-tab {
   width: 100%;
-  height: 30px;
-}
-
-.home-nav {
-  margin: 5px 0;
-  border-right: 1px solid #000000;
-}
-
-.category-nav {
-  margin: 5px 10px;
+  height: 40px;
 }
 
 .category-links {
-  margin: 0 10px;
   cursor: pointer;
+  padding: 4px;
+  transition: 0.25s;
+
+  &:hover {
+    color: $primary-color;
+    background-color: white;
+    border-radius: 8px;
+    padding: 4px;
+    transition: 0.3s;
+  }
 }
 
 .home-item {
-  font-size: 20px;
   cursor: pointer;
-  margin-left: 30px;
 }

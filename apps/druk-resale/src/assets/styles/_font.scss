@@ -1,57 +1,65 @@
-@import "../fonts/fonts";
-
-.quick-sand {
-  font-family: 'Quicksand', sans-serif;
+@font-face {
+  font-family: 'Alegreya Bold';
+  src: url('../fonts/Bold/Alegreya-Bold.woff2') format('woff2'),
+  url('../fonts/Bold/Alegreya-Bold.woff') format('woff');
 }
 
-.montserrat {
-  font-family: 'Montserrat', sans-serif;
+@font-face {
+  font-family: 'Alegreya ExtraBold';
+  src: url('../fonts/ExtraBold/Alegreya-ExtraBold.woff2') format('woff2'),
+  url('../fonts/ExtraBold/Alegreya-ExtraBold.woff') format('woff');
 }
 
-.lato {
-  font-family: 'Lato', sans-serif;
+@font-face {
+  font-family: 'Alegreya SemiBold';
+  src: url('../fonts/SemiBold/Alegreya-SemiBold.woff2') format('woff2'),
+  url('../fonts/SemiBold/Alegreya-SemiBold.woff') format('woff');
 }
 
-.spirax {
-  font-family: 'Spirax', sans-serif;
+@font-face {
+  font-family: 'Alegreya Black';
+  src: url('../fonts/Black/Alegreya-Black.woff2') format('woff2'),
+  url('../fonts/Black/Alegreya-Black.woff') format('woff');
 }
 
-.oswald {
-  font-family: 'Oswald', sans-serif;
+@font-face {
+  font-family: 'Alegreya';
+  src: url('../fonts/Regular/Alegreya-Regular.woff2') format('woff2'),
+  url('../fonts/Regular/Alegreya-Regular.woff') format('woff');
 }
 
-.merriweather {
-  font-family: 'Merriweather', sans-serif;
+@font-face {
+  font-family: 'Alegreya Medium';
+  src: url('../fonts/Medium/Alegreya-Medium.woff2') format('woff2'),
+  url('../fonts/Medium/Alegreya-Medium.woff') format('woff');
 }
 
-.overlock {
-  font-family: 'Overlock', sans-serif;
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url('../fonts/Thin/Lato-Hairline.woff2') format('woff2'),
+  url('../fonts/Thin/Lato-Hairline.woff') format('woff');
 }
 
-.nunito {
-  font-family: 'Nunito', sans-serif;
+@font-face {
+  font-family: 'Lato Black';
+  src: url('../fonts/Black/Lato-Black.woff2') format('woff2'),
+  url('../fonts/Black/Lato-Black.woff') format('woff');
 }
 
-.open-sans {
-  font-family: 'Open Sans', sans-serif;
+@font-face {
+  font-family: 'Lato Bold';
+  src: url('../fonts/Bold/Lato-Bold.woff2') format('woff2'),
+  url('../fonts/Bold/Lato-Bold.woff') format('woff');
 }
 
-.alegreya {
-  font-family: 'Alegreya', sans-serif;
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Regular/Lato-Regular.woff2') format('woff2'),
+  url('../fonts/Regular/Lato-Regular.woff') format('woff');
 }
 
-.rokkitt {
-  font-family: 'Rokkitt', sans-serif;
-}
-
-.questrial {
-  font-family: 'Questrial', sans-serif;
-}
-
-.muli {
-  font-family: 'Muli', sans-serif;
-}
-
-.oxygen {
-  font-family: 'Oxygen', sans-serif;
+@font-face {
+  font-family: 'Lato Light';
+  src: url('../fonts/Light/Lato-Light.woff2') format('woff2'),
+  url('../fonts/Light/Lato-Light.woff') format('woff');
 }
