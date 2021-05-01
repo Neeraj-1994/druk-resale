@@ -1,1 +1,12 @@
-<p>feature-section works!</p>
+<p class="fs-30 bold text-center white-color">Featured Categories</p>
+<p class="bold text-center white-color">Browse through some of our most popular categories</p>
+
+<div fxLayout="row wrap" fxLayoutAlign="space-around" class="m-t-20">
+  <div fxLayout="column" class="white-color featured-color" *ngFor="let option of [1,2,3,4]">
+    <img class="feature-image"
+      src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1926&q=80"
+      alt="featured images"/>
+    <p class="text-center bold fs-20 m-t-12">Land & Real Estate</p>
+    <p class="text-center bold fs-18" [ngClass]="'land_and_real_state'">120,000 ads</p>
+  </div>
+</div>

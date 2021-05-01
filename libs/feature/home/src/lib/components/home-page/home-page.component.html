@@ -1,1 +1,39 @@
+<div fxLayout="row wrap" class="home-page">
+  <div fxFlex="100">
+    <mat-form-field appearance="outline">
+      <input type="tel" matInput>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
 
+  <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" class="p-t-20">
+   <span class="primary-color filter-list"
+         *ngFor="let option of ['Homepage Gallery','Watchlist','Recently Searched', 'Search Alerts']">{{option}}
+     <span class="p-x-12">|</span>
+   </span>
+  </div>
+
+  <div fxLayout='row wrap' fxLayoutAlign='start center' fxLayoutAlign.sm='space-between'
+       fxLayoutGap="20px" class="product-card">
+    <div fxFlex="0 0 calc(20% - 20px)" fxFlex.xl="0 0 calc(17% - 27px)" fxFlex.sm="46"
+         fxFlex.md="0 0 calc(34% - 27px)"
+         fxFlex.xs="100" fxLayoutAlign="center" *ngFor='let product of products; let i = index'>
+      <sc-product-list-card class="product-card-list" [product]='product' [index]='i'
+                            (click)='goToDetails(product)'></sc-product-list-card>
+    </div>
+  </div>
+
+  <div fxLayoutAlign='center' class='full-width m-y-20'>
+    <button mat-stroked-button class="primary-color primary-border">
+      <span>See All</span>
+    </button>
+  </div>
+
+  <div class="full-width featured-section-bg p-y-20">
+    <sc-feature-section></sc-feature-section>
+  </div>
+
+  <div class="full-width">
+    <sc-header-banner-section></sc-header-banner-section>
+  </div>
+</div>

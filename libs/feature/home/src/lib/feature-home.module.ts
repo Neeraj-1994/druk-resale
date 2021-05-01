@@ -9,6 +9,8 @@ import { VehicleHomeComponent } from './components/vehicle-home/vehicle-home.com
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   imports: [
@@ -17,7 +19,9 @@ import { MatButtonModule } from '@angular/material/button';
     SharedComponentsModule,
     SwiperModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   declarations: [
     HomePageComponent,
