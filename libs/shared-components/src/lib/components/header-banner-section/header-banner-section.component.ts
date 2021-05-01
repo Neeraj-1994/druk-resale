@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { SwiperConfigInterface, SwiperNavigationInterface, SwiperPaginationInterface } from 'ngx-swiper-wrapper';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'sc-header-banner-section',
@@ -12,7 +13,7 @@ export class HeaderBannerSectionComponent implements OnInit, AfterViewInit {
   navigation: SwiperNavigationInterface;
   brandSwiper: SwiperConfigInterface;
   renderSwiper: boolean;
-  constructor() { }
+  constructor(public route: Router) { }
 
   ngOnInit(): void {
   }
@@ -25,12 +26,10 @@ export class HeaderBannerSectionComponent implements OnInit, AfterViewInit {
       bulletActiveClass: 'swiper-pagination-bullet-active mat-primary-background'
     };
 
-
     this.navigation = {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     };
-
 
     this.brandSwiper = {
       direction: 'horizontal',

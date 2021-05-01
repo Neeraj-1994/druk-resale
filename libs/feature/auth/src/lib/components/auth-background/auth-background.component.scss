@@ -2,9 +2,12 @@
 @import "apps/druk-resale/src/assets/styles/common";
 @import "apps/druk-resale/src/assets/styles/overwrite";
 
-.footer-link-container {
-  height: 225px;
-  background-color: #3E92A8;
-  color: #FFFFFF;
-  padding: 30px 50px;
+.auth-content {
+  background-color: #FFFFFF;
+  opacity: 90%;
+}
+
+.auth-ad-content {
+  background-color: #2B6777;
+  opacity: 80%;
 }
