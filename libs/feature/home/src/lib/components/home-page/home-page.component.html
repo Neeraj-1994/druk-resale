@@ -1,76 +1,79 @@
 <div fxLayout="row wrap" class="home-page">
-  <div fxLayoutAlign="center" class='p-24 search-bar full-width'>
-    <div fxLayout='row' fxLayoutAlign='space-between' class='full-width search-bar-content hand-cursor white-bg'>
-      <div fxLayoutAlign='center center' fxFlex='20' fxFlex.sm="25" class='primary-bg white-color' [matMenuTriggerFor]="animals">
-        <mat-icon>format_list_bulleted</mat-icon>
-        <button mat-button >Animal index</button>
-        <mat-menu #animals="matMenu">
-          <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
-          <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
-        </mat-menu>
+  <div fxLayoutAlign="center" class="full-width">
+    <div fxLayoutAlign="center" class='p-24 search-bar-home'>
+      <div fxLayout='row' fxLayoutAlign='space-between' class='full-width search-bar-content hand-cursor white-bg'>
+        <div fxLayoutAlign='center center' fxFlex='20' fxFlex.sm="25" class='primary-bg white-color'
+             [matMenuTriggerFor]="animals">
+          <mat-icon>format_list_bulleted</mat-icon>
+          <button mat-button>Animal index</button>
+          <mat-menu #animals="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+            <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+          </mat-menu>
 
-        <mat-menu #vertebrates="matMenu">
-          <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
-          <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
-          <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
-          <button mat-menu-item>Birds</button>
-          <button mat-menu-item>Mammals</button>
-        </mat-menu>
+          <mat-menu #vertebrates="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+            <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+            <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+            <button mat-menu-item>Birds</button>
+            <button mat-menu-item>Mammals</button>
+          </mat-menu>
 
-        <mat-menu #invertebrates="matMenu">
-          <button mat-menu-item>Insects</button>
-          <button mat-menu-item>Molluscs</button>
-          <button mat-menu-item>Crustaceans</button>
-          <button mat-menu-item>Corals</button>
-          <button mat-menu-item>Arachnids</button>
-          <button mat-menu-item>Velvet worms</button>
-          <button mat-menu-item>Horseshoe crabs</button>
-        </mat-menu>
+          <mat-menu #invertebrates="matMenu">
+            <button mat-menu-item>Insects</button>
+            <button mat-menu-item>Molluscs</button>
+            <button mat-menu-item>Crustaceans</button>
+            <button mat-menu-item>Corals</button>
+            <button mat-menu-item>Arachnids</button>
+            <button mat-menu-item>Velvet worms</button>
+            <button mat-menu-item>Horseshoe crabs</button>
+          </mat-menu>
 
-        <mat-menu #fish="matMenu">
-          <button mat-menu-item>Baikal oilfish</button>
-          <button mat-menu-item>Bala shark</button>
-          <button mat-menu-item>Ballan wrasse</button>
-          <button mat-menu-item>Bamboo shark</button>
-          <button mat-menu-item>Banded killifish</button>
-        </mat-menu>
+          <mat-menu #fish="matMenu">
+            <button mat-menu-item>Baikal oilfish</button>
+            <button mat-menu-item>Bala shark</button>
+            <button mat-menu-item>Ballan wrasse</button>
+            <button mat-menu-item>Bamboo shark</button>
+            <button mat-menu-item>Banded killifish</button>
+          </mat-menu>
 
-        <mat-menu #amphibians="matMenu">
-          <button mat-menu-item>Sonoran desert toad</button>
-          <button mat-menu-item>Western toad</button>
-          <button mat-menu-item>Arroyo toad</button>
-          <button mat-menu-item>Yosemite toad</button>
-        </mat-menu>
+          <mat-menu #amphibians="matMenu">
+            <button mat-menu-item>Sonoran desert toad</button>
+            <button mat-menu-item>Western toad</button>
+            <button mat-menu-item>Arroyo toad</button>
+            <button mat-menu-item>Yosemite toad</button>
+          </mat-menu>
 
-        <mat-menu #reptiles="matMenu">
-          <button mat-menu-item>Banded Day Gecko</button>
-          <button mat-menu-item>Banded Gila Monster</button>
-          <button mat-menu-item>Black Tree Monitor</button>
-          <button mat-menu-item>Blue Spiny Lizard</button>
-          <button mat-menu-item disabled>Velociraptor</button>
-        </mat-menu>
-      </div>
-      <div fxFlex='75' fxFlex.md="70" fxFlex.sm="60">
-        <mat-form-field appearance="none" class='search-bar-input full-width'>
-          <input type="tel" matInput class='search-bar-input'>
-        </mat-form-field>
-      </div>
-      <div fxFlex='5' fxFlex.md="10" fxFlex.sm="15" fxLayoutAlign='center center' class='primary-bg white-color'>
-        <mat-icon class='s-50'>search</mat-icon>
+          <mat-menu #reptiles="matMenu">
+            <button mat-menu-item>Banded Day Gecko</button>
+            <button mat-menu-item>Banded Gila Monster</button>
+            <button mat-menu-item>Black Tree Monitor</button>
+            <button mat-menu-item>Blue Spiny Lizard</button>
+            <button mat-menu-item disabled>Velociraptor</button>
+          </mat-menu>
+        </div>
+        <div fxFlex='75' fxFlex.md="70" fxFlex.sm="60">
+          <mat-form-field appearance="none" class='search-bar-input full-width'>
+            <input type="tel" matInput class='search-bar-input'>
+          </mat-form-field>
+        </div>
+        <div fxFlex='5' fxFlex.md="10" fxFlex.sm="15" fxLayoutAlign='center center' class='primary-bg white-color'>
+          <mat-icon class='s-50'>search</mat-icon>
+        </div>
       </div>
     </div>
   </div>
 
   <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center" class="p-t-20">
-   <span class="primary-color filter-list"
+   <span class="primary-color filter-list fs-16 hand-cursor"
          *ngFor="let option of ['Homepage Gallery','Watchlist','Recently Searched', 'Search Alerts']">{{option}}
      <span class="p-x-12">|</span>
    </span>
   </div>
 
-  <div fxLayout='row wrap' fxLayoutAlign='start center' fxLayoutAlign.sm='space-between'
-       fxLayoutGap="20px" class="product-card">
-    <div fxFlex="0 0 calc(20% - 20px)" fxFlex.xl="0 0 calc(17% - 27px)" fxFlex.sm="46"
+  <div fxLayout='row wrap' fxLayoutAlign='start center' ngClass.lt-md="m-x-20" fxLayoutAlign.sm='space-between'
+       fxLayoutGap.gt-sm="20px" class="product-card">
+    <div fxFlex="0 0 calc(20% - 20px)" fxFlex.xl="0 0 calc(17% - 27px)" fxFlex.sm="32"
          fxFlex.md="0 0 calc(34% - 27px)"
          fxFlex.xs="100" fxLayoutAlign="center" *ngFor='let product of products; let i = index'>
       <sc-product-list-card class="product-card-list" [product]='product' [index]='i'

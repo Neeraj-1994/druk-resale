@@ -1,18 +1,18 @@
 <div fxLayout='row' fxLayoutAlign='space-between center'
-     class='header-nav bg-white p-x-50'>
+     class='header-nav bg-white' ngClass.gt-sm="p-x-50" ngClass.lt-md="p-x-20 p-y-12">
   <div fxFlex='5' fxLayoutAlign='start center'>
     <mat-icon class='primary-color home-item' [routerLink]='"/home"'>home</mat-icon>
   </div>
 
-  <div [fxFlex]='authHiddenUrls.includes(route.url) ? "0": "30"'
+  <div [fxFlex]='authHiddenUrls.includes(route.url) ? "0": "30"' fxFlex.xs="95"
        class='primary-color font-size-primary font-secondary' fxLayoutAlign='end center'>
     <ng-container *ngIf='[null, undefined].includes(authFacadeService.getUserState().uid)'>
       <ng-container *ngFor='let authItem of authLinks; let i = index'>
-        <span class='auth-items'
+        <span class='auth-items primary-color'
               (click)='linkRedirection(authItem.route)'>{{authItem.label}}</span>
       </ng-container>
       <span class='auth-items info-icon'>
-        <mat-icon>info_outline</mat-icon>
+        <mat-icon color="primary">info</mat-icon>
       </span>
     </ng-container>
 
