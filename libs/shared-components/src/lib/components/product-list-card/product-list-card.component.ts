@@ -23,6 +23,6 @@ select=false;
   }
 
   favourite():void {
-    this.select != this.select;
+    this.select =! this.select;
   }
 }

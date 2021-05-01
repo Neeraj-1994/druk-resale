@@ -96,14 +96,14 @@
         <p>Thimphu</p>
       </div>
     </ng-container>
-    <div class='heart s-32 hand-cursor'  fxLayoutAlign='center center' (click)="showFirst=!showFirst">
+    <div class='heart s-32 hand-cursor'  fxLayoutAlign='center center' (click)=favourite()>
       <!--<button mat-icon-button [color]="showFirst ? 'warn' : 'primary'">
         <mat-icon class='heart-icon s-24 warn-color' *ngIf="showFirst">favorite</mat-icon>
         <mat-icon  class='heart-icon s-24 primary-color' *ngIf="!showFirst">favorite_border</mat-icon>
       </button>-->
       <button mat-icon-button color='primary'>
-        <mat-icon class='heart-icon s-24 primary-color' *ngIf="showFirst">favorite</mat-icon>
-        <mat-icon  class='heart-icon s-24 primary-color' *ngIf="!showFirst">favorite_border</mat-icon>
+        <mat-icon class='heart-icon s-24 primary-color' *ngIf="select">favorite</mat-icon>
+        <mat-icon  class='heart-icon s-24 primary-color' *ngIf="!select">favorite_border</mat-icon>
       </button>
     </div>
   </div>

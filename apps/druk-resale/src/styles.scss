@@ -75,9 +75,11 @@ html, body {
 
 body {
   margin: 0;
-
+//background: #c5d2e0;
   background-color: #f1f5f7;
-  //  background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
+  //background-color: rgba($primary-color, .3);
+  // background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
+  //background-image: linear-gradient(to right, rgba(#69c8e3, .7), #d2eaf1);
 }
 
 * {
