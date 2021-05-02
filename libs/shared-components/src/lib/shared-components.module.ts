@@ -15,7 +15,7 @@ import { PopularTabSectionComponent } from './components/popular-tab-section/pop
 import { ProductListCardComponent } from './components/product-list-card/product-list-card.component';
 import { SortSectionComponent } from './components/sort-section/sort-section.component';
 import { UserSectionComponent } from './components/user-section/user-section.component';
-import { FlexModule } from '@angular/flex-layout';
+import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
@@ -44,7 +44,8 @@ import { RouterModule } from '@angular/router';
     MatSliderModule,
     MatExpansionModule,
     SwiperModule,
-    RouterModule
+    RouterModule,
+    FlexLayoutModule
   ],
   declarations: [
     HeaderNavSectionComponent,
