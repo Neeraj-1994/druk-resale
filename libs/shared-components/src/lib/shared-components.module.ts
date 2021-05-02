@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HeaderNavSectionComponent } from './components/header-nav-section/header-nav-section.component';
+import { HeaderTabSectionComponent } from './components/header-tab-section/header-tab-section.component';
 import { HeaderBannerSectionComponent } from './components/header-banner-section/header-banner-section.component';
 
 import { AdSectionComponent } from './components/ad-section/ad-section.component';
@@ -10,7 +11,6 @@ import { FeatureSectionComponent } from './components/feature-section/feature-se
 import { FilterSectionComponent } from './components/filter-section/filter-section.component';
 import { FooterSocialSectionComponent } from './components/footer-social-section/footer-social-section.component';
 import { FooterLinksSectionComponent } from './components/footer-links-section/footer-links-section.component';
-import { HeaderTabSectionComponent } from './components/header-tab-section/header-tab-section.component';
 import { PopularTabSectionComponent } from './components/popular-tab-section/popular-tab-section.component';
 import { ProductListCardComponent } from './components/product-list-card/product-list-card.component';
 import { SortSectionComponent } from './components/sort-section/sort-section.component';
@@ -29,6 +29,9 @@ import { HomeProductCardComponent } from './components/home-product-card/home-pr
 import { PaginationSectionComponent } from './components/pagination-section/pagination-section.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SwiperModule } from 'ngx-swiper-wrapper';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -44,7 +47,10 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
     MatSliderModule,
     MatExpansionModule,
     MatRippleModule,
-    SwiperModule
+    SwiperModule,
+    MatChipsModule,
+    MatCheckboxModule,
+    FormsModule
   ],
   declarations: [
     HeaderNavSectionComponent,
