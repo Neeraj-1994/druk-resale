@@ -75,7 +75,8 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
     FeatureSectionComponent,
     DownloadSectionComponent,
     AdSectionComponent,
-    FilterSectionComponent
+    FilterSectionComponent,
+    PaginationSectionComponent
   ]
 })
 export class SharedComponentsModule {}
