@@ -1,1 +1,22 @@
-<p>download-section works!</p>
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="space-between center" class="p-y-20 p-x-40 primary-bg">
+  <div fxLayout="row wrap">
+    <div fxLayoutAlign="start center" class="m-r-20">
+      <div class="p-4 white-bg b-r-12">
+        <img src="./assets/images/SiteLogo.png" width="45" height="45" alt="logo image"/>
+      </div>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center start" class="white-color">
+      <p class="m-t-0 m-b-4 bold fs-18">Download the Druk-ReSale app on iOS and android</p>
+      <p class="m-t-0 m-b-4">Buy and sell faster on the go</p>
+
+      <div fxLayout='row'>
+        <mat-icon *ngFor='let i of [1,2,3,4,5]' class='s-16 yellow-color'>grade</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-link" ngClass.lt-md="m-t-28">
+    <img class="m-r-20" src="./assets/images/apple.svg" width="125" height="37" alt="logo image"/>
+    <img src="./assets/images/google.svg" width="125" height="37" alt="logo image"/>
+  </div>
+</div>

@@ -1,6 +1,6 @@
-<div class='footer-link-container' fxLayout='row' fxLayoutAlign='space-between center'>
+<div class='footer-link-container primary-bg-80' fxLayout='row' fxLayoutAlign='space-between center'>
   <div *ngFor='let groupLinks of footerList' fxLayout='column' fxLayoutAlign='center center'>
-    <p class='font-primary font-size-primary'>{{groupLinks.label}}</p>
+    <p class='font-primary font-size-primary bold'>{{groupLinks.label}}</p>
     <p class='font-xs font-secondary' *ngFor='let content of groupLinks.links'>
       {{content.label}}
     </p>
