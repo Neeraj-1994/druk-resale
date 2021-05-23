@@ -9,7 +9,7 @@ export class PostFacadeService {
 
   constructor(private postApiService: PostApiService) { }
 
-  // Api service
+  // Api services
   postProduct(product: ProductPost) {
     this.postApiService.postProduct(product);
   }

@@ -54,6 +54,8 @@
             </ng-container>
           </span>
 
+          <span class="material-icons" (click)="linkRedirection('/chat')">chat</span>
+
           <mat-menu #belowMenu="matMenu" yPosition="below" xPosition='before'>
             <button mat-menu-item (click)='logout()' class='font-secondary font-sm'>Log Out</button>
           </mat-menu>

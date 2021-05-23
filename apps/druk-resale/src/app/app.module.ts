@@ -19,11 +19,15 @@ import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { FeatureChatAppModule } from '../../../../libs/feature/chat-app/src';
+import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   slidesPerView: 'auto'
 };
+
+const config: SocketIoConfig = { url: 'http://localhost:4444', options: {} };
 
 @NgModule({
   declarations: [
@@ -44,7 +48,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AngularFireAuthModule,
     SwiperModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FeatureChatAppModule,
+    SocketIoModule.forRoot(config)
   ],
   providers: [
     {

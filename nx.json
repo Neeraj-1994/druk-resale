@@ -27,6 +27,7 @@
     "feature-post-product": { "tags": [] },
     "feature-product-order": { "tags": [] },
     "feature-auth": { "tags": [] },
-    "shared-components": { "tags": [] }
+    "shared-components": { "tags": [] },
+    "chat-app": { "tags": [] }
   }
 }

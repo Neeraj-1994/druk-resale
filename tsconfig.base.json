@@ -26,7 +26,8 @@
       "@druk-resale/shared-components": ["libs/shared-components/src/index.ts"],
       "@druk-resale/apps/*": ["apps/druk-resale/src/app/*"],
       "@druk-resale/env/*": ["apps/druk-resale/src/environments/*"],
-      "@druk-resale/assets/*": ["apps/druk-resale/src/assets/*"]
+      "@druk-resale/assets/*": ["apps/druk-resale/src/assets/*"],
+      "@druk-resale/chat-app": ["libs/chat-app/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

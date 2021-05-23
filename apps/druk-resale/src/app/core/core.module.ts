@@ -22,6 +22,10 @@ const routes: Routes = [
     loadChildren: () => import('../ad-post/ad-post.module').then(m => m.AdPostModule)
   },
   {
+    path: 'chat',
+    loadChildren: () => import('../chat-app/chat-app.module').then(m => m.ChatAppModule)
+  },
+  {
     path: '404',
     component: NotFoundComponent,
     pathMatch: 'full'

@@ -6,5 +6,6 @@ module.exports = {
     '<rootDir>/libs/feature/product-order',
     '<rootDir>/libs/feature/auth',
     '<rootDir>/libs/shared-components',
+    '<rootDir>/libs/chat-app',
   ],
 };
