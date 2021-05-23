@@ -48,7 +48,7 @@ $unit: 'px'; // Feel free to change the unit.
     }
   }
 }
-@include font-size((10, 12, 14, 18, 20, 30));
+@include font-size((10, 12, 14, 18, 20, 30, 36));
 
 //object-size
 @mixin size($amount) {

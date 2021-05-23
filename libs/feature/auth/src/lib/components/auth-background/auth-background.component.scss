@@ -2,6 +2,11 @@
 @import "apps/druk-resale/src/assets/styles/common";
 @import "apps/druk-resale/src/assets/styles/overwrite";
 
+
+
+.authentication-bg {
+  box-sizing: border-box;
+
 .auth-content {
   background-color: #FFFFFF;
   opacity: 90%;
@@ -10,4 +15,5 @@
 .auth-ad-content {
   background-color: #2B6777;
   opacity: 80%;
+}
 }

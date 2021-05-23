@@ -102,11 +102,12 @@ $black-80: rgba(0, 0, 0, .8);
 
 .authentication-bg {
   background-image: url("../images/authentication-bg.jpg");
-  height: 100vh;
+  position: absolute;
   width: 100vw;
+  height: 100%;
   background-size: cover;
   background-position: center;
-
+  //overflow-y: scroll;
   .bg-overlay {
     //background-color: #292626;
   }

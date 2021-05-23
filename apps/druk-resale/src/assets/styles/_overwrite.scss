@@ -6,7 +6,7 @@
 
 ::ng-deep {
   .custom-input.mat-form-field-appearance-outline .mat-form-field-outline-thick {
-    color: #02BD7E !important;
+    color: $primary-color !important;
   }
 }
 
@@ -18,7 +18,7 @@
 
 ::ng-deep {
   .custom-input.mat-input-element {
-    caret-color: #02BD7E !important;
+    caret-color: $primary-color !important;
   }
 }
 
