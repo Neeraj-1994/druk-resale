@@ -14,10 +14,6 @@ import { SwiperConfigInterface, SwiperNavigationInterface, SwiperPaginationInter
 })
 export class HomePageComponent implements OnInit, AfterViewInit {
 
-  pagination: SwiperPaginationInterface;
-  navigation: SwiperNavigationInterface;
-  brandSwiper: SwiperConfigInterface;
-  renderSwiper: boolean;
   state$: Observable<HomeStoreState>;
   productState$: Observable<ProductStoreState>;
   products: ProductList[];
@@ -32,30 +28,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.pagination = {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-      bulletActiveClass: 'swiper-pagination-bullet-active mat-primary-background'
-    };
-
-
-    this.navigation = {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    };
-
-
-    this.brandSwiper = {
-      direction: 'horizontal',
-      navigation: this.navigation,
-      pagination: this.pagination,
-      autoplay: false,
-    };
-
-    setTimeout(() => {
-      this.renderSwiper = true;
-    }, 400);
   }
 
   getProductsList(): void {

@@ -3,70 +3,13 @@
 @import "apps/druk-resale/src/assets/styles/overwrite";
 
 .header-nav {
-  color: #000000;
   width: 100%;
   height: 50px;
 }
 
-.home-nav {
-  margin: 5px 0;
-  border-right: 1px solid #000000;
-}
-
-::ng-deep {
-  .search-bar.mat-form-field {
-    text-align: center !important;
-    height: 45px !important;
-  }
-}
-
-::ng-deep {
-  .text-center.mat-input-element {
-    margin: 0 5px 5px 5px !important;
-  }
-}
-
-::ng-deep {
-  .custom-search-icon.mat-form-field-appearance-outline .mat-form-field-suffix {
-    top: -.25em !important;
-  }
-}
-
-::ng-deep {
-  .custom-search-icon.mat-form-field-suffix .mat-icon {
-    font-size: 120% !important;
-    display: inline-flex !important;
-  }
-}
-
-::ng-deep {
-  .search-bar.mat-form-field-appearance-outline .mat-form-field-infix {
-    padding: 5px !important;
-  }
-}
-
-::ng-deep {
-  .header-button.mat-raised-button {
-    line-height: 30px !important;
-    border-radius: 20px !important;
-  }
-}
-
-.logo {
-  width: 200px;
-  height: 45px;
-  cursor: pointer;
-}
-
-.search-bar {
-  width: 450px;
-}
-
-.auth-nav {
-}
-
 .user-items {
   margin: 0 0 0 10px;
+  cursor: pointer;
 }
 
 .auth-items {
@@ -91,16 +34,12 @@
 }
 
 .mat-menu-panel {
-  /* min-width: 112px; */
-  /* max-width: 280px; */
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  /* max-height: calc(100vh - 48px); */
   border-radius: 4px;
   outline: 0;
-  /* min-height: 64px; */
 }
 
-.btn-bottom-shift {
-  margin-bottom: 2px;
+.home-item {
+  cursor: pointer;
 }

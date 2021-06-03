@@ -1,0 +1,18 @@
+<div fxLayoutAlign='center center' class="pagination fs-16 p-x-16 p-t-16 full-width">
+  <a href="#" class='s-24'>&laquo;</a>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#" class='s-24'>&raquo;</a>
+</div>
+<div>
+  <button mat-button [matMenuTriggerFor]="menu">21 result per page
+  <mat-icon class='primary-color'>arrow_drop_down</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+</div>
