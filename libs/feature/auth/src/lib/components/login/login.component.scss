@@ -1,6 +1,7 @@
 @import "apps/druk-resale/src/assets/styles/utility";
 @import "apps/druk-resale/src/assets/styles/common";
 @import "apps/druk-resale/src/assets/styles/overwrite";
+@import "apps/druk-resale/src/assets/styles/mixins";
 
 .social-sign-in {
   width: 175px;
@@ -69,3 +70,4 @@
     top: 0!important;
   }
 }
+

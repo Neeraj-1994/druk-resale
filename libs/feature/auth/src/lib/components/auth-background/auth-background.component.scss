@@ -10,6 +10,10 @@
 .auth-content {
   background-color: #FFFFFF;
   opacity: 90%;
+  .druk-resale--image {
+    object-fit: contain;
+    width: 227px;
+  }
 }
 
 .auth-ad-content {
