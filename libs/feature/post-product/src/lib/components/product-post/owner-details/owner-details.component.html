@@ -1,1 +1,47 @@
-<p>owner-details works!</p>
+<form [formGroup]='ownerDetailsForm'>
+  <div fxLayout='column' fxLayoutAlign='start start'>
+    <p class='font-secondary font-bold font-lg'>Owner Details</p>
+    <div fxLayout='row' fxLayoutAlign='start center'>
+      <mat-form-field appearance='outline' class='owner-post-input'>
+        <mat-label>Contact Name</mat-label>
+        <input matInput [formControl]='contactName'>
+        <mat-error *ngIf='contactName.invalid && contactName.touched'>{{contactName | formatError}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance='outline' class='owner-post-input'>
+        <mat-label>Email</mat-label>
+        <input matInput [formControl]='email'>
+        <mat-error *ngIf='email.invalid && email.touched'>{{email | formatError}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div fxLayout='row' fxLayoutAlign='start center'>
+      <mat-form-field appearance='outline' class='owner-post-input'>
+        <mat-label>Phone Number</mat-label>
+        <input matInput [formControl]='phone'>
+        <mat-error *ngIf='phone.invalid && phone.touched'>{{phone | formatError}}</mat-error>
+      </mat-form-field>
+
+      <div fxLayout='row' fxLayoutAlign='center center' class='owner-radio'>
+        <mat-radio-button [formControl]='showPhoneNumber'>
+          <span class='font-secondary font-sm font-light'>Do you want to show phone number?</span>
+        </mat-radio-button>
+      </div>
+    </div>
+
+    <div fxLayout='row' fxLayoutAlign='start center'>
+      <mat-form-field appearance='outline' class='owner-post-input'>
+        <mat-label>Location</mat-label>
+        <input matInput [formControl]='location'>
+      </mat-form-field>
+    </div>
+  </div>
+  <div fxLayout='row' fxLayoutAlign='center center'>
+    <button mat-button matStepperPrevious
+            class='font-bold font-secondary font-sm btn-secondary custom-config-button'>Back
+    </button>
+    <button mat-button color="primary" matStepperNext class='font-bold font-secondary font-sm custom-config-button'>
+      Next
+    </button>
+  </div>
+</form>

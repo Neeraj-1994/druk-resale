@@ -41,17 +41,17 @@
       </div>
 
       <div fxLayout='column' fxLayoutAlign='space-around center'>
-        <button mat-raised-button class='custom-auth-button btn-primary font-secondary' (click)='logInViaEmail()'>
+        <button mat-raised-button color="primary" class='custom-auth-button font-secondary' (click)='logInViaEmail()'>
           <span>Log In</span>
         </button>
       </div>
 
-      <button mat-raised-button class='social-sign-in google' (click)='logInViaGoogle()'>
+      <button mat-flat-button class='social-sign-in google' (click)='logInViaGoogle()'>
         <i class='fa font-lg fa-google'></i>
         <span class='font-secondary'>Sign in with Google</span>
       </button>
 
-      <button mat-raised-button class='social-sign-in facebook' (click)='logInViaFacebook()'>
+      <button mat-flat-button class='social-sign-in facebook' (click)='logInViaFacebook()'>
         <i class='fa font-lg fa-facebook'></i>
         <span class='font-secondary'>Sign in with Facebook</span>
       </button>

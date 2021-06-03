@@ -1,0 +1,44 @@
+@import "apps/druk-resale/src/assets/styles/utility";
+@import "apps/druk-resale/src/assets/styles/common";
+@import "apps/druk-resale/src/assets/styles/overwrite";
+
+.feature-card {
+  margin-top: 20px;
+  box-shadow: 0.25px 0.25px 2px rgba(0, 0, 0, .4);
+  width: 275px;
+  border-radius: 10px;
+}
+
+.feature-card:hover {
+  transition: transform .5s ease;
+  transform: scale(1.1);
+}
+
+.feature-card-header {
+  background-color: var(--bg);
+  color: #000000;
+  height: 125px;
+  border-radius: 10px 10px 0 0;
+}
+
+.feature-card-title {
+  margin: 10px 0 1px 0;
+}
+
+.feature-card-subtitle {
+  margin: 1px 0 20px 0;
+}
+
+.feature-price {
+  margin: 10px 0 10px 0;
+}
+
+.feature-card-content {
+  height: 200px;
+  padding: 15px;
+}
+
+.feature-card-action {
+  height: 80px;
+  padding: 15px;
+}

@@ -19,7 +19,15 @@ import { PayOutComponent } from './components/product-post/pay-out/pay-out.compo
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
-import { BasicDetailsEditedComponent } from './components/product-post/basic-details-edited/basic-details-edited.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CategoryPipe } from './pipes/category.pipe';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatCardModule } from '@angular/material/card';
+import { FormatErrorPipe } from './pipes/format-error.pipe';
+import { FormatPricePipe } from './pipes/format-price.pipe';
+import { BasicEditableDetailsComponent } from './components/product-post/basic-editable-details/basic-editable-details.component';
 
 @NgModule({
   imports: [
@@ -30,7 +38,12 @@ import { BasicDetailsEditedComponent } from './components/product-post/basic-det
     ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    NgxDropzoneModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatStepperModule,
+    MatCardModule
   ],
   declarations: [
     ProductPostComponent,
@@ -45,7 +58,10 @@ import { BasicDetailsEditedComponent } from './components/product-post/basic-det
     FeatureTypeComponent,
     MiscDataComponent,
     PayOutComponent,
-    BasicDetailsEditedComponent
+    CategoryPipe,
+    FormatErrorPipe,
+    FormatPricePipe,
+    BasicEditableDetailsComponent
   ],
   exports: [
     ProductPostComponent,

@@ -1,19 +1,126 @@
 <div fxLayout='column' fxLayoutAlign='center center' class='post-container'>
   <h1 class='font-primary font-xxl post-title'>Post An Ad</h1>
 
-  <div fxLayout='column' fxLayoutAlign='center start'>
-    <pp-basic-details></pp-basic-details>
+  <!-- Basic Details about the product -->
+  <div fxLayout='column' fxLayoutAlign='center center' *ngIf='showBasicDetails'>
+    <!-- Name of the product -->
+    <div fxLayout='column' fxLayoutAlign='center center'>
+      <div fxLayout='column' fxLayoutAlign.gt-lg='center start'>
+        <div fxLayout='row' fxLayoutAlign='center center'>
+          <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+            <input matInput [formControl]='name' placeholder='Write a descriptive title for your ad...' class='custom-input'>
+            <mat-error *ngIf='name.invalid && name.touched'>{{name | formatError}}</mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="primary" class='custom-post-button' [disabled]='name.invalid'
+                  (click)='isNameValid()'>
+            <i class='font-xxl fa fa-angle-right'></i>
+          </button>
+        </div>
+        <p class='font-secondary font-light font-xs'>Eg. Iphone 11 brand new</p>
+      </div>
+    </div>
 
-    <pp-financials></pp-financials>
+    <!-- Display Card -->
+    <ng-container *ngIf='category.dirty'>
+      <div fxLayout='column' fxLayoutAlign='center center' class='category-container'>
+        <div class='categorical-display' fxLayout='row' fxLayoutAlign='start center' (click)='openCategory = true'>
+          <p class='font-secondary font-thin font-sm category-display'
+          >{{category.value | formatCategory: categories}}</p>
+        </div>
+        <ng-container *ngIf='subCategory.dirty'>
+          <div class='categorical-display' fxLayout='row' fxLayoutAlign='start center' (click)='openSubCategory = true'>
+            <p class='font-secondary font-thin font-sm category-display'
+            >{{subCategory.value | formatCategory: subCategories}}</p>
+          </div>
+          <ng-container *ngIf='itemCategory.dirty'>
+            <div class='categorical-display' fxLayout='row' fxLayoutAlign='start center' (click)='openItemCategory = true'>
+              <p class='font-secondary font-thin font-sm category-display'
+              ><span>{{itemCategory.value | formatCategory: itemCategories}}</span>
+              </p>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </ng-container>
 
-    <pp-descriptive-info></pp-descriptive-info>
+    <!-- Category of the product -->
+    <div fxLayout='column' fxLayoutAlign='center center' *ngIf='openCategory'>
+      <div fxLayout='column' fxLayoutAlign='center start'>
+        <p class='font-secondary font-bold font-md category-title'>Select a category</p>
+        <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+          <mat-select [formControl]='category' (selectionChange)='isCategorySelected(category.value)'>
+            <mat-option *ngFor='let category of categories' [value]='category.value' class='font-secondary'>
+              {{category.label}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf='category.invalid && category.touched'>{{category | formatError}}</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
 
-    <pp-visual-description></pp-visual-description>
+    <!-- (Optional) Sub-category of the product -->
+    <div fxLayout='column' fxLayoutAlign='center center' *ngIf='category.touched && openSubCategory'>
+      <div fxLayout='column' fxLayoutAlign='center start'>
+        <p class='font-secondary font-medium font-sm'>Select a sub-category
+          in {{category.value | formatCategory: categories}}</p>
+        <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+          <mat-select [formControl]='subCategory' (selectionChange)='isSubCategorySelected(subCategory.value)'>
+            <mat-option *ngFor='let subCategory of subCategories' [value]='subCategory.value' class='font-secondary'>
+              {{subCategory.label}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf='subCategory.invalid && subCategory.touched'>{{subCategory | formatError}}</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
 
-    <pp-owner-details></pp-owner-details>
-
-    <pp-feature-type></pp-feature-type>
-
-    <pp-misc-data></pp-misc-data>
+    <!-- (Optional) Item category of the product -->
+    <div fxLayout='column' fxLayoutAlign='center center'
+         *ngIf='subCategory.touched && openItemCategory'>
+      <div fxLayout='column' fxLayoutAlign='center start'>
+        <p class='font-secondary font-medium font-sm'>Select an item-category
+          in {{subCategory.value | formatCategory: subCategories}}</p>
+        <mat-form-field appearance='outline' class='custom-post-input custom-post-error'>
+          <mat-select [formControl]='itemCategory' (selectionChange)='isItemCategorySelected(itemCategory.value)'>
+            <mat-option *ngFor='let itemCategory of itemCategories' [value]='itemCategory.value'
+                        class='font-secondary'>
+              {{itemCategory.label}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf='itemCategory.invalid && itemCategory.touched'>{{itemCategory | formatError}}</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
   </div>
+</div>
+
+<div class='editable-container' *ngIf='showEditableContext'>
+  <mat-horizontal-stepper linear #stepper>
+    <!-- Basic Details Editable/Reroute -->
+    <mat-step [stepControl]='basicDetailsForm'>
+      <pp-basic-editable-details [basicDetailsForm]='basicDetailsForm'
+                                 (showEditableContext)='showEditableContent($event)'
+                                 (showBasicDetails)='showBasicDetailsInfo($event)'></pp-basic-editable-details>
+    </mat-step>
+    <!-- Financial details of the product -->
+    <mat-step [stepControl]='financialDetailsForm'>
+      <pp-financials [financialDetailsForm]='financialDetailsForm'></pp-financials>
+    </mat-step>
+    <!-- Descriptive section -->
+    <mat-step [stepControl]='descriptiveDetailsForm'>
+      <pp-descriptive-info [descriptiveDetailsForm]='descriptiveDetailsForm'></pp-descriptive-info>
+    </mat-step>
+    <!-- Image section -->
+    <mat-step [stepControl]='visualDescriptionForm'>
+      <pp-visual-description [visualDescriptionForm]='visualDescriptionForm'></pp-visual-description>
+    </mat-step>
+    <!-- Owner details section -->
+    <mat-step [stepControl]='ownerDetailsForm'>
+      <pp-owner-details [ownerDetailsForm]='ownerDetailsForm'></pp-owner-details>
+    </mat-step>
+    <!-- Feature details section -->
+    <mat-step [stepControl]='featureForm'>
+      <pp-feature-type [featureForm]='featureForm'></pp-feature-type>
+    </mat-step>
+  </mat-horizontal-stepper>
 </div>

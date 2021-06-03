@@ -1,1 +1,116 @@
-<p>filter-section works!</p>
+<div class='filter-section'>
+  <div class='background p-l-20 p-r-16'>
+    <!--    <div class='filtered m-x-8 m-y-12 p-12'>-->
+    <!--      <p class='black-40 dashed-underline'>reset all Filters</p>-->
+    <!--      <p class='black-80 fs-18'>Brands:</p>-->
+    <!--      <ng-container *ngFor='let item of filteredBrands'>-->
+    <!--        <p class='m-y-8'>-->
+    <!--          <mat-icon class='s-18 v-bottom'>clear</mat-icon>-->
+    <!--          <span class='black-60 m-l-12 dashed-underline'>{{item.brandName}}</span>-->
+    <!--        </p>-->
+    <!--      </ng-container>-->
+    <!--    </div>-->
+    <p class='font-primary bold m-t-16 fs-18'>Filter & Refine</p>
+    <hr>
+    <div class='full-width m-b-24'>
+      <mat-chip-list #chipList class='m-y-16 full-width'>
+        <mat-chip class='primary-color primary-border transparent-bg' *ngFor='let option of options'
+                  [selectable]='selectable'
+                  [removable]='removable' (removed)='remove(option)'>
+          {{option.name}}
+          <mat-icon matChipRemove class='primary-color' *ngIf='removable'>highlight_off</mat-icon>
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+
+    <mat-accordion class='panel-header full-width m-t-20' multi>
+      <mat-expansion-panel class='panel-body'>
+        <mat-expansion-panel-header class='panel-header m-b-6'>
+          <mat-panel-title>
+            <span class='font-primary fs-16 bold'>Categories</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-expansion-panel class='panel-body p-l-12'>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <span class='primary-color font-secondary fs-14'>All Category(99)</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <mat-expansion-panel class='panel-body p-l-12'>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <span class='primary-color font-secondary fs-14'>Electronic(50)</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class='fs-14 primary-color p-l-16'>iPhone</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel class='panel-body p-l-12'>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <span class='primary-color font-secondary fs-14'>Electrical Appliances (100,000)</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+          <mat-expansion-panel class='panel-body p-l-12'>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <span class='primary-color font-secondary fs-14'>Home & Furniture (24,000)</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+
+        </mat-expansion-panel>
+
+      </mat-expansion-panel>
+      <hr>
+
+      <mat-expansion-panel class='panel-body'>
+        <mat-expansion-panel-header class='m-b-6'>
+          <mat-panel-title>
+            <span class='font-primary fs-16 bold'>Location</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-expansion-panel class='panel-body p-l-12'>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <span class='primary-color font-secondary fs-14'>Thimphu</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class='primary-color font-secondary fs-14 p-l-16'>babesa</p>
+        </mat-expansion-panel>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <hr>
+
+    <div class='p-l-4'>
+      <p class='font-primary fs-16 bold m-b-4'>Price Range</p>
+      <p class='fs-14 black-80 bold p-l-4'>Chose a range below</p>
+      <div class='full-width'>
+        <mat-slider
+          thumbLabel
+          [displayWith]='formatLabel'
+          tickInterval='100'
+          min='1'
+          max='100000'
+          color='primary'
+          class='full-width'>
+        </mat-slider>
+      </div>
+    </div>
+
+    <hr>
+    <div>
+      <p class='font-primary fs-16 bold m-b-4'>Checkbox Filter</p>
+      <p class='fs-14 black-80 bold p-l-4'>Choose an option below</p>
+      <div fxLayout='column'>
+        <mat-checkbox color='primary' class='m-x-10' [(ngModel)]='checked'>Checked</mat-checkbox>
+        <mat-checkbox color='primary' class='m-x-10' [(ngModel)]='checked'>Checked</mat-checkbox>
+      </div>
+    </div>
+  </div>
+</div>
+
+
