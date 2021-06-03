@@ -12,13 +12,13 @@ $unit: 'px'; // Feel free to change the unit.
 }
 
 //padding
-@include list-loop((12, 16,20), '.p-', 'padding');
+@include list-loop((12, 16, 20), '.p-', 'padding');
 @include list-loop((0, 16), '.p-r-', 'padding-right');
 @include list-loop((0,  4, 12, 16, 20), '.p-l-', 'padding-left');
-@include list-loop((0), '.p-b-', 'padding-bottom');
+@include list-loop((0, 12, 16), '.p-b-', 'padding-bottom');
 @include list-loop((0, 8, 12,20, 60, 32), '.p-t-', 'padding-top');
-@include list-loop((12, 20, 40, 50), '.p-x-', ('padding-right', 'padding-left'));
-@include list-loop((12, 20), '.p-y-', ('padding-top', 'padding-bottom'));
+@include list-loop((12, 20, 28, 40, 50), '.p-x-', ('padding-right', 'padding-left'));
+@include list-loop((12, 20, 28), '.p-y-', ('padding-top', 'padding-bottom'));
 
 //margin
 @include list-loop((), '.m-', 'margin');

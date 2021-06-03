@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'sc-sort-section',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class SortSectionComponent implements OnInit {
 
+  @Output() changeView = new EventEmitter<string>();
   toggle = true;
 
   constructor() {
@@ -18,8 +19,8 @@ export class SortSectionComponent implements OnInit {
     {option: 'Most Relivant'}
   ];
 
-  view(): void {
-    this.toggle = !this.toggle;
+  view(viewType: string): void {
+    this.changeView.emit(viewType);
   }
 
   ngOnInit(): void {

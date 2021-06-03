@@ -1,4 +1,4 @@
-<div fxLayoutAlign='space-between center' class=' p-16 full-width'>
+<div fxLayoutAlign='space-between center' class=' p-y-16 p-x-28 full-width'>
   <div class=''>
     <div class='breadcrumb'>
       <ul fxLayout='row' fxLayoutAlign='center start' class='m-b-4'>
@@ -12,11 +12,11 @@
     <p class="m-t-4">120,000 Results: <span class='bold'>Category</span></p>
   </div>
   <div fxLayout='row' fxLayoutAlign='center center' class=' primary-color p-t-12 font-size-14' >
-    <p class='m-r-16 hand-cursor' (click)="view()">
+    <p class='m-r-16 hand-cursor' (click)="view('list')">
       <mat-icon class='s-28 v-middle m-r-8'>list</mat-icon>
       <span class='font-size-14 v-middle'>List</span>
     </p>
-    <p class='m-x-28 hand-cursor' (click)="view()">
+    <p class='m-x-28 hand-cursor' (click)="view('grid')">
       <mat-icon class='s-18 v-middle m-r-8'>grid_view</mat-icon>
       <span class='font-size-14 v-middle'>Grid</span>
     </p>

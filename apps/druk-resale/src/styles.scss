@@ -73,7 +73,19 @@ $druk-resale-theme: mat-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  //background: #c5d2e0;
+  background-color: #f1f5f7;
+  //background-color: rgba($primary-color, .3);
+  // background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
+  //background-image: linear-gradient(to right, rgba(#69c8e3, .7), #d2eaf1);
+}
+  html, body { height: 100%; }
 body { margin: 0; font-family: Lato, sans-serif;
 background-color: #f1f5f7;
 //  background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
@@ -81,4 +93,7 @@ background-color: #f1f5f7;
 * {
   font-family: Lato, sans-serif;
 }
-p {font-size: 16px;}
+
+p {
+  font-size: 16px;
+}
