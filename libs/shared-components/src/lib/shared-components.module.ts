@@ -86,7 +86,8 @@ import { FormsModule } from '@angular/forms';
     FeatureSectionComponent,
     DownloadSectionComponent,
     AdSectionComponent,
-    FilterSectionComponent
+    FilterSectionComponent,
+    PaginationSectionComponent
   ]
 })
 export class SharedComponentsModule {}
