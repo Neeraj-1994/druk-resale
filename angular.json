@@ -20,6 +20,9 @@
               "apps/druk-resale/src/favicon.ico",
               "apps/druk-resale/src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/druk-resale/src/assets/styles"]
+            },
             "styles": [
               "apps/druk-resale/src/styles.scss"
             ],

@@ -72,10 +72,39 @@
 </div>-->
 
 
-<div fxLayout='column' fxLayoutAlign='center center' class='mt-32'>
-  <div class='text-center mt-32 mb-16'>
-    <p class='fs-18 font-primary mt-32 mb-16'>Welcome Back!</p>
+<div fxLayout='column' fxLayoutAlign='center center' class='m-t-32'>
+  <div class='text-center m-t-24 m-b-20'>
+    <p class='fs-18 font-primary bold m-b-16'>Welcome Back!</p>
     <p class='text-light font-secondary'>Sign in to continue to Druk-ReSale</p>
-    <div class='s-24 p-12'>thif</div>
   </div>
+  <div fxLayoutAlign='center' class='full-width'>
+    <mat-form-field [appearance]="'outline'" class='example-full-width'>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder=''>
+      <mat-icon matPrefix class='primary-color material-icons-outlined'>email</mat-icon>
+    </mat-form-field>
+  </div>
+  <div fxLayoutAlign='center' class='full-width'>
+    <mat-form-field [appearance]="'outline'" class='example-full-width'>
+      <mat-label>Password</mat-label>
+      <input matInput placeholder=''>
+      <mat-icon matPrefix class='primary-color material-icons-outlined'>vpn_key</mat-icon>
+    </mat-form-field>
+  </div>
+  <div fxLayoutAlign='center' class='full-width m-t-12'>
+    <button fxFlex='36' mat-flat-button color='primary' class='rounded-medium-button'>Login</button>
+  </div>
+  <div fxLayoutAlign='center' class='full-width'>
+    <div fxFlex='36' fxLayoutAlign='end center' class='black-60 fs-14 m-t-8'>
+      <mat-icon class='s-16 m-r-6'>lock</mat-icon>
+      <span>Forgot your password?</span>
+    </div>
+  </div>
+  <div fxLayout='row' class='full-width'>
+    <auth-social-login  fxFlex='100'></auth-social-login>
+  </div>
+   <p class='m-b-12 fs-12'>
+     Don't have an account yet?  <a href='#'> Register</a>
+   </p>
 </div>
+

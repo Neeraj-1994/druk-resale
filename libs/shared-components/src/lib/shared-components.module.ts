@@ -24,10 +24,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatRippleModule } from '@angular/material/core';
 import { HomeProductCardComponent } from './components/home-product-card/home-product-card.component';
 import { PaginationSectionComponent } from './components/pagination-section/pagination-section.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SwiperModule } from 'ngx-swiper-wrapper';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -40,9 +44,17 @@ import { RouterModule } from '@angular/router';
     MatSnackBarModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSnackBarModule,
     MatSliderModule,
     MatExpansionModule,
+    MatRippleModule,
+    SwiperModule,
+    MatChipsModule,
+    MatCheckboxModule,
+    FormsModule,
+    SwiperModule,
+    MatChipsModule,
+    MatCheckboxModule,
+    FormsModule,
     SwiperModule,
     RouterModule
   ],

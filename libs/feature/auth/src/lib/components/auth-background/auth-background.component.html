@@ -2,11 +2,24 @@
   <!--<auth-content-page fxFlex='44' class='auth-content'>
 
   </auth-content-page>-->
-  <div fxFlex='44' class='auth-content p-t-60 full-width'>
-    <div fxLayoutAlign='center'>
-      <a routerLink=''><img src='../../../../../assets/images/Site Title.png' class='druk-resale--image' alt='logo'></a>
+  <div fxFlex='44' fxLayout='column' fxLayoutAlign='space-between center' class='auth-content p-t-50 full-width'>
+    <div class='full-width'>
+      <div fxLayoutAlign='center'>
+        <a routerLink=''><img src='../../../../../assets/images/Site Title.png' class='druk-resale--image' alt='logo'></a>
+      </div>
+
+      <!--FE switch this 3-component to get the reqiured view-->
+<!--      <auth-login></auth-login>-->
+<!--      <auth-register></auth-register>-->
+      <auth-forgot-password></auth-forgot-password>
+
     </div>
-    <auth-login></auth-login>
+
+<!--      <auth-social-login fxFlex='100'></auth-social-login>-->
+
+
+
+      <p class='fs-12'>&copy; Druk-ReSale 2021</p>
   </div>
 
   <auth-ad-page fxFlex='56' class='auth-ad-content'></auth-ad-page>

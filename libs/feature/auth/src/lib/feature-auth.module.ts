@@ -4,7 +4,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { AuthBaseComponent } from './components/auth-base/auth-base.component';
-import { FlexModule } from '@angular/flex-layout';
+import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -15,11 +15,12 @@ import { SharedComponentsModule } from '@druk-resale/shared-components';
 import { AuthBackgroundComponent } from './components/auth-background/auth-background.component';
 import { ContentPageComponent } from './components/content-page/content-page.component';
 import { AdPageComponent } from './components/ad-page/ad-page.component';
+import { SocialLoginComponent } from './components/social-login/social-login.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    FlexModule,
+    FlexLayoutModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
@@ -35,7 +36,8 @@ import { AdPageComponent } from './components/ad-page/ad-page.component';
     AuthBaseComponent,
     AuthBackgroundComponent,
     ContentPageComponent,
-    AdPageComponent
+    AdPageComponent,
+    SocialLoginComponent
   ],
   exports: [
     RegisterComponent,
