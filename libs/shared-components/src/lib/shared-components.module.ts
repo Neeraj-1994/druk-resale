@@ -43,7 +43,6 @@ import { FormsModule } from '@angular/forms';
     MatSnackBarModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSnackBarModule,
     MatSliderModule,
     MatExpansionModule,
     MatRippleModule,
@@ -83,7 +82,8 @@ import { FormsModule } from '@angular/forms';
     FeatureSectionComponent,
     DownloadSectionComponent,
     AdSectionComponent,
-    FilterSectionComponent
+    FilterSectionComponent,
+    PaginationSectionComponent
   ]
 })
 export class SharedComponentsModule {}

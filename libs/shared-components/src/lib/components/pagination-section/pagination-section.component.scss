@@ -1,0 +1,15 @@
+$primary-color: #2b6777;
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  //float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  &:hover {
+    color: $primary-color;
+  }
+}
