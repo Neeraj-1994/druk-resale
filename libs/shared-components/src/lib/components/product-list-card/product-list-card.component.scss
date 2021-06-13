@@ -1,4 +1,6 @@
 @import "apps/druk-resale/src/assets/styles/font";
+@import "apps/druk-resale/src/assets/styles/common";
+
 .home-container {
   margin: 10px 20px;
 }
@@ -69,39 +71,77 @@
 .product-card {
   position: relative;
   //height: 150px;
-  height: 300px;
-  width: 234px;
-  background: white;
-  border: 1px solid rgba(0, 0, 0, .1);
+  //background: white;
+  //border: 1px solid rgba(0, 0, 0, .1);
   margin: 10px 0;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
-  border-radius: 7px;
-  cursor: pointer;
+  //box-shadow: 3px 3px 15px rgba(0, 0, 0, .2);
+  //border-radius: 7px;
 
-  .image {
-    height: 170px;
-    width: 100%;
-    object-fit: contain;
-    transition: 0.3s;
-    &:hover {
-      transform: translate(0, -10px);
+
+  background: white;
+  //background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.2));
+  background: linear-gradient(to right bottom, rgba($primary-color, 0.3), rgba($primary-color, 0.1));
+  //padding: 50px;
+  border-radius: 7px;
+  //backdrop-filter: blur(30px);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(45, 55, 68, .06);
+  z-index: 1;
+
+  &.grid {
+    //height: 300px;
+    width: 234px;
+
+    .image {
+      height: 170px;
+      width: 100%;
+      object-fit: contain;
+      //transition: 0.5s linear;
+      transition: 0.5s linear;
     }
-    //border-radius: 8px;
+  }
+  &.list {
+    //height: 400px;
+    //width: 230px;
+
+    .image {
+      height: 200px;
+      width: 230px;
+      object-fit: contain;
+      transition: 0.5s linear;
+  }
+
+
+  }
+
+  &:hover {
+    &.grid,
+    &.list {
+      .image {
+          //transform: translate(0, -10px);
+          transform: scale(1.1) rotate3d(0, 1, 0, .5turn);
+      }
+    }
   }
 
 
   .heart {
-    background-color: rgba(0,0,0, .2);
+    //background-color: rgba(0,0,0, .2);
     position: absolute;
     right: 12px;
     bottom: 12px;
-    border-radius: 50%;
-    &:hover {
-      box-shadow: 1px 1px 5px rgba(227,27,35, .6);
-    }
+    //border-radius: 50%;
+    transition: 2s;
+    //animation: all 2s;
+
     .heart-icon {
-      &:hover {
-        color: rgb(227,27,35, .9);
+      transition: .5s linear;
+    }
+    &:hover {
+      .heart-icon {
+          color: rgb($primary-color, .9);
+          transform: scale(1.2) translateY(-5px) rotate3d(0, 1, 0, .5turn);
       }
     }
   }

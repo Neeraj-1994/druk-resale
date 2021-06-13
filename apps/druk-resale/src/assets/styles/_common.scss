@@ -9,12 +9,16 @@ $primary-color: #2b6777;
   background-color: #FFFFFF;
 }
 
+.transparent-bg {
+  background: transparent !important;
+}
+
 .white-color {
   color: #FFFFFF;
 }
 
 .primary-color {
-  color: $primary-color;
+  color: $primary-color !important;
 }
 
 .bg-secondary {
@@ -69,6 +73,9 @@ $black-80: rgba(0, 0, 0, .8);
 }
 
 .primary-border {
+  border: 1px solid $primary-color;
+}
+.silver-border {
   border-bottom: 2px solid #c2c2c2;
 }
 
@@ -204,4 +211,12 @@ a.text-primary:hover, a.text-primary:focus {
 
 .custom-config-button {
   margin: 30px 5px 10px 5px;
+}
+
+.warn-bg {
+  background: #D9415C ;
+}
+
+.secondary-font {
+  font-family: 'Lato', sans-serif;
 }
