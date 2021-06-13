@@ -15,7 +15,7 @@ import { PopularTabSectionComponent } from './components/popular-tab-section/pop
 import { ProductListCardComponent } from './components/product-list-card/product-list-card.component';
 import { SortSectionComponent } from './components/sort-section/sort-section.component';
 import { UserSectionComponent } from './components/user-section/user-section.component';
-import { FlexModule } from '@angular/flex-layout';
+import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
@@ -32,6 +32,7 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -49,7 +50,10 @@ import { FormsModule } from '@angular/forms';
     SwiperModule,
     MatChipsModule,
     MatCheckboxModule,
-    FormsModule
+    FormsModule,
+    SwiperModule,
+    RouterModule,
+    FlexLayoutModule
   ],
   declarations: [
     HeaderNavSectionComponent,

@@ -1,6 +1,7 @@
-<div fxLayout='row' fxLayoutAlign='space-between center'
-     class='header-tab primary-bg white-color font-secondary font-size-primary p-x-50'>
+<div fxLayout='row' fxLayoutAlign.gt-sm='space-between center'
+     class='header-tab primary-bg white-color font-secondary'
+     ngClass.gt-sm="p-x-50 font-size-primary" ngClass.sm="p-x-20 p-y-12" ngClass.xs="p-12  fs-12">
   <ng-container *ngFor='let category of categoryList'>
-    <a class='category-links' (click)='routeRedirection(category.value)'>{{category.label}}</a>
+    <a class='category-links' ngClass.lt-md="m-r-8" (click)='routeRedirection(category.value)'>{{category.label}}</a>
   </ng-container>
 </div>

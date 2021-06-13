@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SuccessPageComponent } from './success-page.component';
+import { AuthBackgroundComponent } from './auth-background.component';
 
-describe('SuccessPageComponent', () => {
-  let component: SuccessPageComponent;
-  let fixture: ComponentFixture<SuccessPageComponent>;
+describe('AuthBackgroundComponent', () => {
+  let component: AuthBackgroundComponent;
+  let fixture: ComponentFixture<AuthBackgroundComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SuccessPageComponent ]
+      declarations: [ AuthBackgroundComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SuccessPageComponent);
+    fixture = TestBed.createComponent(AuthBackgroundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
