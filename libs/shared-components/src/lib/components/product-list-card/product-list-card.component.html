@@ -1,5 +1,5 @@
 <div class='full-width'>
-  <div class='product-card m-t-20 p-x-12 p-y-20' [ngClass]='viewType === "grid" ? "grid" : "list full-width"'
+  <div class='product-card m-b-20 p-x-12 p-y-20' [ngClass]='viewType === "grid" ? "grid" : "list full-width"'
        [fxLayout]='viewType === "grid" ? "column" : "row"'>
     <div [fxFlex]='viewType === "grid" ? "" : "35"' class='image-card' fxLayoutAlign='start center'>
       <img [src]='product.images[0]' alt='product_image_{{index}}' class='image'>

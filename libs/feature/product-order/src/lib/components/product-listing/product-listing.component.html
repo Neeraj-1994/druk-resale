@@ -3,10 +3,10 @@
 
 
   <div class='full-width p-x-20'>
-    <sc-filter-section fxFlex='20' class='m-t-50'></sc-filter-section>
+    <sc-filter-section fxFlex='20' class=''></sc-filter-section>
 
     <div fxFlex='80' [fxLayout]='viewChange === "grid" ? "row wrap" : "column"' fxLayoutAlign='center center'
-         class='product-card p-y-28'>
+         class='product-card p-b-16'>
       <ng-container *ngIf='viewChange==="grid"'>
         <ng-container *ngFor='let product of products; let i = index'>
           <sc-product-list-card class='product-card-list m-x-20' [product]='product'
