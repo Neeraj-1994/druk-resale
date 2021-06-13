@@ -6,7 +6,7 @@ import { PostBaseComponent } from '../../post-base/post-base.component';
 import { featureTypes } from '../../../constants/product-post.constant';
 
 @Component({
-  selector: 'pp-feature-type',
+  selector: 'dr-feature-type',
   templateUrl: './feature-type.component.html',
   styleUrls: ['./feature-type.component.scss']
 })

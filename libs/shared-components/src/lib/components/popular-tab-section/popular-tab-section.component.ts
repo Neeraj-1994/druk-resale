@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sc-popular-tab-section',
+  selector: 'dr-popular-tab-section',
   templateUrl: './popular-tab-section.component.html',
   styleUrls: ['./popular-tab-section.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'po-order-base',
+  selector: 'dr-order-base',
   template: ``
 })
 export class OrderBaseComponent {

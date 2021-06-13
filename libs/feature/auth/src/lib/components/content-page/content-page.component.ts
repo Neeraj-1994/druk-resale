@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'auth-content-page',
+  selector: 'dr-content-page',
   templateUrl: './content-page.component.html',
   styleUrls: ['./content-page.component.scss']
 })

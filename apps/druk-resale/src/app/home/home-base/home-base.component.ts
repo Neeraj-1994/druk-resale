@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'druk-resale-home-base',
+  selector: 'dr-home-base',
   template: `<router-outlet></router-outlet>`,
   styleUrls: ['./home-base.component.scss']
 })

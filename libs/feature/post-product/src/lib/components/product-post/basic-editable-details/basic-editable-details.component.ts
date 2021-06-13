@@ -8,7 +8,7 @@ import { itemCategories } from '../../../constants/product-post.constant';
 import { PostBaseComponent } from '../../post-base/post-base.component';
 
 @Component({
-  selector: 'pp-basic-editable-details',
+  selector: 'dr-basic-editable-details',
   templateUrl: './basic-editable-details.component.html',
   styleUrls: ['./basic-editable-details.component.scss']
 })

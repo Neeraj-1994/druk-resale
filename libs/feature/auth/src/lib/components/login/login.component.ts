@@ -6,7 +6,7 @@ import { FormControl } from '@angular/forms';
 import { UserLogin } from '../../models/auth.model';
 
 @Component({
-  selector: 'auth-login',
+  selector: 'dr-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })

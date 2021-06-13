@@ -76,8 +76,8 @@
     <div fxFlex="0 0 calc(20% - 20px)" fxFlex.xl="0 0 calc(17% - 27px)" fxFlex.sm="32"
          fxFlex.md="0 0 calc(34% - 27px)"
          fxFlex.xs="100" fxLayoutAlign="center" *ngFor='let product of products; let i = index'>
-      <sc-product-list-card class="product-card-list" [product]='product' [index]='i'
-                            (click)='goToDetails(product)'></sc-product-list-card>
+      <dr-product-list-card class="product-card-list" [product]='product' [index]='i'
+                            (click)='goToDetails(product)'></dr-product-list-card>
     </div>
   </div>
 
@@ -88,14 +88,14 @@
   </div>
 
   <div class="full-width featured-section-bg p-y-20">
-    <sc-feature-section></sc-feature-section>
+    <dr-feature-section></dr-feature-section>
   </div>
 
   <div class="full-width">
-    <sc-header-banner-section></sc-header-banner-section>
+    <dr-header-banner-section></dr-header-banner-section>
   </div>
 
   <div class="full-width">
-    <sc-download-section></sc-download-section>
+    <dr-download-section></dr-download-section>
   </div>
 </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'home-real-estate-home',
+  selector: 'dr-real-estate-home',
   templateUrl: './real-estate-home.component.html',
   styleUrls: ['./real-estate-home.component.scss']
 })

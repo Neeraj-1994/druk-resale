@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'auth-auth-background',
+  selector: 'dr-auth-background',
   templateUrl: './auth-background.component.html',
   styleUrls: ['./auth-background.component.scss']
 })

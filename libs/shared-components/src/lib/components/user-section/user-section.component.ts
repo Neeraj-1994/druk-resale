@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sc-user-section',
+  selector: 'dr-user-section',
   templateUrl: './user-section.component.html',
   styleUrls: ['./user-section.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sc-ad-section',
+  selector: 'dr-ad-section',
   templateUrl: './ad-section.component.html',
   styleUrls: ['./ad-section.component.scss']
 })

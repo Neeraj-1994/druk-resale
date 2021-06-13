@@ -6,7 +6,7 @@ import { FormControl } from '@angular/forms';
 import { User } from '../../models/auth.model';
 
 @Component({
-  selector: 'auth-register',
+  selector: 'dr-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })

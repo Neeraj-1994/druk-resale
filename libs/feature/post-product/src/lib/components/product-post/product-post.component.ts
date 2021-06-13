@@ -9,7 +9,7 @@ import { itemCategories } from '../../constants/product-post.constant';
 import { noop } from 'rxjs';
 
 @Component({
-  selector: 'pp-product-post',
+  selector: 'dr-product-post',
   templateUrl: './product-post.component.html',
   styleUrls: ['./product-post.component.scss']
 })

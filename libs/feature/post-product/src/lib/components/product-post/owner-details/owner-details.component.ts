@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { PostBaseComponent } from '../../post-base/post-base.component';
 
 @Component({
-  selector: 'pp-owner-details',
+  selector: 'dr-owner-details',
   templateUrl: './owner-details.component.html',
   styleUrls: ['./owner-details.component.scss']
 })

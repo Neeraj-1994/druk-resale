@@ -5,7 +5,7 @@ import { AuthFacadeService } from '../../services/auth-facade.service';
 import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'auth-forgot-password',
+  selector: 'dr-forgot-password',
   templateUrl: './forgot-password.component.html',
   styleUrls: ['./forgot-password.component.scss']
 })
