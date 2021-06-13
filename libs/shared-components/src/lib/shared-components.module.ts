@@ -49,10 +49,6 @@ import { FormsModule } from '@angular/forms';
     SwiperModule,
     MatChipsModule,
     MatCheckboxModule,
-    FormsModule,
-    SwiperModule,
-    MatChipsModule,
-    MatCheckboxModule,
     FormsModule
   ],
   declarations: [
