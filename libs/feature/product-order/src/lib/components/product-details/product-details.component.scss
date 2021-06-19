@@ -1,9 +1,17 @@
+@import "apps/druk-resale/src/assets/styles/common";
+
+%swiper-card {
+  color: $primary-color;
+  background-color: white;
+  opacity: 1;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+}
 .opt-img {
   width: 94px;
   height: 78px;
   border-radius: 4px;
   background-size: 50%;
-  background-size: 40px 40px;
+  background-position: 40px 40px;
   //background-color: #3B5998;
   &:focus, &:hover {
     background-color: #f1f5f7;
@@ -63,3 +71,84 @@ hr.faint {
   }
 }
 
+
+.filter-list:nth-last-child(1) {
+  span {
+    display: none;
+  }
+}
+
+.featured-section-bg {
+  background-color: rgba($primary-color, 0.8);
+}
+
+::ng-deep .search-bar-input .mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+  padding-left: 12px;
+}
+
+.product-variant-img {
+  height: 100px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.product-img {
+  height: 428px;
+  object-fit: contain;
+}
+
+::ng-deep .product-mini-variant {
+  padding: 10px 0 4px;
+  height: fit-content !important;
+}
+
+.product-list {
+  ::ng-deep.s-wrapper {
+    padding: 0 40px !important;
+    width: auto;
+
+    .swiper-button-next {
+      @extend %swiper-card;
+      right: 0 !important;
+
+      &:after {
+        font-size: 24px;
+      }
+    }
+
+    .swiper-button-prev {
+      @extend %swiper-card;
+
+      left: 0 !important;
+
+      &:after {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.product-details {
+  ::ng-deep.s-wrapper {
+    .swiper-button-prev {
+      display: none;
+    }
+
+    .swiper-button-next {
+      color: white;
+      background-color: $primary-color;
+      opacity: 1;
+      box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+      bottom: -8px !important;
+
+      &:after {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.seller-card {
+  height: fit-content;
+}

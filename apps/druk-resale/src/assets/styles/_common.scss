@@ -55,6 +55,10 @@ $black-80: rgba(0, 0, 0, .8);
   color: $black-80;
 }
 
+.light-gray-bg {
+  background-color: #F9F9F9;
+}
+
 .dashed-underline {
   -moz-text-decoration-line: underline;
   text-decoration-line: underline;
@@ -204,4 +208,41 @@ a.text-primary:hover, a.text-primary:focus {
 
 .custom-config-button {
   margin: 30px 5px 10px 5px;
+}
+
+.silver-border {
+  border: 1px solid #C4C4C4;
+}
+
+.input-button {
+  ::ng-deep.mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 0 0 0 .75em !important;
+  }
+
+  ::ng-deep.mat-form-field-suffix {
+    top: -1px !important;
+
+    .mat-raised-button {
+      height: 44px;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  ::ng-deep.mat-form-field-infix {
+    padding: 8px 0 1em 0 !important;
+  }
+}
+
+.custom-icon {
+  box-shadow: 0 4px 5px 0.5px rgba(0, 0, 0, 0.25);
+}
+
+::ng-deep.search-list {
+  .mat-tab-header {
+    background-color: white !important;
+  }
+
+  .mat-tab-label-active {
+    color: $primary-color !important;
+  }
 }
