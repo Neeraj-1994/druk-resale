@@ -14,9 +14,15 @@ export class ProductListingComponent implements OnInit {
 
   state$: Observable<ProductStoreState>;
   products: ProductList[];
+  viewChange = 'grid';
   constructor(public productFacadeService: ProductFacadeService, private route: Router) {
     this.productFacadeService.initialize();
   }
+  /*sort = [
+    {option: 'Most Relivant'},
+    {option: 'Most Relivant'},
+    {option: 'Most Relivant'}
+  ];*/
 
   ngOnInit(): void {
     this.getProductsList();
@@ -28,6 +34,10 @@ export class ProductListingComponent implements OnInit {
       this.products = response;
       this.productFacadeService.updateProductLists(response);
     })
+  }
+
+  changeViewoptions(viewType: string): void {
+    this.viewChange = viewType;
   }
 
   goToDetails(product: ProductList): void {

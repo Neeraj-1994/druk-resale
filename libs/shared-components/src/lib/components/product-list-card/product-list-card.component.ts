@@ -10,12 +10,19 @@ export class ProductListCardComponent implements OnInit {
 select=false;
   @Input() product: ProductList;
   @Input() index: number;
+  @Input() viewType: string;
+  centered = false;
+  disabled = false;
+  unbounded = false;
+
+  radius: number;
+  color: string;
   constructor() { }
 
   ngOnInit(): void {
   }
 
   favourite():void {
-    this.select != this.select;
+    this.select =! this.select;
   }
 }

@@ -3,17 +3,9 @@
 
 .filter-section {
   .background {
-    width: 200px;
-    //height: 70vh;
+    width: 250px;
     padding: 8px;
-    background-image: linear-gradient(to bottom right, #ccf2f4, #a4ebf3);
-
-    .filtered {
-      border: 1px dashed rgba(0, 0, 0, .4);
-    }
-    .dashed-hr {
-      border-bottom: 1px dashed $black-40;
-    }
+    background: transparent;
   }
 }
 
@@ -28,8 +20,17 @@
     padding: 0;
   }
 }
- ::ng-deep {
-   .panel-header .mat-expansion-panel-header {
-     padding: 0px 4px 0px ;
-   }
- }
+
+::ng-deep .panel-header .mat-expansion-panel-header {
+  padding: 0px 4px 0px;
+  height: 22px;
+}
+
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover {
+  background: transparent !important;
+}
+
+.mat-chip.mat-standard-chip .mat-chip-remove {
+  opacity: 1;
+}
+
