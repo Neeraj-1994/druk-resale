@@ -47,7 +47,7 @@
       width: 100%;
       object-fit: contain;
       //transition: 0.5s linear;
-      transition: 0.5s linear;
+      transition: 200ms linear;
     }
   }
   &.list {
@@ -58,18 +58,23 @@
       height: 200px;
       width: 230px;
       object-fit: contain;
-      transition: 0.5s linear;
+      transition: 200ms linear;
   }
 
 
   }
 
   &:hover {
-    &.grid,
+    &.grid {
+      .image {
+          transform: translate(0, -10px);
+          //transform: scale(1.1) rotate3d(0, 1, 0, .5turn);
+      }
+    }
     &.list {
       .image {
-          //transform: translate(0, -10px);
-          transform: scale(1.1) rotate3d(0, 1, 0, .5turn);
+        transform: scale(1.03);
+        //transform: scale(1.1) rotate3d(0, 1, 0, .5turn);
       }
     }
   }

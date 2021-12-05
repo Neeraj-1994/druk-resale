@@ -1,28 +1,28 @@
 <div fxLayout='column' fxLayoutAlign='space-between start'>
-  <dr-sort-section (changeView)='changeViewoptions($event)' class='full-width'></dr-sort-section>
+  <sc-sort-section (changeView)='changeViewoptions($event)' class='full-width'></sc-sort-section>
 
 
   <div class='full-width p-x-20'>
-    <dr-filter-section fxFlex='20' class='m-t-50'></dr-filter-section>
+    <dr-filter-section fxFlex='20' class=''></dr-filter-section>
 
     <div fxFlex='80' [fxLayout]='viewChange === "grid" ? "row wrap" : "column"' fxLayoutAlign='center center'
-         class='product-card p-y-28'>
+         class='product-card p-b-16'>
       <ng-container *ngIf='viewChange==="grid"'>
         <ng-container *ngFor='let product of products; let i = index'>
-          <dr-product-list-card class='product-card-list m-x-20' [product]='product'
-                                [index]='i' [viewType]='viewChange'></dr-product-list-card>
+          <sc-product-list-card class='product-card-list m-x-20' [product]='product'
+                                [index]='i' [viewType]='viewChange'></sc-product-list-card>
         </ng-container>
       </ng-container>
       <ng-container *ngIf='viewChange==="list"'>
         <div fxLayout='row wrap' class='full-width' fxLayoutAlign='center center'>
           <ng-container *ngFor='let product of products; let i = index'>
-            <dr-product-list-card fxFlex='70' class='product-card-list m-x-20' [product]='product'
-                                  [index]='i' [viewType]='viewChange'></dr-product-list-card>
+            <sc-product-list-card fxFlex='70' class='product-card-list m-x-20' [product]='product'
+                                  [index]='i' [viewType]='viewChange'></sc-product-list-card>
           </ng-container>
         </div>
       </ng-container>
       <div fxLayoutAlign='center center' class='full-width'>
-        <dr-pagination-section fxLayout='column' fxLayoutAlign='center center' class='full-width'></dr-pagination-section>
+        <sc-pagination-section fxLayout='column' fxLayoutAlign='center center' class='full-width'></sc-pagination-section>
       </div>
     </div>
   </div>
