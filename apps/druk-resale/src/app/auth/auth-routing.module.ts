@@ -7,6 +7,7 @@ import {
   RegisterComponent
 } from '@druk-resale/feature/auth';
 import { AuthBaseComponent } from '@druk-resale/apps/auth/auth-base/auth-base.component';
+import { AuthBackgroundComponent } from '../../../../../libs/feature/auth/src/lib/components/auth-background/auth-background.component';
 
 const routes: Routes = [
   {
@@ -14,16 +15,8 @@ const routes: Routes = [
     component: AuthBaseComponent,
     children: [
       {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
         path: 'register',
-        component: RegisterComponent
-      },
-      {
-        path: 'forgot-password',
-        component: ForgotPasswordComponent
+        component: AuthBackgroundComponent
       }
     ]
   }

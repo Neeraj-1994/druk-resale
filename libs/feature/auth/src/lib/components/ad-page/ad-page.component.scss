@@ -3,12 +3,9 @@
 @import "apps/druk-resale/src/assets/styles/overwrite";
 
 .ad-text-style {
-  font-size: 30px;
-  font-style: italic;
   opacity: 120%;
+  line-height: 1.4;
 }
-
-.home-icon-style {
-  font-size: 40px;
-  opacity: 120%;
+.content {
+  height: 100%;
 }

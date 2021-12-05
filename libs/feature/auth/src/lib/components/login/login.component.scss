@@ -1,67 +1,76 @@
 @import "apps/druk-resale/src/assets/styles/utility";
 @import "apps/druk-resale/src/assets/styles/common";
 @import "apps/druk-resale/src/assets/styles/overwrite";
+@import "apps/druk-resale/src/assets/styles/mixins";
 
-.social-sign-in {
-  width: 175px;
-  height: 50px;
-  margin: 10px;
-  border-radius: 5px;
-  border: 1px solid #000000;
-  color: #000000;
-}
+//.social-sign-in {
+//  width: 175px;
+//  height: 50px;
+//  margin: 10px;
+//  border-radius: 5px;
+//  border: 1px solid #000000;
+//  color: #000000;
+//}
+//
+//.fa {
+//  margin-right: 10px;
+//}
+//
+//.fa-envelope-o {
+//  margin-top: -5px;
+//}
+//
+//.fa-key {
+//  margin-top: -5px;
+//}
+//
+//.facebook {
+//  background: #ffffff;
+//}
+//
+//.google {
+//  background: #ffffff;
+//}
+//
+//.input-field {
+//  margin: 5px 10px;
+//}
+//
+//.custom-auth-button {
+//  width: 120px;
+//  height: 35px;
+//  margin: 10px;
+//  border-radius: 5px;
+//  transition: 200ms all;
+//  &:hover {
+//    box-shadow: 0 5px 10px rgba($primary-color, 0.6);
+//  }
+//}
+//
+//.login-card {
+//  width: 350px;
+//  height: auto;
+//  border: 1px solid dimgrey;
+//  margin: 10px 0;
+//  box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
+//  border-radius: 10px;
+//}
+//
+//.log-head {
+//  margin: 20px;
+//}
+//
+//.action-text {
+//  margin: 10px;
+//  cursor: pointer;
+//}
+//
+//::ng-deep {
+//  .fa.mat-form-field-appearance-outline .mat-form-field-prefix {
+//    top: 0!important;
+//  }
+//  .mat-form-field-infix {
+//
+//  }
+//}
 
-.fa {
-  margin-right: 10px;
-}
-
-.fa-envelope-o {
-  margin-top: -5px;
-}
-
-.fa-key {
-  margin-top: -5px;
-}
-
-.facebook {
-  background: #ffffff;
-}
-
-.google {
-  background: #ffffff;
-}
-
-.input-field {
-  margin: 5px 10px;
-}
-
-.custom-auth-button {
-  width: 120px;
-  height: 35px;
-  margin: 10px;
-  border-radius: 5px;
-}
-
-.login-card {
-  width: 350px;
-  height: auto;
-  border: 1px solid dimgrey;
-  margin: 10px 0;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
-  border-radius: 10px;
-}
-
-.log-head {
-  margin: 20px;
-}
-
-.action-text {
-  margin: 10px;
-  cursor: pointer;
-}
-
-::ng-deep {
-  .fa.mat-form-field-appearance-outline .mat-form-field-prefix {
-    top: 0!important;
-  }
-}

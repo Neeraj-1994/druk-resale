@@ -1,12 +1,18 @@
+@import "common";
+
 ::ng-deep {
   .custom-input.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
     color: #D9415C !important;
   }
 }
 
+
 ::ng-deep {
   .custom-input.mat-form-field-appearance-outline .mat-form-field-outline-thick {
-    color: #02BD7E !important;
+    color: $primary-color !important;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-flex {
+    border-color: $primary-color !important;;
   }
 }
 
@@ -18,7 +24,7 @@
 
 ::ng-deep {
   .custom-input.mat-input-element {
-    caret-color: #02BD7E !important;
+    caret-color: $primary-color !important;
   }
 }
 
@@ -36,4 +42,65 @@ input:-webkit-autofill {
 input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 50px white inset; /*your box-shadow*/
   -webkit-text-fill-color: #333;
+}
+
+
+::ng-deep {
+  button.rounded-medium-button,
+  .rounded-medium-button.mat-flat-button .mat-button-wrapper .mat-button {
+    text-transform: none !important;
+    //font-family: $gotham-rounded-medium;
+    width: 100% !important;
+    min-height: 45px !important;
+    font-size: 16px;
+  }
+}
+
+/*
+::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 8px 0px !important;}
+::ng-deep .mat-form-field-label-wrapper { top: 0px; }
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(0px);
+  width: 100%;
+}
+*/
+
+::ng-deep .mat-form-field-infix {
+  //padding: 16px !important;
+  height:10px !important;
+  padding:12px 0 18px !important;
+}
+
+
+::ng-deep {
+  .mat-form-field {
+    line-height: 1.2 !important;
+
+    .mat-form-field-label-wrapper {
+      overflow: unset !important;
+    }
+    .mat-form-field-flex {
+      &:hover,
+      &:active {
+        .mat-form-field-outline {
+          color: $primary-color !important;
+        }
+      }
+    }
+  }
+  .mat-form-field-appearance-outline {
+    .mat-form-field-outline-gap,
+    .mat-form-field-outline-end,
+    .mat-form-field-outline-start {
+      border-width: 2px !important;
+    }
+  }
+  .mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
+    padding-left: 0 !important;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-wrapper {
+    margin: 8px 0 !important;
+  }
 }

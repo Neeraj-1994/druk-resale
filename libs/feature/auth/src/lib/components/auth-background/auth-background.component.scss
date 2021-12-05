@@ -2,12 +2,22 @@
 @import "apps/druk-resale/src/assets/styles/common";
 @import "apps/druk-resale/src/assets/styles/overwrite";
 
+
+
+.authentication-bg {
+  box-sizing: border-box;
+
 .auth-content {
   background-color: #FFFFFF;
   opacity: 90%;
+  .druk-resale--image {
+    object-fit: contain;
+    width: 227px;
+  }
 }
 
 .auth-ad-content {
   background-color: #2B6777;
   opacity: 80%;
+}
 }
