@@ -9,6 +9,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgxImgZoomModule } from 'ngx-img-zoom';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { SwiperModule } from 'ngx-swiper-wrapper';
 
 @NgModule({
   imports: [
@@ -18,7 +23,12 @@ import { NgxImgZoomModule } from 'ngx-img-zoom';
     MatIconModule,
     MatCardModule,
     MatTabsModule,
-    NgxImgZoomModule
+    NgxImgZoomModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    SwiperModule
   ],
   declarations: [
     OrderBaseComponent,

@@ -1,4 +1,182 @@
-<div fxLayout='row' fxLayoutAlign='space-between center'>
+<div fxLayout='row' fxLayoutAlign='space-between' class='full-width search-bar-content hand-cursor white-bg'>
+  <div fxLayoutAlign='center center' fxFlex='20' fxFlex.sm="25" class='primary-bg white-color'>
+    <mat-icon>format_list_bulleted</mat-icon>
+    <button mat-button>Animal index</button>
+  </div>
+  <div fxFlex='75' fxFlex.md="70" fxFlex.sm="60">
+    <mat-form-field appearance="none" class='search-bar-input full-width'>
+      <input matInput class='search-bar-input'>
+    </mat-form-field>
+  </div>
+  <div fxFlex='5' fxFlex.md="10" fxFlex.sm="15" fxLayoutAlign='center center' class='primary-bg white-color'>
+    <mat-icon class='s-50'>search</mat-icon>
+  </div>
+</div>
+
+<div fxLayout="row wrap" class="m-t-50">
+  <div fxFlex="75" fxLayout="row wrap">
+    <div class="product-details">
+      <div fxFlex="14">
+        <swiper [config]='brandSwiper' fxFlex='auto' class='p-r-8' *ngIf='renderSwiper'>
+          <div class="m-b-12 white-bg product-mini-variant" *ngFor="let option of [1,2,3,5,6,7,8,9]">
+            <img class="product-variant-img"
+                 src="https://toppng.com/uploads/preview/android-phone-frame-hd-11549516960ueg5oyykzz.png"
+                 alt="product img"/>
+          </div>
+        </swiper>
+      </div>
+
+      <div fxFlex="85">
+        <div class="white-bg">
+          <div fxLayout="row" fxLayoutAlign="end">
+            <mat-icon class="p-8 custom-icon b-r-60 m-t-8 m-r-8" color="primary">favorite</mat-icon>
+          </div>
+          <div fxLayout="row" fxLayoutAlign="center center">
+            <img class="product-img"
+                 src="https://toppng.com/uploads/preview/android-phone-frame-hd-11549516960ueg5oyykzz.png"
+                 alt="product img"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-info full-width white-bg p-12 m-r-10">
+
+      <div fxLayout="row wrap" fxLayoutAlign="space-between" class="black-60 m-t-20 m-b-8">
+        <p>50 views</p>
+
+        <div fxLayout="row">
+          <div fxLayoutAlign="center center" class="m-r-20">
+            <mat-icon class="s-16 m-r-4">library_add</mat-icon>
+            <span>Post Similar Ad</span>
+          </div>
+          <div fxLayoutAlign="center center">
+            <mat-icon class="s-16 m-r-4">flag</mat-icon>
+            <span>Report Ad</span>
+          </div>
+
+        </div>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <p class="fs-18 m-t-12">Product Title</p>
+      <div fxLayout="row" class="location">
+        <mat-icon color="primary" class="m-r-4 s-16">fmd_good</mat-icon>
+        <div class="primary-color fs-12">
+          <p class="m-t-0 m-b-4">Address</p>
+          <p class="m-y-0">Address</p>
+        </div>
+      </div>
+
+      <p class="m-t-20 m-b-8">Product Description</p>
+      <p class="m-t-0 fs-12">This product is so good</p>
+
+      <div fxLayout="row" fxLayoutAlign="start center" class="m-b-12">
+        <mat-icon class="s-24 m-r-4" color="primary">add_circle_outline</mat-icon>
+        <span class="primary-color fs-16">More</span>
+      </div>
+    </div>
+  </div>
+
+  <mat-card fxFlex="25" class="seller-card">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between center" class="m-b-12">
+      <div fxLayout="row wrap" class="seller-info">
+        <mat-icon class="s-60 black-40">account_circle</mat-icon>
+        <div fxLayout="row" fxLayoutAlign="start center" class="m-l-8">
+          <div class="seller-detail">
+            <p class="fs-20 bold m-b-4 m-t-0">Seller Name</p>
+            <div fxLayout="row" fxLayoutAlign="start center" class="black-60">
+              <mat-icon class="s-16 m-r-4">event</mat-icon>
+              <span>Druk-ReSale since 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <mat-icon color="primary" class="s-24">arrow_forward_ios</mat-icon>
+    </div>
+
+    <mat-form-field class="full-width" appearance="outline">
+      <label>
+        <textarea matInput></textarea>
+      </label>
+    </mat-form-field>
+
+    <div class="m-b-20">
+      <button mat-raised-button color="primary" fxFlexFill>
+        Send Message
+      </button>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <p class="bold text-center p-t-20">Bid an offer</p>
+    <div class="input-button">
+      <mat-form-field appearance="outline" fxFlexFill>
+        <mat-label><span class="primary-color">Nu</span></mat-label>
+        <input matInput>
+        <button mat-raised-button matSuffix color="primary">GO</button>
+      </mat-form-field>
+    </div>
+
+    <p class="primary-color bold">Current Selling Bid: Nu. 20,000</p>
+  </mat-card>
+</div>
+
+<div class="m-t-20">
+  <div class="product-list">
+    <p class="fs-18 black-80 m-t-20 m-b-0">SIMILAR ADS</p>
+    <div fxLayoutAlign="center" fxLayout='row wrap' fxLayoutGap="20px" class="product-card">
+      <swiper [config]='productSwiper' fxFlex="100" *ngIf='renderSwiper'>
+        <ng-container *ngFor='let product of products; let i = index'>
+          <sc-product-list-card class="product-card-list" [product]='product' [index]='i'
+                                (click)='goToDetails(product)'></sc-product-list-card>
+        </ng-container>
+      </swiper>
+    </div>
+  </div>
+
+  <div class="product-list">
+    <p class="fs-18 black-80 m-t-20 m-b-0">OTHER ADS BY THIS ADVERTISER</p>
+    <div fxLayoutAlign="center" fxLayout='row wrap' fxLayoutGap="20px" class="product-card">
+      <swiper [config]='productSwiper' fxFlex="100" *ngIf='renderSwiper'>
+        <ng-container *ngFor='let product of products; let i = index'>
+          <sc-product-list-card class="product-card-list" [product]='product' [index]='i'
+                                (click)='goToDetails(product)'></sc-product-list-card>
+        </ng-container>
+      </swiper>
+    </div>
+  </div>
+
+  <div class="product-list">
+    <p class="fs-18 black-80 m-t-20">SIMILAR SEARCHES</p>
+    <div fxLayoutAlign="center" fxLayout='row wrap' class="btn-card p-b-8">
+      <swiper [config]='buttonSwiper' fxFlex="98" *ngIf='renderSwiper'>
+        <button mat-flat-button *ngFor="let option of [1,2,3,4,5,6,7,8,9]"><span
+          class="primary-color">Furniture</span></button>
+      </swiper>
+    </div>
+  </div>
+</div>
+
+<div class="m-y-20 search-list">
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Recently Viewed">
+      <div fxLayout="column">
+        <div class="light-gray-bg black-60 text-center p-y-24">
+          <mat-icon class="s-60">visibility_off</mat-icon>
+          <p class="fs-16 m-t-12 m-b-0">You don’t have any recently viewed items</p>
+          <p class="fs-12 m-y-0">Any items you have viewed recently will be viewed here</p>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Search Alerts">Content 2</mat-tab>
+    <mat-tab label="Watchlist">Content 3</mat-tab>
+  </mat-tab-group>
+</div>
+
+<!--<div fxLayout='row' fxLayoutAlign='space-between center'>
   <p class='black-80 m-y-24 font-bold'>PRODUCT DETAIL</p>
   <p class='black-60 '>
     <span class=''>Ecommerce</span>
@@ -6,8 +184,8 @@
     <span>Produce Detail</span>
   </p>
 </div>
-<div>
-  <mat-card class='p-20'>
+<div>-->
+<!--  <mat-card class='p-20'>
     <div fxLayout='row'>
       <div class='m-r-24'>
         <div fxLayoutAlign='center center' class='opt-img b-r-4 m-y-4' tabindex='1'
@@ -96,7 +274,7 @@
       <p>Product description:</p>
       <mat-tab-group>
         <mat-tab label='Description'>
-          <mat-card class='description-border p-x-40 m-t--1'>
+          <mat-card class='description-border p-x-40 m-t&#45;&#45;1'>
             <p>If several languages coalesce, the grammar of the resulting language is more simple and regular than that
               of the individual</p>
 
@@ -107,7 +285,7 @@
           </mat-card>
         </mat-tab>
         <mat-tab label='Specification'>
-          <mat-card class='description-border p-x-40 m-t--1'>
+          <mat-card class='description-border p-x-40 m-t&#45;&#45;1'>
             <hr class='faint'>
             <ng-container *ngFor='let item of [1,2,3,4,5]'>
               <div fxLayoutAlign='start center' fxLayoutGap='200px' class='full-width'>
@@ -134,5 +312,5 @@
       </div>
 
     </div>
-  </mat-card>
-</div>
+  </mat-card>-->
+<!--</div>-->
