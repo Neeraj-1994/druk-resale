@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ProductList } from '../../models/product-list.model';
 
 @Component({
-  selector: 'sc-product-list-card',
+  selector: 'dr-product-list-card',
   templateUrl: './product-list-card.component.html',
   styleUrls: ['./product-list-card.component.scss']
 })

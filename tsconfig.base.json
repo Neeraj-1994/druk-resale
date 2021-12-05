@@ -15,18 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@druk-resale/feature/home": ["libs/feature/home/src/index.ts"],
-      "@druk-resale/feature/post-product": [
-        "libs/feature/post-product/src/index.ts"
-      ],
-      "@druk-resale/feature/product-order": [
-        "libs/feature/product-order/src/index.ts"
-      ],
-      "@druk-resale/feature/auth": ["libs/feature/auth/src/index.ts"],
-      "@druk-resale/shared-components": ["libs/shared-components/src/index.ts"],
-      "@druk-resale/apps/*": ["apps/druk-resale/src/app/*"],
-      "@druk-resale/env/*": ["apps/druk-resale/src/environments/*"],
-      "@druk-resale/assets/*": ["apps/druk-resale/src/assets/*"]
+      "@dr/feature/home": ["libs/feature/home/src/index.ts"],
+      "@dr/feature/post-product": ["libs/feature/post-product/src/index.ts"],
+      "@dr/feature/product-order": ["libs/feature/product-order/src/index.ts"],
+      "@dr/feature/auth": ["libs/feature/auth/src/index.ts"],
+      "@dr/shared-components": ["libs/shared-components/src/index.ts"],
+      "@dr/apps/*": ["apps/druk-resale/src/app/*"],
+      "@dr/env/*": ["apps/druk-resale/src/environments/*"],
+      "@dr/assets/*": ["apps/druk-resale/src/assets/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

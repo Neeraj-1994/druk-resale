@@ -54,6 +54,7 @@
     "bootstrap": "^4.6.0",
     "firebase": "^8.2.5",
     "google-libphonenumber": "^3.2.16",
+    "husky": "^4.3.8",
     "lodash": "^4.17.21",
     "ngx-drag-drop": "^2.0.0",
     "ngx-dropzone": "^3.0.0",
@@ -74,6 +75,8 @@
     "@angular/compiler-cli": "^11.0.0",
     "@angular/language-service": "^11.0.0",
     "@angular/localize": "^11.2.3",
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
     "@nrwl/cli": "11.1.5",
     "@nrwl/cypress": "11.1.5",
     "@nrwl/eslint-plugin-nx": "11.1.5",
@@ -86,17 +89,48 @@
     "@typescript-eslint/eslint-plugin": "4.3.0",
     "@typescript-eslint/parser": "4.3.0",
     "codelyzer": "^6.0.0",
+    "commitizen": "^4.2.3",
     "cypress": "^6.0.1",
+    "cz-conventional-changelog": "^3.3.0",
     "dotenv": "6.2.0",
     "eslint": "7.10.0",
     "eslint-config-prettier": "6.0.0",
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "26.2.2",
     "jest-preset-angular": "8.3.1",
+    "lint-staged": "^10.5.3",
     "prettier": "2.2.1",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.19.0",
     "ts-jest": "26.4.0",
     "ts-node": "~9.1.1",
     "tslint": "~6.1.0",
     "typescript": "~4.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.scss": [
+      "yarn lint:scss"
+    ],
+    "*.ts": [
+      "yarn affected:lint -- --uncommitted --parallel=true  --fix=true"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'sc-sort-section',
+  selector: 'dr-sort-section',
   templateUrl: './sort-section.component.html',
   styleUrls: ['./sort-section.component.scss']
 })

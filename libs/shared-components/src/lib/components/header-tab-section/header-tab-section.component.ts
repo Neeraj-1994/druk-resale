@@ -4,7 +4,7 @@ import { AuthLink, Category } from '../../models/header.model';
 import { authNav, category } from '../../constants/header.constant';
 
 @Component({
-  selector: 'sc-header-tab-section',
+  selector: 'dr-header-tab-section',
   templateUrl: './header-tab-section.component.html',
   styleUrls: ['./header-tab-section.component.scss']
 })

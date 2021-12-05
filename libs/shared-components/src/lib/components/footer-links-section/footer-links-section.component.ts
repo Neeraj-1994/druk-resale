@@ -3,7 +3,7 @@ import { LinkGroups } from '../../models/footer.model';
 import { footerLinks } from '../../constants/footer.constant';
 
 @Component({
-  selector: 'sc-footer-links-section',
+  selector: 'dr-footer-links-section',
   templateUrl: './footer-links-section.component.html',
   styleUrls: ['./footer-links-section.component.scss']
 })

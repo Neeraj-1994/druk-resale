@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sc-footer-social-section',
+  selector: 'dr-footer-social-section',
   templateUrl: './footer-social-section.component.html',
   styleUrls: ['./footer-social-section.component.scss']
 })

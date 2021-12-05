@@ -5,7 +5,7 @@ import { ProductList } from '../../../../../home/src/lib/models/product-list.mod
 import { NgxImgZoomService } from 'ngx-img-zoom';
 
 @Component({
-  selector: 'po-product-details',
+  selector: 'dr-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.scss']
 })

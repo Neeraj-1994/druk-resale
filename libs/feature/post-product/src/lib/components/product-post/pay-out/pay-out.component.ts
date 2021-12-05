@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'pp-pay-out',
+  selector: 'dr-pay-out',
   templateUrl: './pay-out.component.html',
   styleUrls: ['./pay-out.component.scss']
 })

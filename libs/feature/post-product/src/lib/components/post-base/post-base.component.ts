@@ -5,7 +5,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ProductPostFormBuilder } from '../../misc/helpers/product-post.fb';
 
 @Component({
-  selector: 'pp-post-base',
+  selector: 'dr-post-base',
   template: ``
 })
 export class PostBaseComponent {

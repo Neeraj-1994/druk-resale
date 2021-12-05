@@ -7,7 +7,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { UserData } from '../../models/auth.model';
 
 @Component({
-  selector: 'sc-header-nav-section',
+  selector: 'dr-header-nav-section',
   templateUrl: './header-nav-section.component.html',
   styleUrls: ['./header-nav-section.component.scss']
 })

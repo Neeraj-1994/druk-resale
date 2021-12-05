@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sc-pagination-section',
+  selector: 'dr-pagination-section',
   templateUrl: './pagination-section.component.html',
   styleUrls: ['./pagination-section.component.scss']
 })

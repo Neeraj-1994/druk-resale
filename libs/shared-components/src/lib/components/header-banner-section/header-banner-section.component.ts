@@ -3,7 +3,7 @@ import { SwiperConfigInterface, SwiperNavigationInterface, SwiperPaginationInter
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'sc-header-banner-section',
+  selector: 'dr-header-banner-section',
   templateUrl: './header-banner-section.component.html',
   styleUrls: ['./header-banner-section.component.scss']
 })

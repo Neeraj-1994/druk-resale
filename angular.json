@@ -5,7 +5,7 @@
       "projectType": "application",
       "root": "apps/druk-resale",
       "sourceRoot": "apps/druk-resale/src",
-      "prefix": "druk-resale",
+      "prefix": "dr",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -125,7 +125,7 @@
       "projectType": "library",
       "root": "libs/feature/home",
       "sourceRoot": "libs/feature/home/src",
-      "prefix": "home",
+      "prefix": "dr",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
@@ -152,7 +152,7 @@
       "projectType": "library",
       "root": "libs/feature/post-product",
       "sourceRoot": "libs/feature/post-product/src",
-      "prefix": "pp",
+      "prefix": "dr",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
@@ -179,7 +179,7 @@
       "projectType": "library",
       "root": "libs/feature/product-order",
       "sourceRoot": "libs/feature/product-order/src",
-      "prefix": "po",
+      "prefix": "dr",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
@@ -206,7 +206,7 @@
       "projectType": "library",
       "root": "libs/feature/auth",
       "sourceRoot": "libs/feature/auth/src",
-      "prefix": "auth",
+      "prefix": "dr",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
@@ -233,7 +233,7 @@
       "projectType": "library",
       "root": "libs/shared-components",
       "sourceRoot": "libs/shared-components/src",
-      "prefix": "sc",
+      "prefix": "dr",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",

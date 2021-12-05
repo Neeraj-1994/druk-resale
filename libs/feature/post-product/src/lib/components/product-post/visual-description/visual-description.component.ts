@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { FormArray, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'pp-visual-description',
+  selector: 'dr-visual-description',
   templateUrl: './visual-description.component.html',
   styleUrls: ['./visual-description.component.scss']
 })

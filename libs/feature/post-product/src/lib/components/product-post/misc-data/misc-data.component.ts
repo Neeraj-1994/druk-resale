@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'pp-misc-data',
+  selector: 'dr-misc-data',
   templateUrl: './misc-data.component.html',
   styleUrls: ['./misc-data.component.scss']
 })

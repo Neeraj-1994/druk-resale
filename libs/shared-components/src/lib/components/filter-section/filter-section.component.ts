@@ -3,7 +3,7 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 
 @Component({
-  selector: 'sc-filter-section',
+  selector: 'dr-filter-section',
   templateUrl: './filter-section.component.html',
   styleUrls: ['./filter-section.component.scss']
 })

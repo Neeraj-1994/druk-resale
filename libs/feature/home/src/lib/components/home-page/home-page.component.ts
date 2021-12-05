@@ -8,7 +8,7 @@ import { ProductFacadeService, ProductStoreState } from '@druk-resale/feature/pr
 import { SwiperConfigInterface, SwiperNavigationInterface, SwiperPaginationInterface } from 'ngx-swiper-wrapper';
 
 @Component({
-  selector: 'home-home-page',
+  selector: 'dr-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })

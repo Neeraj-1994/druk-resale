@@ -6,7 +6,7 @@ import { ProductFacadeService } from '../../services/product-facade.service';
 import { ProductStoreState } from '../../services/product-state.service';
 
 @Component({
-  selector: 'po-product-listing',
+  selector: 'dr-product-listing',
   templateUrl: './product-listing.component.html',
   styleUrls: ['./product-listing.component.scss']
 })

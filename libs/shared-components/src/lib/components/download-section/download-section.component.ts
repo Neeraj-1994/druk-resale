@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sc-download-section',
+  selector: 'dr-download-section',
   templateUrl: './download-section.component.html',
   styleUrls: ['./download-section.component.scss']
 })

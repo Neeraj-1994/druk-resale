@@ -5,7 +5,7 @@ import { AuthFacadeService } from '../../services/auth-facade.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'auth-auth-base',
+  selector: 'dr-auth-base',
   template: ``,
 })
 export class AuthBaseComponent {

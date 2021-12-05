@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'pp-descriptive-info',
+  selector: 'dr-descriptive-info',
   templateUrl: './descriptive-info.component.html',
   styleUrls: ['./descriptive-info.component.scss']
 })

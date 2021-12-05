@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'pp-vehicle-post',
+  selector: 'dr-vehicle-post',
   templateUrl: './vehicle-post.component.html',
   styleUrls: ['./vehicle-post.component.scss']
 })

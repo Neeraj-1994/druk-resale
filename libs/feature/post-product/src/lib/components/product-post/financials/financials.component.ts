@@ -7,7 +7,7 @@ import { PostFacadeService } from '../../../services/post-facade.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'pp-financials',
+  selector: 'dr-financials',
   templateUrl: './financials.component.html',
   styleUrls: ['./financials.component.scss']
 })
